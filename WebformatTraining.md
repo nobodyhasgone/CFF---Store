@@ -1,0 +1,16 @@
+# Modulo "Webformat_Training"
+
+|Specifica|Note|
+|---------|----|
+|il modulo deve attivare o disattivare il suo funzionamento (vedi specifiche dopo), a partire da una propria configurazione (Stores>Configuration, in un'apposita section “Webformat_Training”) nel BE di Magento (flag Yes/No)|    |
+|il modulo deve aggiungere un attributo "aggiungibile a carrello" sul prodotto, attraverso cui controllare se il prodotto è o meno acquistabile. Questo controllo può essere disattivato da un’apposita configurazone presente nel BE di Magento (section Webformat_Training)
+Da Testare:
+>> aggiunta a carrello
+>> su prodotto in carrello, cambiare il flag a Sì e controllare che non si possa procedere al checkout prima di rimuovere il prodotto dal carrello
+>> su prodotto in carrello, cambiare il flag a Sì prima di pagare alla cassa e verificare che non sia possibile acquistare il prodotto stesso|L'attributo va scriptato, quindi non creato da BE di Magento, ma creato via setup schema.
+
+Il controllo deve attivarsi, disattivarsi anche controllando il flag generale di attivazione/disattivazione modulo.|
+|il modulo deve aggiungere una propria configurazione (Stores>Configuration), che permetta di nascondere la visualizzazione del prezzo prodotto sull'intero website, nella pagina di lista prodotti|Il controllo deve attivarsi, disattivarsi controllando il flag generale di attivazione/disattivazione modulo.|
+|il modulo deve aggiungere un comando a console per estrarre la lista dei prodotti con flag "aggiungibile a carrello" a "No".|    |
+|il modulo deve esporre un API rest per estrarre la lista dei prodotti con flag "aggiungibile a carrello" a "No".|    |
+|il modulo deve esporre un API rest per verificare se un dato prodotto è aggiungibile a carrello (flag "aggiungibile a carrello" a "Sì”)|    |
