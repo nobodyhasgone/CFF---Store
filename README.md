@@ -17,7 +17,7 @@ Attualmente le registrazioni dei corsi ed i file utili alla formazione sono
 salvati nel NAS aziendale al seguente path
 
 ```
-\\nas1\FileServer\Corsi e Seminari\Magento Training
+\\nas1\FileServer\FORMAZIONE\Corsi e Seminari\Magento Training
 ```
 
 ## Risoluzione esercizi
