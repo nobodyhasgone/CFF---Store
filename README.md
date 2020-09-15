@@ -5,11 +5,13 @@ utile per la formazione dei nuovi arrivati in Webformat.
 
 ## Esercizi
 
+Gli esercizi e' opportuno seguirli in questo ordine:
+
 - Webformat Training - Generico
+- Webformat Training - Stock
+- Webformat Training - Metodi di pagamento
 - Webformat Training - Feed
 - Webformat Training - LookBook
-- Webformat Training - Metodi di pagamento
-- Webformat Training - Stock
 
 ## Corsi e file utili
 
