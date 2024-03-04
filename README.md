@@ -3,6 +3,11 @@
 Questo repository e' stato creato per raccogliere gli esercizi ed il materiale
 utile per la formazione dei nuovi arrivati in Webformat.
 
+## Pratica iniziale
+
+In fase di formazione vengono svolti i primi esercizi. Si veda la sezione `WebformatTraining-InitialPractice.md`
+per maggiori dettagli.
+
 ## Esercizi
 
 Gli esercizi e' opportuno seguirli in questo ordine:
