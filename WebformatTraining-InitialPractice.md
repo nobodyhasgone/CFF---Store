@@ -51,7 +51,16 @@ I seguenti esercizi vengono svolti in fase di formazione con l'eventuale aiuto d
 | La lista deve essere passata come argomento ed è opzionale. Nel caso non venga passato nulla restituire le informazioni per tutti gli store presenti |      |
 | Il nome deve essere stampato solo se richiesto tramite parametro opzionale del comando                                                               |      |
 | Fare una validazione degli store code segnalando eventuali store code errati                                                                         |      |
-| Predisporre un logger su file specifico e loggare inizio a fine task ed eventuali errori/store non validi                                            |      |
+| Predisporre un logger su file specifico e loggare inizio a fine task ed eventuali errori/store non validi  <br/>                                     |      |
+
+## Esercizi su routing/controller
+
+| Specifica                                                                                                        | Note |
+|------------------------------------------------------------------------------------------------------------------|------|
+| Creare un nuovo modulo `{{CognomeDev_Routing}}`                                                                  |      |
+| Creare una nuova route https://{{base_url}}/{{store_code}}/my-module/myroute/redirect che crei una pagina vuota. |      |
+| Come secondo step vogliamo che faccia un redirect a carrello                                                     |      |
+
 
 
 
