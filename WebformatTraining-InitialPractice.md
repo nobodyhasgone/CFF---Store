@@ -32,18 +32,26 @@ I seguenti esercizi vengono svolti in fase di formazione con l'eventuale aiuto d
 | Creare un nuovo modulo `{{CognomeDev_Observer}}`                                                                                                                                                                                                                         |      |
 | Impedire l’aggiunta a carrello di un prodotto qualora il totale a carrello, dopo il tentativo di aggiunta del prodotto nella quantità voluta, fosse maggiore di una certa quantità (es. 100 Euro). Dare un feedback sul motivo per cui il prodotto non è stato aggiunto. |      |
 
-
 ## Esercizi su EAV
 
-| Specifica                                                                                                                                                                                                                                                           | Note                            |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
-| Creare un nuovo modulo `{{CognomeDev_CustomProductAttribute}}`                                                                                                                                                                                                      |                                 |
+| Specifica                                                                                                                                                                                                                                                           | Note                              |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| Creare un nuovo modulo `{{CognomeDev_CustomProductAttribute}}`                                                                                                                                                                                                      |                                   |
 | 1. Data patch per creare l’attributo `wf_season`, aggiungendo all’attribute group `Product Details`. Use in Search = 1, Use in Layered Navigation = 1, Use in Search Results Layered Navigation = 1, Visible on Catalog Pages on Storefront = 1, Scope = Store View | segue `setup:upgrade` e verifiche |
 | 2. Data patch per modificare l’attributo `wf_season`, con `is_user_defined => 1`                                                                                                                                                                                    | segue `setup:upgrade` e verifiche |
 | 3. Data patch per creare un gruppo `Webformat Attributes`, associarlo all'attribute set `Bottom` e associare l’attributo `wf_season` all'attribute group creato                                                                                                     | segue `setup:upgrade` e verifiche |
 | 4. Data patch per aggiungere le 4 opzioni di default all'attributo `wf_season`                                                                                                                                                                                      | segue `setup:upgrade` e verifiche |
 
+## Esercizi su command/logging
 
+| Specifica                                                                                                                                            | Note |
+|------------------------------------------------------------------------------------------------------------------------------------------------------|------|
+| Creare un nuovo modulo `{{CognomeDev_CommandLog}}`                                                                                                   |      |
+| Creare un comando CLI che, ricevuta in input una lista di store code, stampi per ognuno lo store id corrispondente e il nome dello store.            |      |
+| La lista deve essere passata come argomento ed è opzionale. Nel caso non venga passato nulla restituire le informazioni per tutti gli store presenti |      |
+| Il nome deve essere stampato solo se richiesto tramite parametro opzionale del comando                                                               |      |
+| Fare una validazione degli store code segnalando eventuali store code errati                                                                         |      |
+| Predisporre un logger su file specifico e loggare inizio a fine task ed eventuali errori/store non validi                                            |      |
 
 
 
