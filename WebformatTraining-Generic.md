@@ -1,4 +1,4 @@
-# Modulo "Webformat_Training"
+# Modulo "Webformat Training - Generic"
 
 |Specifica|Note|
 |---------|----|

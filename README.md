@@ -8,15 +8,16 @@ utile per la formazione dei nuovi arrivati in Webformat.
 In fase di formazione vengono svolti i primi esercizi. Si veda la sezione `WebformatTraining-InitialPractice.md`
 per maggiori dettagli.
 
-## Esercizi
+## Esercizi pratici
 
-Gli esercizi e' opportuno seguirli in questo ordine:
+Nella parte finale della formazione affrontare i seguenti esercizi che è opportuno seguire in questo ordine:
 
-- Webformat Training - Generico
-- Webformat Training - Stock
-- Webformat Training - Metodi di pagamento
-- Webformat Training - Feed
-- Webformat Training - LookBook
+- Webformat Training - Generic [WebformatTraining-Generic.md](WebformatTraining-Generic.md)
+- Webformat Training - Stock [WebformatTraining-Stock.md](WebformatTraining-Stock.md)
+- Webformat Training - Feed [WebformatTraining-Feed.md](WebformatTraining-Feed.md)
+- Webformat Training - Frontend practise ([Frontend_Guidelines.pdf](Frontend_Guidelines.pdf))
+- Webformat Training - Metodi di pagamento [WebformatTraining-MetododiPagamento.md](WebformatTraining-MetododiPagamento.md)
+- Webformat Training - LookBook [WebformatTraining-LookBook.md](WebformatTraining-LookBook.md)
 
 ## Corsi e file utili
 

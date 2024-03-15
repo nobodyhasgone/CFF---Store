@@ -32,6 +32,7 @@ I seguenti esercizi vengono svolti in fase di formazione con l'eventuale aiuto d
 | Creare un nuovo modulo `{{CognomeDev_Observer}}`                                                                                                                                                                                                                         |      |
 | Impedire l’aggiunta a carrello di un prodotto qualora il totale a carrello, dopo il tentativo di aggiunta del prodotto nella quantità voluta, fosse maggiore di una certa quantità (es. 100 Euro). Dare un feedback sul motivo per cui il prodotto non è stato aggiunto. |      |
 
+
 ## Esercizi su EAV
 
 | Specifica                                                                                                                                                                                                                                                           | Note                              |
@@ -60,6 +61,16 @@ I seguenti esercizi vengono svolti in fase di formazione con l'eventuale aiuto d
 | Creare un nuovo modulo `{{CognomeDev_Routing}}`                                                                  |      |
 | Creare una nuova route https://{{base_url}}/{{store_code}}/my-module/myroute/redirect che crei una pagina vuota. |      |
 | Come secondo step vogliamo che faccia un redirect a carrello                                                     |      |
+
+## Esercizi su tema
+
+| Specifica                                                                                              | Note |
+|--------------------------------------------------------------------------------------------------------|------|
+| Creare un nuovo tema `{{CognomeDev/luma_child}}` child del tema luma                                   |      |
+| Portare localmente al tema il template `Magento_Catalog/templates/product/list.phtml`                  |      |
+| Aggiungere una string identificativa al template custom, e visionare una PLP a frontend prima del div `products wrapper` |      |
+
+
 
 
 
