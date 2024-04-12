@@ -1,0 +1,48 @@
+// Definizione del mixin card
+@mixin card {
+  font-family: $main-font;
+  width: 164px;
+  height: 311px;
+  margin: auto;
+  text-align: center;
+}
+
+// Stili base della card
+.card {
+  @include card; // Includi il mixin card
+
+  &__price {
+    color: grey;
+    font-size: 22px;
+  }
+
+  // Definizione della parte inferiore della card
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+
+    .card__price { 
+      margin: 0;
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+
+.wish__card {
+  @include card; 
+}
+
+// Se vuoi aggiungere un'icona di cuore specifica per la wish card, puoi farlo così:
+.wish__card img {
+  background-image: url('./src/images/product/hearticon2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+}

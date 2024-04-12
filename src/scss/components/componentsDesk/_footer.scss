@@ -1,0 +1,109 @@
+.footer{
+    padding: 84px 0 16px 0;
+}
+.footer__top {
+    padding: 0 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid $neutral-grey;
+
+    .container__list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .container__footer--logo,
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h3,
+        p,
+        ul {
+            margin: 0 0 10px 0;
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: $main-brown;
+            font-weight: $font-medium;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+        }
+
+        p {
+            font-size: 14.4px;
+            color: $main-brown;
+        }
+
+        img {
+            width: auto;
+            height: auto;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                padding: 5px 0;
+                a {
+                    color: $main-black;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                &:first-child {
+                    font-weight: $font-medium;
+                    color: $main-brown;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+
+    h6 {
+        color: $main-black;
+        font-size: 0.75rem;
+        font-weight: $font-medium;
+        margin: 0;
+    }
+
+    .country-selector {
+        label {
+            font-size: 0.75rem;
+            color: $main-black;
+            font-weight: $font-medium;
+            margin-right: 10px;
+        }
+
+        .country-selector__select {
+            padding: 8px 16px;
+            border: 1px solid $neutral-grey;
+            color: $main-black;
+            font-size: 0.75rem;
+            font-weight: $font-medium;
+            appearance: none;
+            background-color: transparent;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+                border-color: darken($neutral-grey, 10%);
+            }
+        }
+    }
+}

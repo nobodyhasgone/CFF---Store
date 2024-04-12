@@ -1,0 +1,108 @@
+
+.subscription-container {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+    font-family: 'Futura Std';
+    background-color: #F8F6F7;
+}
+.subscription-container h2,
+.subscription-container p {
+    font-size: 24px;
+    font-family: 'Futura Std', sans-serif; 
+    font-weight: 500;
+}
+
+
+.subscription-container h2 {
+    margin-bottom: 20px;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscription-form input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    text-align: center;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.subscription-form input[type="email"]::placeholder {
+    text-align: center; 
+    opacity: 1; 
+}
+
+.terms-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.terms-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.terms-container label {
+    margin: 0;
+}
+
+.terms-container a {
+    color: black;
+    text-decoration: underline;
+}
+
+.subscribe-button {
+    padding: 16px 140px;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.subscribe-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.social-media-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center; 
+    gap: 16px;
+}
+
+.social-media-list__item {
+    margin: 18px 0px 0px;
+    display: inline-block;
+}
+
+.social-media-list__link {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.social-media-list__link--facebook {
+    background-image: url('./src/images/icons/facebook.svg');
+}
+
+.social-media-list__link--instagram {
+    background-image: url('./src/images/icons/instagram.svg');
+}

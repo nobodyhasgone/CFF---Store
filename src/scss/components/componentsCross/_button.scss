@@ -1,0 +1,160 @@
+/* Variabili padding */
+$pad-l: 12px 16px;
+$pad-sm: 8px 12px;
+$pad-xsm: 4px 8px;
+$pad-square-l: 16px;
+
+/* Radius */
+$radius: 16px;
+
+/* Filter */
+@mixin btn_filter($colorfont, $bordercolor, $backgroundcolor){
+    padding: $pad-sm;
+    border-radius: 4px;
+    font-size: $font-size;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    text-align: center;
+    color: $colorfont;
+    border-color: $bordercolor;
+    background-color: $backgroundcolor;
+}
+.btn_filter{
+    @include btn_filter($main-black, $main-black, $main-white)
+}
+.btn_filter-active{
+    @include btn_filter($main-black, $main-black, $main-white);
+    &:hover {
+        background-color: $main-white;
+        color: $main-black;
+        border-color: $main-black;
+    }
+}
+
+/* Badge */
+@mixin badge ($backgroundcolor, $colorfont){
+    font-family: $main-font;
+    font-weight: $font-small;
+    font-size: 0.75em;
+    padding: $pad-xsm;
+    border-radius: 20px;
+    text-align: center;
+    color: $colorfont;
+    background-color: $backgroundcolor;
+}
+
+.shipped {
+    @include badge($main-black, $main-white)
+}
+.delivered {
+    @include badge($main-green, $main-white)
+}
+.pending {
+    @include badge($main-yellow, $main-black)
+}
+.refunded {
+    @include badge($main-green, $main-white)
+}
+
+/* Chips */
+
+@mixin chips ($backgroundcolor, $colorfont, $bordercolor){
+    padding: $pad-l;
+    border: 1px solid black;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    font-size: $font-size;
+    background-color: $backgroundcolor;
+    color: $colorfont;
+    border-color: $bordercolor;
+}
+.big_chips{
+    @include chips ($main-white, $main-black, $main-black)
+}
+.big_chips-active{
+    @include chips ($main-white, $main-black, $main-black);
+    &:hover{
+        background-color:$main-brown ;
+        color: $main-white;
+        border-color: $main-brown;
+    }
+}
+.small_chips{
+    @include chips ($main-white, $main-black, $main-black);
+    &{
+        padding: $pad-sm;
+    }
+}
+.small_chips-active{
+    @include chips ($main-brown, $main-white, $main-brown);
+    &:hover{
+        padding: $pad-sm;
+        background-color:$main-brown ;
+        color: $main-white;
+        border-color: $main-brown;
+    }
+}
+.small_chips-unselected{
+    @include chips ($main-trasparent, $main-grey, $main-grey);
+    &{
+        padding: $pad-sm;
+        background-color: $main-trasparent;
+        color: $main-grey;
+        border-color: $main-grey;
+    }
+}
+
+
+/* Buttons Default */
+
+@mixin btn_default ($backgroundcolor, $colorfont, $bordercolor){
+    padding: $pad-square-l;
+    font-family: $main-font;
+    font-size: $font-size;
+    font-weight: $font-medium;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid $main-white;
+    background-color: $backgroundcolor;
+    color: $colorfont;
+    border-color: $bordercolor;
+}
+.btn_default-primary{
+    @include btn_default($main-black, $main-white, $main-black);
+}
+.btn_default-primary-active{
+    @include btn_default($main-black, $main-white, $main-black);
+    &:hover{
+        background-color:$main-brown ;
+        color: $main-white;
+        border-color: $main-brown;
+    }
+}
+.btn_default-primary-disabled{
+    @include btn_default($main-grey, $main-white, $main-grey);
+}
+.btn_default-primary2{
+    @include btn_default($main-white, $main-black, $main-white);
+}
+.btn_default-secondary{
+    @include btn_default($main-white, $main-black, $main-black);
+}
+.btn_default-secondary-active{
+    @include btn_default($main-trasparent, $main-black, $main-black);
+    &:hover{
+        background-color: $main-trasparent;
+        color: $main-brown;
+        border-color: $main-brown;
+    }
+}
+.btn_default-secondary-disabled{
+    @include btn_default($main-white, $main-black, $main-black);
+    &:hover{
+        background-color: $main-trasparent;
+        color: $main-grey;
+        border-color: $main-grey;
+    }
+}
+.btn_default-secondary2{
+    @include btn_default($main-trasparent, $main-white, $main-white);
+}

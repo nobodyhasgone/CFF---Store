@@ -1,0 +1,26 @@
+.hero__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 121%;
+    span{
+        color: $main-white;
+        font-size: 2.5em;
+        font-family: $main-font;
+        margin-bottom: 24px;
+    }
+}
+
+.hero__img{
+    background-image: url("./src/images/hero/valstar-aw22-home 1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.btn_default-secondary2--hover:hover{
+        background-color: $main-white;
+        color: $main-black;
+        border-color: $main-white;
+}

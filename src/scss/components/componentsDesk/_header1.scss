@@ -1,0 +1,184 @@
+// $neutral-grey: #e0e0e0;
+// $main-black: #000;
+// $main-brown: #886E4C;
+
+
+// .hero {
+//   text-align: center;
+//   &__inner {
+//       background-color: white;
+//       transition: all 0.3s ease;
+//       border-bottom: 1px solid $neutral-grey;
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       align-items: center; 
+//       position: fixed;
+//       top: 0; 
+//       left: 0;
+//       right: 0;
+//       width: 100%;
+//       box-sizing: border-box;
+//       padding: 20px 70px;
+//       &__img {
+//           width: 106.5px;
+//           height: 48px;
+//           margin: 0 auto;
+//       }
+//   }
+//   &__menu, &__icon {
+//       display: flex;
+//       flex-direction: row;
+//       gap: 24px;
+//       list-style-type: none;
+//       a{
+//           text-decoration: none;
+//           text-align: left;
+//       }
+//     > li {
+//       position: relative;
+//       &:hover .dropdown-content{
+//         display: flex;
+//               flex-direction: row;
+//               justify-content: space-between; 
+//               width: auto;
+//               background-color: white;
+//               border: 1px solid $neutral-grey;
+//               padding: 0 15px;
+//             }
+//           }
+//         }
+//   .nested-menu { 
+//     display: block;
+//     position: absolute;
+//     flex-direction: column;
+//     left: 0;
+//     top: 100%;
+//     background-color: white;
+//     border: 1px solid $neutral-grey;
+//     list-style-type: none;
+//     padding: 0 15px;
+//     li {
+//       text-align: left;
+//       letter-spacing: 0.8px;
+//       padding: 8px 50px 8px 0;
+//       a {
+//         filter: invert(100%);
+//         display: block; 
+
+//         &:hover {
+//           color: $main-brown; 
+//         }
+//       }
+//     }
+//   }
+//   .dropdown-content {
+//     display: none; 
+//     position: absolute;
+//     left: 0;
+//     top: 100%;
+//     z-index: 100;
+// }
+
+// .menu-image {
+//     background-image: url('./src/images/hero/shop-home-menu.jpg');
+//     background-size: contain;
+//     background-position: center;
+//     display: block; // Assicura che l'immagine sia visibile all'hover
+//     width: 100px;
+//     height: 100px;
+// }
+// }
+
+
+
+
+// .magnifier a, .message a, .heart a, .account a, .shoppingIcon a {
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     background-position: center;
+//     display: block;
+//     width: 20px;
+//     height: 20px;
+// }
+// .magnifier a {
+//     background-image: url("src/images/icons/magnifierb.svg");
+// }
+// .message a {
+//     background-image: url("src/images/icons/messageb.svg");
+// }
+// .heart a {
+//     background-image: url("src/images/icons/heartb.svg");
+// }
+// .account a {
+//     background-image: url("src/images/icons/accountb.svg");
+// }
+// .shoppingIcon a {
+//     background-image: url("src/images/icons/shoppingbagb.svg");
+// }
+
+
+
+
+// /* Stili specifici per la homepage */
+// body.home .hero__inner {
+//     background-color: transparent;
+//     border-bottom: none;
+
+//     // Se l'header è scrolled, sovrascrivi gli stili
+//   &.scrolled {
+//     background-color: white; // Background bianco quando scrolli
+//     border-bottom: 1px solid $neutral-grey; // Bordo quando scrolli
+//   }
+//       .hero__inner__img {
+//         filter: invert(100%);
+//       }
+
+//       // Logo torna al colore originale dopo lo scroll
+//   &.scrolled .hero__inner__img {
+//     filter: none;
+//   }
+//   }
+  
+// /* Stili per i link e le icone prima dello scroll */
+// body.home .hero__inner .hero__menu a{
+//     color: white; 
+//   }
+  
+//   /* Effetto hover per i menu a tendina */
+//   body.home .hero__menu li:hover .dropdown-menu {
+//     display: block;
+//   }
+  
+//   /* Stili per i menu a tendina */
+//   body.home .dropdown-menu {
+//     display: none;
+//     position: absolute; 
+//     background-color: white; 
+//     min-width: 160px; 
+//     z-index: 1; 
+    
+//   }
+  
+// /* Stili per i link e le icone prima dello scroll */
+// body.home .hero__icon a {
+//     color: white; 
+//     filter: invert(100%); 
+//   }
+  
+//   /* Stili per i link e le icone dopo lo scroll */
+//   body.home .hero__inner.scrolled .hero__menu a,
+//   body.home .hero__inner.scrolled .hero__icon a {
+//     color: black; 
+//     filter: none;
+//   }
+// /* Stili per la navbar dopo lo scroll */
+// body.home .hero__inner.scrolled .hero__inner__img {
+//     filter: none; 
+//   }
+
+
+// //   /* Stili per le icone nella navbar */
+// //   body.home .hero__icon a {
+// //     // Qui puoi specificare gli stili per le icone quando si è nella homepage
+// //   }

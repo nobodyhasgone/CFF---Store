@@ -1,0 +1,20 @@
+@import 'src/scss/color';
+@import 'src/scss/fonts';
+@import 'src/scss/components/componentsDesk/header';
+@import 'src/scss/components/componentsCross/button';
+@import 'src/scss/components/componentsDesk/section';
+@import 'src/scss/components/componentsDesk/footer';
+@import 'src/scss/components/componentsCross/productcard';
+@import 'src/scss/components/componentsDesk/visual';
+@import 'src/scss/components/componentsCross/subscription.scss';
+
+/* Global */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,36 @@
+/* Fonts */
+$main-font: 'Futura Std';
+$font-size: 1rem;
+$font-small: 400;
+$font-medium: 500;
+$font-big: 700; 
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('src/fonts/FuturaStd-Book.woff2') format('woff2'),
+        url('src/fonts/FuturaStd-Book.woff') format('woff');
+    font-weight: $font-small;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Futura Std';
+    src: url('src/fonts/FuturaStd-Medium.woff2') format('woff2'),
+        url('src/fonts/FuturaStd-Medium.woff') format('woff');
+    font-weight: $font-medium;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Futura Std';
+    src: url('src/fonts/FuturaStd-Bold.woff2') format('woff2'),
+        url('src/fonts/FuturaStd-Bold.woff') format('woff');
+    font-weight: $font-big;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    font-family: $main-font;
+    font-size: $font-size;
+}

@@ -1,8 +1,0 @@
-# Modulo "Webformat_Training - LookBook"
-
-|Specifica|Note|
-|---------|----|
-|Le pagine di tipo Lookbook sono composte dai seguenti tre elementi:<br/>- Banner<br/>- Contenuti testuali<br/>- Look con prodotti suggeriti al mouse hover<br/><br/>Questi tre elementi potranno essere composti a piacere per creare la struttura di pagina desiderata tramite Page Builder.<br/><br/>Creare un nuovo widget disponibile in modo da gestirne poi l'iserimento poi con pagebuilder.<br/>Nome: “Look element”<br/><br/>Il funzionamento sarà:<br/>1. visualizzazione dell'immagine con sotto i prezzi dei capi FIG lookelementA<br/>2. Al mouse hover sulla foto, la foto e i prezzi saranno sostituiti con slider dai prodotti FIG lookelementA<br/><br/>Quindi creazione del widget e che gestisca le configurazioni desiderare e al salvataggio visualizzare l'html da utilizzare in page builder.<br/><br/>La configurazione del widget permettera di:<br/>- Title (in modo che sia poi individuabile in lista)<br/>- Store view di applicabilita (scelta multipla)<br/>- Immagine da utilizzare a FE<br/>- Campo dove specificare una lista di SKU separate da virgola da passare al FE con lo stesso ordine.  |Il LookBook vuole essere un piccolo quadrato (tipo le pubblicita’ in pagina) che ha un’immagine di sfondo ed un numero X di prodotti “raccomandati” in sovraimpressione.<br/><br/>Questi prodotti saranno tutti in sconto quindi e’ necessario mostrare il prezzo “regular”, lo “special” e la percentuale di sconto.<br/><br/>E’ necessario poi, all’hover, mostrare gli stessi prodotti anche con la loro immagine principale.|
-
-![ImageA](LookelementA.png)
-![ImageB](LookelementB.png)

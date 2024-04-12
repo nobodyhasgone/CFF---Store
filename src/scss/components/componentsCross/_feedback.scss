@@ -1,0 +1,32 @@
+/* Feedback */
+
+@mixin toast($backgroundcolor){
+    border-radius: 8px;
+    padding: 16px 24px 16px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $backgroundcolor;
+    color: $main-white;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    font-size: $font-size;
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* Negative */
+.toast-red{
+    @include toast($error-feedbackcolor)
+}
+
+/* Positive */
+.toast-green{
+    @include toast($success-feedbackcolor)
+}
+
+/* Standard */
+.toast-brow{
+    @include toast($main-brown)
+}
