@@ -7,6 +7,7 @@
   left: 0;
   width: 100%; 
   z-index: 9999;
+  border-bottom: 1px solid $main-grey;
   
   &__nav {
     display: flex;
@@ -163,7 +164,7 @@
   }
 
 
-  $header-icon-size: 20px; // Dimensione standard per le icone
+$header-icon-size: 20px; // Dimensione standard per le icone
 
 .header__icons-container {
     display: flex;
@@ -215,4 +216,403 @@
           filter: brightness(0) saturate(100%) invert(41%) sepia(65%) saturate(650%) hue-rotate(360deg) brightness(91%) contrast(84%);
         }
     }
+}
+
+/* SearchBar */
+
+.search-container-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 100%; // Posizionato direttamente sotto l'header
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center; // Centra il form nel wrapper
+  background: transparent;
+  pointer-events: none;
+}
+
+.search-container {
+  width: calc(100% - 160px); // Larghezza ridotta per il padding laterale
+  padding: 40px 0;
+  background-color: $main-brown;
+  border-radius: 8px;
+  transform: translateX(100%);  // Inizia completamente fuori dal lato destro dello schermo
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.search-container.is-visible {
+  transform: translateX(0%);  // Muovi al centro
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;  // Abilita interazioni quando è visibile
+}
+.search-container.closing {
+  transform: translateX(100%);  // Anima di nuovo fuori dallo schermo
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease, width 0s ease 0.5s;
+}
+
+
+.search-form {
+  display: flex;
+  align-items: center;
+  width: 80%; // Utilizza tutto lo spazio disponibile
+  background-color: $main-brown; // Colore di sfondo come specificato
+  position: relative; // Per il posizionamento del bordo inferiore
+  margin: 0 auto;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 8px 16px; // Padding interno per l'input
+  border: none;
+  color: white;
+  background-color: transparent; // Sfondo trasparente dell'input
+  outline: none;
+  text-align: center; // Centra il testo e il placeholder
+
+  &::placeholder {
+    color: white; // Colore del placeholder
+    font-family: $main-font;
+    font-size: 1rem;
+  }
+}
+
+.search-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: $main-font;
+  font-size: 1rem;
+}
+
+.search-form::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: white; // Linea bianca sotto l'input e il pulsante
+}
+
+/* Icona Message con effetto overlay */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: -440px;
+  width: 440px;
+  height: 100vh;
+  background-color: $main-white;
+  transition: right 0.5s ease;
+  z-index: 100;
+  overflow-y: auto;
+
+  &__content {
+    padding: 20px;
+    padding-top: 38px;
+    position: relative;
+  }
+
+  &__close-container {
+    position: absolute;
+    top: 38px;
+    right: 25px;
+  }
+
+  &__close-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 16px;
+  }
+  &__close-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('./src/images/icons/close-icon.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    font-size: 24px;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    letter-spacing: 1.5px;
+  }
+
+  &__description {
+    margin: 0 0 40px;
+    font-weight: $font-medium;
+    font-size: 18px;
+    color: $main-black;
+  }
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 20px;
+}
+
+.contact-info a {
+  display: flex;
+  align-items: center;
+  color: $main-black;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: $main-font;
+}
+
+.icon {
+  width: 18px;
+  height: 20px;
+  margin-right: 4.5px;
+  background-size: cover;
+  background-position: center;
+}
+
+.phone-icon {
+  background-image: url('./src/images/icons/mobile-icon.png');
+}
+
+.email-icon {
+  background-image: url('./src/images/icons/email-icon.png');
+}
+
+.address-icon {
+  background-image: url('./src/images/icons/position-icon.png');
+}
+
+.page-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+}
+
+.login-panel {
+  position: fixed;
+  top: 0;
+  right: -440px; // Posizione iniziale fuori dalla vista
+  width: 440px;
+  height: 100vh;
+  background-color: $main-white;
+  transition: right 0.5s ease; // Animazione per mostrare/nascondere il panel
+  z-index: 100;
+  overflow-y: auto;
+
+  &__content {
+    padding: 38px 20px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__close-area {
+    position: absolute;
+    top: 38px;
+    right: 25px;
+  }
+
+  &__close-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 16px;
+
+    &__icon {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url('./src/images/icons/close-icon.svg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    font-size: 24px;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    letter-spacing: 1.5px;
+  }
+
+  &__form {
+    width: 100%; // Il form occupa la larghezza completa del contenuto
+    &__forgot-link {
+      display: inline-block; // Imposta il contenitore del link come inline
+      text-decoration: none;
+      margin-left: auto;
+      a {
+        color: $main-black;
+        text-decoration: underline;
+        &:visited{
+          color: $main-black;
+        }
+        &:hover{
+          color: $main-brown;
+        }
+      }
+    }
+    &__group {
+      .password-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    
+        .login-panel__form__group__input {
+          flex-grow: 1;
+          padding-right: 30px; // Lascia spazio per l'icona
+        }
+    
+        .toggle-password-icon {
+          position: absolute;
+          right: 10px;
+          height: 20px;
+          width: 20px;
+          cursor: pointer;
+        }
+      }
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+
+  &__label-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    letter-spacing: 0.8px;
+  }
+
+  &__required {
+    color: $main-brown;
+  }
+
+  &__input {
+    padding: 0 17px;
+    border: 1px solid $main-black;
+    width: calc(100% - 36px);
+    height: 40px;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    letter-spacing: 1px;
+  }
+}
+
+    &__submit {
+      button {
+        width: 100%;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__signup-link {
+    text-align: left;
+    margin: 24px 0 0;
+    a {
+      text-decoration: underline;
+      color: $main-black;
+      &:visited{
+        color: $main-black;
+      }
+      &:hover{
+        color: $main-brown;
+      }
+    }
+  }
+}
+
+
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%; // Inizia fuori dalla vista
+  width: 400px; // o una larghezza appropriata per il carrello
+  height: 100vh;
+  background-color: $main-white;
+  transition: right 0.5s ease;
+  z-index: 1000; // Assicurati che sia sopra ad altri contenuti
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // Distribuisce lo spazio
+
+  .cart-content {
+    padding: 20px;
+    padding-top: 38px;
+    position: relative;
+  }
+
+  .cart-close-area {
+    position: absolute;
+    top: 38px;
+    right: 25px;
+  }
+
+  .cart-close-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 16px;
+
+      .cart-close-icon {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url('./src/images/icons/close-icon.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+  }
+
+  .cart-title {
+    margin: 0 0 30px;
+    font-size: 24px;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    letter-spacing: 1.5px;
+  }
+  .cart-empty-message {
+    text-align: center;
+    margin-top: auto; 
+    padding-bottom: 100%;
+    font-size: 14px;
+    font-family: $main-font;
+    font-weight: $font-medium;
+  }
 }

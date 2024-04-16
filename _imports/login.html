@@ -1,0 +1,31 @@
+<section class="login-section">
+    <div class="login-section__container">
+      <h2 class="login-section__title">Sign In</h2>
+      <form class="login-section__form">
+        <div class="login-section__form-group">
+          <label for="emailAddress" class="login-section__label">Email Address<span class="login-section__required">*</span></label>
+          <input type="email" id="emailAddress" name="email" required class="login-section__input" placeholder="Email Address">
+        </div>
+  
+        <div class="login-section__form-group">
+          <label for="password" class="login-section__label">Password<span class="login-section__required">*</span></label>
+          <div class="password-wrapper">
+          <input type="password" id="password" name="password" required class="login-section__input" placeholder="Password">
+          <img src="./src/images/icons/icon-eye.png" id="togglePassword" class="toggle-password-icon" alt="Show password">
+        </div>
+        </div>
+        
+        <div class="login-section__form-group login-section__form-group--remember-me">
+          <span class="login-section__form-option"><input type="checkbox" id="rememberMe" name="remember_me" class="login-section__checkbox">
+            <label for="rememberMe" class="login-section__label">Remember me</label></span>
+          <span class="login-section__form-option"><a href="#" class="login-section__forgot-password-link">Forgot password?</a></span>
+        </div>
+        
+        <button type="submit" class="btn_default-primary-active">SIGN IN</button>
+        <div class="login-section__register-link-container">
+          <p>Not registered yet? <a href="#" class="login-section__register-link">Create an account</a></p>
+        </div>
+      </form>
+    </div>
+</section>
+  
