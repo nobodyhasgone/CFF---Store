@@ -1,4 +1,45 @@
 // Header styles using BEM
+body.home {
+  .header {
+    background-color: transparent; // Imposta il colore di sfondo dell'header su trasparente
+    border-bottom: none; // Rimuove il bordo inferiore
+
+    // Applica gli stili per il logo
+    &__logo-img {
+      filter: invert(100%); // Rende il logo bianco
+    }
+
+    // Applica gli stili per le icone
+    &__icon {
+      filter: invert(100%);
+      transition: filter 0.3s ease;
+      &:hover {
+        color: $main-brown;
+      }
+    }
+
+    // Applica gli stili per i link di primo livello
+    &__menu--left {
+      .header__menu-item {
+        .header__menu-link {
+          color: white; // Imposta il colore dei link di primo livello su bianco
+        }
+      }
+    }
+
+    // Assicurati che i link annidati rimangano neri (o qualunque sia il loro colore normale)
+    &__submenu-link {
+      color: black; // Specifica un colore per i link annidati
+      &:hover{
+        color: $main-brown;
+      }
+    }
+  }
+}
+
+
+
+
 .header {
   background-color: $main-white;
   color: $main-black;
@@ -616,3 +657,4 @@ $header-icon-size: 20px; // Dimensione standard per le icone
     font-weight: $font-medium;
   }
 }
+

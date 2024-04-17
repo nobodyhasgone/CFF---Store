@@ -110,3 +110,25 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.header');
+  const toggleHeaderStyle = () => {
+    if (window.scrollY > 0) {
+      document.body.classList.remove('home'); // Rimuove la classe 'home' dal body quando si scrolla
+      header.classList.remove('header-home'); // Puoi usare questa linea se hai stili specifici in una classe header-home
+      header.classList.add('header-normal'); // Aggiunge la classe per lo stile di scroll
+    } else {
+      document.body.classList.add('home'); // Aggiunge la classe 'home' al body quando si è in cima alla pagina
+      header.classList.remove('header-normal'); // Rimuove la classe di scroll
+      header.classList.add('header-home'); // Ripristina lo stile iniziale se necessario
+    }
+  };
+
+  // Aggiungi un listener per l'evento di scroll sulla finestra
+  window.addEventListener('scroll', toggleHeaderStyle);
+
+  // Chiama la funzione inizialmente per impostare lo stile corretto al caricamento della pagina
+  toggleHeaderStyle();
+});
+
+

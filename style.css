@@ -29,6 +29,30 @@ body {
   font-size: 1rem;
 }
 
+body.home .header {
+  background-color: transparent;
+  border-bottom: none;
+}
+body.home .header__logo-img {
+  filter: invert(100%);
+}
+body.home .header__icon {
+  filter: invert(100%);
+  transition: filter 0.3s ease;
+}
+body.home .header__icon:hover {
+  color: #886E4C;
+}
+body.home .header__menu--left .header__menu-item .header__menu-link {
+  color: white;
+}
+body.home .header__submenu-link {
+  color: black;
+}
+body.home .header__submenu-link:hover {
+  color: #886E4C;
+}
+
 .header {
   background-color: #FFFFFF;
   color: #000000;
