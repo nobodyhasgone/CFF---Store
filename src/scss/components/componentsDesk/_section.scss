@@ -8,6 +8,9 @@
     text-align: center;
     font-size: 1.4em;
     margin: 0px 0px 30px;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    text-transform: uppercase;
 }
 .col-1{
     width: calc(100%/6);
@@ -18,4 +21,35 @@
 .container__p{
     font-size: 1.1em;
     padding: 30px 0;
+    font-size: 18px;
+    font-weight: $font-small;
+    font-family: $main-font;
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        padding: 70px 0;
+    }
+
+    .container__title {
+        font-size: 22.5px;
+        letter-spacing: 2.75px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .col-1 {
+        display: none;
+    }
+
+    .col-4 {
+        width: 100%;
+    }
+
+    .container__p {
+        text-align: justify;
+        padding: 10px 20px;
+    }
 }

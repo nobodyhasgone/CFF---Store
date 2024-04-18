@@ -909,6 +909,9 @@ body.home .header__submenu-link:hover {
   text-align: center;
   font-size: 1.4em;
   margin: 0px 0px 30px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .col-1 {
@@ -922,8 +925,34 @@ body.home .header__submenu-link:hover {
 .container__p {
   font-size: 1.1em;
   padding: 30px 0;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Futura Std";
 }
 
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    padding: 70px 0;
+  }
+  .container__title {
+    font-size: 22.5px;
+    letter-spacing: 2.75px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 10px;
+  }
+  .col-1 {
+    display: none;
+  }
+  .col-4 {
+    width: 100%;
+  }
+  .container__p {
+    text-align: justify;
+    padding: 10px 20px;
+  }
+}
 .footer {
   padding: 84px 0 16px 0;
 }
@@ -940,6 +969,25 @@ body.home .header__submenu-link:hover {
   justify-content: space-between;
   width: 100%;
   margin-bottom: 40px;
+}
+.footer__top .list a {
+  position: relative;
+  display: inline-block;
+  color: #000000;
+  text-decoration: none;
+}
+.footer__top .list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+.footer__top .list a:hover::after, .footer__top .list a:focus::after {
+  width: 100%;
 }
 .footer__top .container__footer--logo,
 .footer__top .list {
@@ -982,22 +1030,15 @@ body.home .header__submenu-link:hover {
 }
 .footer__top .container__footer--logo ul li,
 .footer__top .list ul li {
-  padding: 5px 0;
-}
-.footer__top .container__footer--logo ul li a,
-.footer__top .list ul li a {
-  color: #000000;
-  text-decoration: none;
-}
-.footer__top .container__footer--logo ul li a:hover,
-.footer__top .list ul li a:hover {
-  text-decoration: underline;
+  padding: 7px 0;
 }
 .footer__top .container__footer--logo ul li:first-child,
 .footer__top .list ul li:first-child {
   font-weight: 500;
   color: #886E4C;
   text-transform: uppercase;
+  margin: 14px 0px 16px;
+  letter-spacing: 1px;
 }
 
 .footer__bottom {
@@ -1006,7 +1047,7 @@ body.home .header__submenu-link:hover {
   align-items: center;
   padding: 20px 70px;
 }
-.footer__bottom h6 {
+.footer__bottom .copyright {
   color: #000000;
   font-size: 0.75rem;
   font-weight: 500;
@@ -1035,6 +1076,67 @@ body.home .header__submenu-link:hover {
   border-color: #5e5e5e;
 }
 
+@media (max-width: 480px) {
+  .footer {
+    padding: 0;
+  }
+  .footer__top {
+    padding: 0 20px;
+    border-bottom: none;
+  }
+  .footer__top .container__list {
+    margin-bottom: 0;
+  }
+  .container__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .container__footer--logo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .container__footer--logo img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+  }
+  .list:nth-child(2) {
+    display: none;
+  }
+  .container__list > .list:not(:nth-child(2)) {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    padding-left: 5px;
+  }
+  .container__list > .list:not(:nth-child(2)) ul,
+  .container__list > .list:not(:nth-child(2)) ul li,
+  .container__list > .list:not(:nth-child(2)) ul li a {
+    text-align: left;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .footer__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .footer__country-selector {
+    order: -1;
+    padding-bottom: 20px;
+  }
+  .footer__bottom > .copyright {
+    border-top: 1px solid black;
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Futura Std";
+    font-weight: 400;
+  }
+}
 .card {
   font-family: "Futura Std";
   width: 164px;
@@ -1082,7 +1184,7 @@ body.home .header__submenu-link:hover {
   justify-content: center;
   height: 121%;
 }
-.hero__title span {
+.hero__title .hero__title-text {
   color: #FFFFFF;
   font-size: 2.5em;
   font-family: "Futura Std";
@@ -1102,6 +1204,22 @@ body.home .header__submenu-link:hover {
   border-color: #FFFFFF;
 }
 
+@media (max-width: 480px) {
+  .hero__title {
+    padding: 20px;
+  }
+  .hero__title .hero__title-text {
+    font-size: 40px;
+    text-align: center;
+  }
+  .hero__img {
+    height: 80vh;
+  }
+  .btn_default-secondary2 {
+    padding: 16px;
+    font-size: 0.8em;
+  }
+}
 .subscription-container {
   width: 100vw;
   margin: 0 auto;
@@ -1114,8 +1232,9 @@ body.home .header__submenu-link:hover {
 .subscription-container h2,
 .subscription-container p {
   font-size: 24px;
-  font-family: "Futura Std", sans-serif;
+  font-family: "Futura Std";
   font-weight: 500;
+  letter-spacing: 2px;
 }
 
 .subscription-container h2 {
@@ -1126,16 +1245,17 @@ body.home .header__submenu-link:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .subscription-form input[type=email] {
   width: 70%;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   margin-bottom: 20px;
   border: none;
   text-align: center;
   background-color: transparent;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000000;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1144,17 +1264,24 @@ body.home .header__submenu-link:hover {
 .subscription-form input[type=email]::-moz-placeholder {
   text-align: center;
   opacity: 1;
+  font-size: 18px;
+  font-family: "Futura Std";
+  font-weight: 500;
 }
 
 .subscription-form input[type=email]::placeholder {
   text-align: center;
   opacity: 1;
+  font-size: 18px;
+  font-family: "Futura Std";
+  font-weight: 500;
 }
 
 .terms-container {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  letter-spacing: 0.8px;
 }
 
 .terms-container input[type=checkbox] {
@@ -1166,29 +1293,26 @@ body.home .header__submenu-link:hover {
 }
 
 .terms-container a {
-  color: black;
+  color: #000000;
   text-decoration: underline;
 }
-
-.subscribe-button {
-  padding: 16px 140px;
-  display: inline-block;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  border: 1px solid black;
-  background-color: white;
-  cursor: pointer;
+.terms-container a:hover {
+  color: #886E4C;
 }
 
-.subscribe-button:hover {
-  background-color: black;
-  color: white;
+.btn_default-secondary {
+  padding: 16px 140px;
+  letter-spacing: 1px;
+}
+.btn_default-secondary:Hover {
+  background-color: #F8F6F7;
+  color: #000000;
 }
 
 .social-media-list {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+  margin: 18px 0 0;
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -1201,8 +1325,8 @@ body.home .header__submenu-link:hover {
 
 .social-media-list__link {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 17.7px;
+  height: 17.6px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1216,6 +1340,41 @@ body.home .header__submenu-link:hover {
   background-image: url("./src/images/icons/instagram.svg");
 }
 
+.spacing-element {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .subscription-container {
+    padding: 40px 0;
+    margin-bottom: 37px;
+  }
+  .subscription-container h2,
+  .subscription-container p {
+    font-size: 24px;
+    margin-top: 0;
+    letter-spacing: 2px;
+  }
+  .subscription-form input[type=email] {
+    width: 80%;
+    padding: 8px;
+  }
+  .social-media-list {
+    gap: 10px;
+  }
+  .social-media-list__link {
+    width: 17.7px;
+    height: 17.6px;
+  }
+  .spacing-element {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
+    font-family: "Futura Std";
+  }
+}
 .login-section {
   max-width: 100vw;
   margin: 0 auto;

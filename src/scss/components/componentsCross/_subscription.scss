@@ -4,14 +4,15 @@
     margin: 0 auto;
     text-align: center;
     padding: 40px 0;
-    font-family: 'Futura Std';
-    background-color: #F8F6F7;
+    font-family: $main-font;
+    background-color: $neutral-white;
 }
 .subscription-container h2,
 .subscription-container p {
     font-size: 24px;
-    font-family: 'Futura Std', sans-serif; 
-    font-weight: 500;
+    font-family: $main-font; 
+    font-weight: $font-medium;
+    letter-spacing: 2px;
 }
 
 
@@ -23,29 +24,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .subscription-form input[type="email"] {
     width: 70%;
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     margin-bottom: 20px;
     border: none;
     text-align: center;
     background-color: transparent;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $main-black;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 .subscription-form input[type="email"]::placeholder {
     text-align: center; 
-    opacity: 1; 
+    opacity: 1;
+    font-size: 18px;
+    font-family: $main-font;
+    font-weight: $font-medium; 
 }
 
 .terms-container {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    letter-spacing: 0.8px;
 }
 
 .terms-container input[type="checkbox"] {
@@ -57,29 +63,27 @@
 }
 
 .terms-container a {
-    color: black;
+    color: $main-black;
     text-decoration: underline;
+    &:hover{
+        color: $main-brown;
+    }
 }
 
-.subscribe-button {
+.btn_default-secondary{
     padding: 16px 140px;
-    display: inline-block;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    border: 1px solid black;
-    background-color: white;
-    cursor: pointer;
+    letter-spacing: 1px;
+    &:Hover{
+    background-color: $neutral-white;
+    color: $main-black;
+    }
 }
 
-.subscribe-button:hover {
-    background-color: black;
-    color: white;
-}
 
 .social-media-list {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 18px 0 0;
     display: flex;
     justify-content: center; 
     gap: 16px;
@@ -92,8 +96,8 @@
 
 .social-media-list__link {
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 17.7px;
+    height: 17.6px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -105,4 +109,45 @@
 
 .social-media-list__link--instagram {
     background-image: url('./src/images/icons/instagram.svg');
+}
+
+.spacing-element {
+    display: none;
+}
+
+
+@media (max-width: 480px) {
+    .subscription-container {
+        padding: 40px 0;
+        margin-bottom: 37px;
+    }
+
+    .subscription-container h2,
+    .subscription-container p {
+        font-size: 24px;
+        margin-top: 0;
+        letter-spacing: 2px;
+    }
+
+    .subscription-form input[type="email"] {
+        width: 80%; // Aumenta la larghezza dell'input per facilitare l'ingresso
+        padding: 8px; // Leggera riduzione del padding
+    }
+
+    .social-media-list {
+        gap: 10px; // Riduci lo spazio tra le icone dei social
+    }
+
+    .social-media-list__link {
+        width: 17.7px; // Riduci le dimensioni delle icone dei social
+        height: 17.6px;
+    }
+    .spacing-element {
+        display: block;
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: $font-small;
+        font-family: $main-font;
+    }
 }

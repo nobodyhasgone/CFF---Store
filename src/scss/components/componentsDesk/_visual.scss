@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 121%;
-    span{
+    .hero__title-text{
         color: $main-white;
         font-size: 2.5em;
         font-family: $main-font;
@@ -23,4 +23,25 @@
         background-color: $main-white;
         color: $main-black;
         border-color: $main-white;
+}
+
+
+@media (max-width: 480px) {
+    .hero__title {
+        padding: 20px;
+
+        .hero__title-text {
+            font-size: 40px;
+            text-align: center;
+        }
+    }
+
+    .hero__img {
+        height: 80vh;  // Riduci l'altezza per i dispositivi mobili per non occupare tutto lo schermo
+    }
+
+    .btn_default-secondary2 {
+        padding: 16px;  // Riduci la dimensione del bottone per adattarsi meglio agli schermi piccoli
+        font-size: 0.8em; // Adatta la dimensione del testo nel bottone
+    }
 }

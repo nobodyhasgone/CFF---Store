@@ -37,9 +37,6 @@ body.home {
   }
 }
 
-
-
-
 .header {
   background-color: $main-white;
   color: $main-black;
@@ -198,12 +195,14 @@ body.home {
   }
 }
 
+
+
+
 // You can add styles for the dropdown image and links here
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
   }
-
 
 $header-icon-size: 20px; // Dimensione standard per le icone
 
@@ -294,7 +293,6 @@ $header-icon-size: 20px; // Dimensione standard per le icone
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease, width 0s ease 0.5s;
 }
-
 
 .search-form {
   display: flex;
@@ -594,8 +592,6 @@ $header-icon-size: 20px; // Dimensione standard per le icone
   }
 }
 
-
-
 .cart-overlay {
   position: fixed;
   top: 0;
@@ -657,4 +653,5 @@ $header-icon-size: 20px; // Dimensione standard per le icone
     font-weight: $font-medium;
   }
 }
+
 
