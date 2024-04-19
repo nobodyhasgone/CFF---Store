@@ -1,0 +1,158 @@
+.header {
+    background-color: $main-white;
+    color: $main-black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 9999;
+    border-bottom: 1px solid $main-grey;
+    
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 80px;
+      min-height: 85px;
+    }
+    
+    &__menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      
+      &--left, &--right {
+          display: flex;
+        }
+      
+      &-item {
+        position: relative;
+        padding: 0.5rem 0;
+        &:hover .header__dropdown-menu {
+          display: block;
+          animation: fadeIn 0.3s; // Add a nice fade-in effect
+        }
+      }
+      
+      &-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: $main-black;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        text-transform: uppercase;
+        &:hover {
+          background-color: $main-white;
+        }
+        
+        &:hover, &:focus {
+          color: $main-black;
+        }
+      }
+    }
+    
+    &__dropdown-menu {
+      display: none; // Start with the dropdown menu hidden
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: max-content;
+      border: 1px solid $neutral-grey2;
+      background-color: $main-white;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+      transition: opacity 0.3s, visibility 0.3s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+      display: flex;
+      flex-direction: row; // Immagine a fianco della lista
+      padding: 1rem;
+      
+      &:hover {
+        display: flex; // Show the dropdown when hovered
+      }
+      .header__menu-item:hover & {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+    }
+    &__menu-item {
+      position: relative;
+      &:hover > .header__dropdown-menu {
+        display: flex;
+      }
+    }
+    
+    &__submenu {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-right: 50px;
+      gap: 16px;
+      
+      &:after {
+        content: '';
+        clear: both;
+        display: block;
+      }
+    }
+    &__submenu-link {
+      color: $main-black; // Colore base dei link impostato su nero
+      text-decoration: none;
+      display: block;
+      transition: color 0.3s ease;
+      
+  
+      &:hover, &:focus {
+        color: $main-brown; // Cambia colore al passaggio del mouse
+      }
+    }
+  &__submenu-item {
+      position: relative;
+      &:hover > .header__dropdown-menu {
+          display: flex; // Mostra il dropdown
+          // Potresti aver bisogno di aggiustare il valore di top se c'è ancora uno spazio
+          top: calc(100% - 1px); // '1px' può essere regolato a seconda del tuo layout
+        }
+      
+      &-link {
+        color: $main-black;
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+        &:hover, &:focus {
+          color: $main-green;
+        }
+      }
+  }
+    
+    &__image, &__submenu-image {
+      width: 150px; // Larghezza dell'immagine nel dropdown
+      height: auto; // Mantiene l'aspect ratio
+      align-self: flex-start; // Margine tra immagine e lista
+    }
+    &__logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__logo-img {
+      height: 3rem;
+    }
+    &__menu--right {
+      &-item {
+        position: relative;
+        margin-left: 1rem;
+      }
+      
+      &-link {
+        display: block;
+        text-decoration: none;
+      }
+    }
+  }

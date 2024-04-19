@@ -1,0 +1,196 @@
+// Stili per la sezione mobile
+.mobile-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: $main-white;
+    color: $main-black;
+    min-height: 45px;
+    padding-top: 14px;
+    letter-spacing: 1px;
+
+    &__menu-toggle {
+      &--bar {
+        display: block;
+        width: 20px;
+        height: 1px;
+        margin: 4px 0;
+        background-color: $main-black;
+        cursor: pointer;
+      }
+    }
+  
+    &__logo img {
+        height: 32px;
+        filter: none;
+      }
+  
+      &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: baseline;
+        gap: 20px;
+    
+        &__icon-link img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+  }
+
+  
+  
+  @media (max-width: 768px) {
+    .mobile-navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $main-white; // Sfondo trasparente di default
+  
+      &__menu-toggle--bar {
+        background-color: $main-black; // Barre dell'hamburger menu bianche di default
+      }
+      .mobile-navbar__logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); 
+        z-index: 1; 
+    }
+  
+      &__icons {
+        &__icon-link {
+          &.search-icon img {
+            background-image: url("./src/images/icons/magnifier_white.svg");
+          }
+          &.shopping-icon img {
+            background-image: url("./src/images/icons/Shopping Icon_white.svg");
+          }
+        }
+      }
+    }
+    .header__nav, .header__icon-item {
+      display: none;
+    }
+  }
+  @media (min-width: 769px) {
+    .mobile-navbar,
+    .side-menu {
+        display: none;  // Nasconde la navbar mobile e il side menu sui desktop
+    }
+}
+
+  
+  
+  
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background-color: $main-white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 16px;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+  
+  .side-menu__close {
+    width: 24px;
+    height: 24px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .side-menu__close img {
+    width: 100%;
+    height: auto;
+  }
+  .side-menu ul {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .side-menu ul li {
+    text-align: left; 
+  }
+  
+  
+  /* Visualizza il menu quando la classe 'active' viene aggiunta via JavaScript */
+  .side-menu.active {
+    right: 0;
+  }
+  
+  .side-menu__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: margin-bottom 0.3s ease;
+    
+    .side-menu__link {
+      text-transform: uppercase;
+      padding: 10px 15px 10px 0px;
+      font-size: 24px;
+      color: $main-black;
+      font-family: $main-font;
+      font-weight: $font-medium;
+    }
+  
+    .side-menu__toggle {
+      cursor: pointer;
+      img {
+        display: block; 
+        width: 24px;
+        height: 24px;
+        padding-right: 24px;
+      }
+    }
+  
+    .side-menu__sub-menu {
+      display: none;
+      list-style-type: none;
+      padding-left: 10px; 
+      position: absolute; 
+      right: 0;
+      left: 10px;
+      top: 100%; 
+      width: 100%;
+      li { 
+        padding: 10px 30px 10px 15px;
+        a {
+          color: $main-black;
+        }
+      }
+    }
+  }
+
+  .mobile-navbar__icon-link {
+    display:inline-flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    background: none; 
+    border: none; 
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 24px;
+    color: inherit; 
+    outline: none;
+    text-decoration: none;
+    a:visited{
+      color: $main-black;
+    }
+}
+
+.mobile-navbar__icon-link__icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+    display: inline-block;
+}
+

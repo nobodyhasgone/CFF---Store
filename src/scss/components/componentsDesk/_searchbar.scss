@@ -1,0 +1,77 @@
+.search-container-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 100%; // Posizionato direttamente sotto l'header
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center; // Centra il form nel wrapper
+    background: transparent;
+    pointer-events: none;
+  }
+  
+  .search-container {
+    width: calc(100% - 160px); // Larghezza ridotta per il padding laterale
+    padding: 40px 0;
+    background-color: $main-brown;
+    border-radius: 8px;
+    transform: translateX(100%);  // Inizia completamente fuori dal lato destro dello schermo
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .search-container.is-visible {
+    transform: translateX(0%);  // Muovi al centro
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;  // Abilita interazioni quando è visibile
+  }
+  .search-container.closing {
+    transform: translateX(100%);  // Anima di nuovo fuori dallo schermo
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease, width 0s ease 0.5s;
+  }
+  
+  .search-form {
+    display: flex;
+    align-items: center;
+    width: 80%; // Utilizza tutto lo spazio disponibile
+    background-color: $main-brown; // Colore di sfondo come specificato
+    position: relative; // Per il posizionamento del bordo inferiore
+    margin: 0 auto;
+  }
+  
+  .search-input {
+    flex-grow: 1;
+    padding: 8px 16px; // Padding interno per l'input
+    border: none;
+    color: white;
+    background-color: transparent; // Sfondo trasparente dell'input
+    outline: none;
+    text-align: center; // Centra il testo e il placeholder
+  
+    &::placeholder {
+      color: white; // Colore del placeholder
+      font-family: $main-font;
+      font-size: 1rem;
+    }
+  }
+  
+  .search-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: $main-font;
+    font-size: 1rem;
+  }
+  
+  .search-form::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: white; // Linea bianca sotto l'input e il pulsante
+  }
