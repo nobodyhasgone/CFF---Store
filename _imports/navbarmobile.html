@@ -1,5 +1,5 @@
 <nav class="mobile-navbar">
-  <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
+  <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu('side-menu')">
     <span class="mobile-navbar__menu-toggle--bar"></span>
     <span class="mobile-navbar__menu-toggle--bar"></span>
     <span class="mobile-navbar__menu-toggle--bar"></span>
@@ -12,17 +12,48 @@
   </div>
 
   <div class="mobile-navbar__icons">
-    <a href="#" class="mobile-navbar__icon-link mobile-navbar__icon-link--search" aria-label="Search">
+    <a href="#" class="mobile-navbar__icon-link mobile-navbar__icon-link--search" aria-label="Search" onclick="toggleMenu('search-menu')">
         <img src="./src/images/icons/magnifierb.svg" alt="Search" class="visually-hidden">
     </a>
-    <a href="#" class="mobile-navbar__icon-link mobile-navbar__icon-link--cart" aria-label="View Cart">
+    <a href="#" class="mobile-navbar__icon-link mobile-navbar__icon-link--cart" aria-label="View Cart" onclick="toggleMenu('cart-menu')">
         <img src="./src/images/icons/shoppingbagb.svg" alt="Cart" class="visually-hidden">
     </a>
+</div>
+<!-- Menu a tendina per Search -->
+<div id="search-menu" class="side-menu" style="display: none;">
+    <div class="side-menu__top">
+        <span>Search</span>
+        <div class="side-menu__close" onclick="toggleMenu('search-menu')">
+            <img src="./src/images/icons/close-icon.svg" alt="Close menu" />
+        </div>
+    </div>
+    <form class="search-panel__mobile">
+        <div class="input-wrapper__mobile">
+            <input type="search" name="query" placeholder="Start browsing..." class="search-input__mobile" aria-label="Search"/>
+        </div>
+        <span class="button-wrapper__mobile">
+            <button type="submit" class="search-submit__mobile">Search</button>
+        </span>
+    </form>
+    
+    
+</div>
+
+
+<!-- Menu a tendina per Cart -->
+<div id="cart-menu" class="side-menu" style="display: none;">
+    <div class="side-menu__top">
+        <span>Cart</span>
+        <div class="side-menu__close" onclick="toggleMenu('cart-menu')">
+            <img src="./src/images/icons/close-icon.svg" alt="Close menu" />
+        </div>
+    </div>
+    <p class="cart__mobile">You have no items in your shopping bag.</p>
 </div>
 
 <!-- Menu a tendina -->
 <div id="side-menu" class="side-menu" style="display: none;">
-    <div class="side-menu__close" onclick="toggleMenu()">
+    <div class="side-menu__close" onclick="toggleMenu('side-menu')">
         <img src="./src/images/icons/close-icon.svg" alt="Close menu" />
       </div>
       
@@ -80,11 +111,27 @@
             </button>
         </li>
         <li>
-            <button class="mobile-navbar__icon-link mobile-navbar__icon-link--contacts" aria-label="View Contacts">
+            <button class="mobile-navbar__icon-link mobile-navbar__icon-link--contacts" aria-label="View Contacts" onclick="toggleContactsMenu()">
                 <img src="./src/images/icons/messageb.svg" alt="Contacts" class="mobile-navbar__icon-link__icon">
                 Contacts
             </button>
         </li>
+        
     </ul>
   </div>
+    <!-- Menu a tendina per i contatti -->
+    <div id="contacts-menu" class="side-menu" style="display: none;">
+        <div class="header__mobile">
+            <h4 class="overlay__title">Contact Us</h4>
+            <div class="side-menu__close" onclick="toggleMenu('contacts-menu')">
+                <img src="./src/images/icons/close-icon.svg" alt="Close menu" />
+            </div>
+        </div>
+          <p class="overlay__description">Unfortunately, it is currently not possible to order directly through our website from your country. However, we're happy to support you in finalising your order. To purchase, please reach out to our customer service.</p>
+          <ul class="contact-info">
+            <li><a href="tel:+390209978503"><span class="icon phone-icon"></span>+39 02 09978503</a></li>
+            <li><a href="mailto:customercare@valstarmilano.com"><span class="icon email-icon"></span>customercare@valstarmilano.com</a></li>
+            <li><a href="https://goo.gl/maps/J3TMPia2oNd3jpwy9" target="_blank" rel="noopener noreferrer"><span class="icon address-icon"></span>Via Brera 2, Milano, Italy</a></li>
+          </ul>
+      </div>
 </nav>
