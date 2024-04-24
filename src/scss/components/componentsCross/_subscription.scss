@@ -71,12 +71,15 @@
 }
 
 .btn_default-secondary{
-    padding: 16px 140px;
+    
     letter-spacing: 1px;
     &:Hover{
     background-color: $neutral-white;
     color: $main-black;
     }
+}
+.extra{
+    padding: 16px 140px;
 }
 
 
@@ -121,7 +124,9 @@
         padding: 40px 0;
         margin-bottom: 37px;
     }
-
+    .extra{
+        padding: 16px 90px;
+    }
     .subscription-container h2,
     .subscription-container p {
         font-size: 24px;

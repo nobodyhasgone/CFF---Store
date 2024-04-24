@@ -1,0 +1,32 @@
+#backToTop {
+    cursor: pointer;
+    width: 45px; 
+    height: 45px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #C4C4C4; 
+    background-color: white; 
+    border-radius: 50%; 
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    display: none; 
+
+    .arrow {
+        width: 50%;
+        height: auto;
+        filter: invert(30%); 
+        transition: filter 0.3s ease;
+    }
+
+    &:hover {
+        background-color: $main-brown;
+        border-color: $main-brown;
+
+        .arrow {
+            filter: none;
+        }
+    }
+}

@@ -4,7 +4,7 @@
 @import 'src/scss/components/componentsCross/button';
 @import 'src/scss/components/componentsDesk/section';
 @import 'src/scss/components/componentsDesk/footer';
-@import 'src/scss/components/componentsCross/productcard';
+@import 'src/scss/components/componentsCross/card';
 @import 'src/scss/components/componentsDesk/visual';
 @import 'src/scss/components/componentsCross/subscription.scss';
 @import 'src/scss/components/componentsCross/login';
@@ -13,8 +13,11 @@
 @import 'src/scss/components/componentsDesk/overlaymessages';
 @import 'src/scss/components/componentsDesk/overlaycart';
 @import 'src/scss/components/componentsDesk/overlayaccount';
-
 @import 'src/scss/components/componentsMob/navbarmobile';
+@import 'src/scss/components/componentsCross/filtersoverlay';
+@import 'src/scss/components/componentsCross/productpage';
+@import 'src/scss/components/componentsCross/sortby';
+@import 'src/scss/components/componentsCross/arrowup';
 
 /* Global */
 body {

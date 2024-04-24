@@ -133,29 +133,33 @@ body.home .header__submenu-link:hover {
 .btn_filter {
   padding: 8px 12px;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 12px;
   font-family: "Futura Std";
   font-weight: 500;
   text-align: center;
   color: #000000;
   border-color: #000000;
   background-color: #FFFFFF;
+  cursor: pointer;
+  letter-spacing: 1px;
 }
 
 .btn_filter-active {
   padding: 8px 12px;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 12px;
   font-family: "Futura Std";
   font-weight: 500;
   text-align: center;
   color: #000000;
   border-color: #000000;
   background-color: #FFFFFF;
+  cursor: pointer;
+  letter-spacing: 1px;
 }
 .btn_filter-active:hover {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #000000;
+  color: #FFFFFF;
   border-color: #000000;
 }
 
@@ -169,6 +173,7 @@ body.home .header__submenu-link:hover {
   text-align: center;
   color: #FFFFFF;
   background-color: #000000;
+  cursor: pointer;
 }
 
 .delivered {
@@ -180,6 +185,7 @@ body.home .header__submenu-link:hover {
   text-align: center;
   color: #FFFFFF;
   background-color: #36783C;
+  cursor: pointer;
 }
 
 .pending {
@@ -191,6 +197,7 @@ body.home .header__submenu-link:hover {
   text-align: center;
   color: #000000;
   background-color: #F3C34A;
+  cursor: pointer;
 }
 
 .refunded {
@@ -202,6 +209,7 @@ body.home .header__submenu-link:hover {
   text-align: center;
   color: #FFFFFF;
   background-color: #36783C;
+  cursor: pointer;
 }
 
 /* Chips */
@@ -214,6 +222,8 @@ body.home .header__submenu-link:hover {
   background-color: #FFFFFF;
   color: #000000;
   border-color: #000000;
+  border-radius: 16px;
+  cursor: pointer;
 }
 
 .big_chips-active {
@@ -225,6 +235,8 @@ body.home .header__submenu-link:hover {
   background-color: #FFFFFF;
   color: #000000;
   border-color: #000000;
+  border-radius: 16px;
+  cursor: pointer;
 }
 .big_chips-active:hover {
   background-color: #886E4C;
@@ -241,6 +253,8 @@ body.home .header__submenu-link:hover {
   background-color: #FFFFFF;
   color: #000000;
   border-color: #000000;
+  border-radius: 16px;
+  cursor: pointer;
 }
 .small_chips {
   padding: 8px 12px;
@@ -252,9 +266,12 @@ body.home .header__submenu-link:hover {
   font-family: "Futura Std";
   font-weight: 500;
   font-size: 1rem;
-  background-color: #886E4C;
-  color: #FFFFFF;
-  border-color: #886E4C;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-color: #000000;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
 }
 .small_chips-active:hover {
   padding: 8px 12px;
@@ -272,6 +289,8 @@ body.home .header__submenu-link:hover {
   background-color: rgba(255, 255, 255, 0);
   color: #8E8E93;
   border-color: #8E8E93;
+  border-radius: 16px;
+  cursor: pointer;
 }
 .small_chips-unselected {
   padding: 8px 12px;
@@ -292,6 +311,7 @@ body.home .header__submenu-link:hover {
   background-color: #000000;
   color: #FFFFFF;
   border-color: #000000;
+  cursor: pointer;
 }
 
 .btn_default-primary-active {
@@ -305,6 +325,7 @@ body.home .header__submenu-link:hover {
   background-color: #000000;
   color: #FFFFFF;
   border-color: #000000;
+  cursor: pointer;
 }
 .btn_default-primary-active:hover {
   background-color: #886E4C;
@@ -323,6 +344,10 @@ body.home .header__submenu-link:hover {
   background-color: #8E8E93;
   color: #FFFFFF;
   border-color: #8E8E93;
+  cursor: pointer;
+}
+.btn_default-primary-disabled:hover {
+  background-color: #000000;
 }
 
 .btn_default-primary2 {
@@ -336,6 +361,7 @@ body.home .header__submenu-link:hover {
   background-color: #FFFFFF;
   color: #000000;
   border-color: #FFFFFF;
+  cursor: pointer;
 }
 
 .btn_default-secondary {
@@ -349,6 +375,7 @@ body.home .header__submenu-link:hover {
   background-color: #FFFFFF;
   color: #000000;
   border-color: #000000;
+  cursor: pointer;
 }
 
 .btn_default-secondary-active {
@@ -362,6 +389,7 @@ body.home .header__submenu-link:hover {
   background-color: rgba(255, 255, 255, 0);
   color: #000000;
   border-color: #000000;
+  cursor: pointer;
 }
 .btn_default-secondary-active:hover {
   background-color: rgba(255, 255, 255, 0);
@@ -380,6 +408,7 @@ body.home .header__submenu-link:hover {
   background-color: #FFFFFF;
   color: #000000;
   border-color: #000000;
+  cursor: pointer;
 }
 .btn_default-secondary-disabled:hover {
   background-color: rgba(255, 255, 255, 0);
@@ -398,6 +427,7 @@ body.home .header__submenu-link:hover {
   background-color: rgba(255, 255, 255, 0);
   color: #FFFFFF;
   border-color: #FFFFFF;
+  cursor: pointer;
 }
 
 .container {
@@ -578,9 +608,9 @@ body.home .header__submenu-link:hover {
   border-color: #5e5e5e;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .footer {
-    padding: 0;
+    padding: 20px 0 0 0;
   }
   .footer__top {
     padding: 0 20px;
@@ -640,35 +670,79 @@ body.home .header__submenu-link:hover {
   }
 }
 .card {
-  font-family: "Futura Std";
-  width: 164px;
-  height: 311px;
-  margin: auto;
+  background: #FFF;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.card .card__image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.card .card__image-container .card__image {
+  width: 100%;
+  height: auto;
+}
+.card .card__image-container .card__btn {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  right: 15px;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: none;
   text-align: center;
+  padding: 10px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: calc(100% - 30px);
+  font-weight: 400;
+  font-family: "Futura Std";
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.card:hover .card__btn {
+  opacity: 1;
+}
+.card__image {
+  width: 100%;
+  height: auto;
+}
+.card__name {
+  text-transform: uppercase;
+  padding: 3px 0;
+  text-align: left;
+  margin: 0;
+  font-size: 12px;
+  font-family: "Futura Std";
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.card__description {
+  text-align: left;
+  font-size: 10px;
+  padding: 3px 0;
+  margin: 0;
+  font-family: "Futura Std";
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 .card__price {
-  color: grey;
-  font-size: 22px;
+  text-align: left;
+  font-size: 12px;
+  font-family: "Futura Std";
+  font-weight: 400;
 }
 .card__bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 0;
 }
-.card__bottom .card__price {
-  margin: 0;
-}
-.card__bottom img {
-  width: 16px;
-  height: 16px;
-}
-
-.wish__card {
-  font-family: "Futura Std";
-  width: 164px;
-  height: 311px;
-  margin: auto;
-  text-align: center;
+.card__favorite {
+  cursor: pointer;
 }
 
 .wish__card img {
@@ -679,6 +753,100 @@ body.home .header__submenu-link:hover {
   height: 16px;
 }
 
+.shop-section__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0;
+  padding-top: 30px;
+}
+.pagination .page-number {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 18px;
+  font-family: "Futura Std";
+}
+.pagination .page-number.current-page::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 2px;
+  background-color: black;
+  width: 100%;
+}
+.pagination .page-number:hover {
+  color: #886E4C;
+}
+.pagination .pagination-arrow {
+  order: 2;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #C4C4C4;
+  background-color: white;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.pagination .pagination-arrow .arrow {
+  width: 30%;
+  height: auto;
+  filter: invert(30%);
+  transition: filter 0.3s ease;
+}
+.pagination .pagination-arrow:hover {
+  background-color: #886E4C;
+  border-color: #886E4C;
+}
+.pagination .pagination-arrow:hover .arrow {
+  filter: none;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .hero__title {
   display: flex;
   flex-direction: column;
@@ -711,7 +879,7 @@ body.home .header__submenu-link:hover {
     padding: 20px;
   }
   .hero__title .hero__title-text {
-    font-size: 40px;
+    font-size: 24px;
     text-align: center;
   }
   .hero__img {
@@ -803,12 +971,15 @@ body.home .header__submenu-link:hover {
 }
 
 .btn_default-secondary {
-  padding: 16px 140px;
   letter-spacing: 1px;
 }
 .btn_default-secondary:Hover {
   background-color: #F8F6F7;
   color: #000000;
+}
+
+.extra {
+  padding: 16px 140px;
 }
 
 .social-media-list {
@@ -850,6 +1021,9 @@ body.home .header__submenu-link:hover {
   .subscription-container {
     padding: 40px 0;
     margin-bottom: 37px;
+  }
+  .extra {
+    padding: 16px 90px;
   }
   .subscription-container h2,
   .subscription-container p {
@@ -1015,7 +1189,7 @@ body.home .header__submenu-link:hover {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 999;
   border-bottom: 1px solid #8E8E93;
 }
 .header__nav {
@@ -1303,6 +1477,9 @@ body.home .header__submenu-link:hover {
   text-decoration: none;
   font-size: 18px;
   font-family: "Futura Std";
+}
+.contact-info a:hover {
+  color: #886E4C;
 }
 
 .icon {
@@ -1871,6 +2048,282 @@ body.home--mobile .mobile-navbar__menu-toggle--bar, body.home--mobile .mobile-na
   filter: none;
 }
 .mobile-navbar.scrolled .mobile-navbar__icons .mobile-navbar__icon-link img {
+  filter: none;
+}
+
+.container__filters {
+  padding: 24px;
+  width: 391px;
+  background-color: #fff;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translateX(0%);
+  transition: transform 1s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  box-sizing: border-box;
+  height: 100vh;
+}
+.container__filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container__filters-bg {
+  font-size: 24px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.container__filters-close {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+.container__filters-section {
+  margin-top: 20px;
+}
+.container__filters-subtitle {
+  font-size: 12px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-family: "Futura Std";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.container__filters-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.container__filters-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 20px 0;
+  padding-top: 50px;
+  width: 100%;
+}
+.container__filters-actions button {
+  flex: 1 0 0%;
+  min-width: 120px;
+  text-align: center;
+}
+
+.container__filters-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.container__filters-colors .container__filters-color {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(131, 111, 82, 0.2);
+  cursor: pointer;
+}
+.container__filters-colors .container__filters-color:hover {
+  border: 1px solid #886E4C;
+}
+.container__filters-colors .container__filters-color:hover .color-tooltip {
+  visibility: visible;
+}
+.container__filters-colors .container__filters-color .color-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 5px;
+}
+.container__filters-colors .container__filters-color .color-cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: black;
+  visibility: hidden;
+  text-shadow: 0 0 3px white;
+}
+.container__filters-colors .container__filters-color.selected .color-cross {
+  visibility: visible;
+}
+.container__filters-colors .container__filters-color:nth-child(1) {
+  background-color: #C1B197;
+}
+.container__filters-colors .container__filters-color:nth-child(2) {
+  background-color: #000000;
+}
+.container__filters-colors .container__filters-color:nth-child(3) {
+  background-color: #2359AC;
+}
+.container__filters-colors .container__filters-color:nth-child(4) {
+  background-color: #8E6535;
+}
+.container__filters-colors .container__filters-color:nth-child(5) {
+  background-color: #000A63;
+}
+.container__filters-colors .container__filters-color:nth-child(6) {
+  background-color: #1B3D0C;
+}
+.container__filters-colors .container__filters-color:nth-child(7) {
+  background-color: #B0AEAE;
+}
+.container__filters-colors .container__filters-color:nth-child(8) {
+  background-color: #59CAFA;
+}
+.container__filters-colors .container__filters-color:nth-child(9) {
+  background-color: #B2CFA9;
+}
+.container__filters-colors .container__filters-color:nth-child(10) {
+  background-color: #F3A83C;
+}
+.container__filters-colors .container__filters-color:nth-child(11) {
+  background-color: #872191;
+}
+.container__filters-colors .container__filters-color:nth-child(12) {
+  background-color: #E23427;
+}
+.container__filters-colors .container__filters-color:nth-child(13) {
+  background-color: #FFFFFF;
+}
+
+.filters-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.filters-overlay.is-visible {
+  display: block;
+}
+
+.main__container-shop {
+  margin: 0 auto;
+  width: 100%;
+  padding: 100px 85px 0px 85px;
+  box-sizing: border-box;
+}
+.main__container-shop__title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  letter-spacing: -0.41px;
+}
+.main__container-shop__filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: static;
+  z-index: 1;
+}
+
+.custom-select {
+  font-family: sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.select-title {
+  color: #000000;
+  font-family: "Futura Std";
+  font-weight: 500;
+  font-size: 1rem;
+  align-items: baseline;
+}
+
+.select-trigger {
+  cursor: pointer;
+  color: #886E4C;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.select-dropdown {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  border: 1px solid black;
+  background-color: white;
+  white-space: nowrap;
+  min-width: 100%;
+  width: auto;
+  display: none;
+  z-index: 1000;
+}
+
+.select-dropdown li {
+  padding: 8px 16px;
+  cursor: pointer;
+  clear: both;
+}
+
+.select-dropdown li:hover {
+  text-decoration: underline;
+}
+
+.arrow {
+  width: 8px; /* Regola la larghezza secondo le tue esigenze */
+  height: auto;
+  vertical-align: middle; /* Per allineare l'SVG con il testo */
+}
+
+/* Esempio per cambiare colore all'SVG inline al passaggio del mouse */
+.select-trigger:hover .arrow {
+  fill: #886E4C; /* Cambia il colore del riempimento dell'SVG */
+}
+
+#backToTop {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #C4C4C4;
+  background-color: white;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+#backToTop .arrow {
+  width: 50%;
+  height: auto;
+  filter: invert(30%);
+  transition: filter 0.3s ease;
+}
+#backToTop:hover {
+  background-color: #886E4C;
+  border-color: #886E4C;
+}
+#backToTop:hover .arrow {
   filter: none;
 }
 

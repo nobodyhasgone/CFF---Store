@@ -11,13 +11,15 @@ $radius: 16px;
 @mixin btn_filter($colorfont, $bordercolor, $backgroundcolor){
     padding: $pad-sm;
     border-radius: 4px;
-    font-size: $font-size;
+    font-size: 12px;
     font-family: $main-font;
     font-weight: $font-medium;
     text-align: center;
     color: $colorfont;
     border-color: $bordercolor;
     background-color: $backgroundcolor;
+    cursor: pointer;
+    letter-spacing: 1px;
 }
 .btn_filter{
     @include btn_filter($main-black, $main-black, $main-white)
@@ -25,8 +27,8 @@ $radius: 16px;
 .btn_filter-active{
     @include btn_filter($main-black, $main-black, $main-white);
     &:hover {
-        background-color: $main-white;
-        color: $main-black;
+        background-color: $main-black;
+        color: $main-white;
         border-color: $main-black;
     }
 }
@@ -41,6 +43,7 @@ $radius: 16px;
     text-align: center;
     color: $colorfont;
     background-color: $backgroundcolor;
+    cursor: pointer;
 }
 
 .shipped {
@@ -67,6 +70,8 @@ $radius: 16px;
     background-color: $backgroundcolor;
     color: $colorfont;
     border-color: $bordercolor;
+    border-radius: 16px;
+    cursor: pointer;
 }
 .big_chips{
     @include chips ($main-white, $main-black, $main-black)
@@ -86,7 +91,8 @@ $radius: 16px;
     }
 }
 .small_chips-active{
-    @include chips ($main-brown, $main-white, $main-brown);
+    @include chips ($main-white, $main-black, $main-black);
+    padding: $pad-sm;
     &:hover{
         padding: $pad-sm;
         background-color:$main-brown ;
@@ -118,6 +124,7 @@ $radius: 16px;
     background-color: $backgroundcolor;
     color: $colorfont;
     border-color: $bordercolor;
+    cursor: pointer;
 }
 .btn_default-primary{
     @include btn_default($main-black, $main-white, $main-black);
@@ -132,6 +139,9 @@ $radius: 16px;
 }
 .btn_default-primary-disabled{
     @include btn_default($main-grey, $main-white, $main-grey);
+    &:hover{
+        background-color: $main-black;
+    }
 }
 .btn_default-primary2{
     @include btn_default($main-white, $main-black, $main-white);

@@ -1,0 +1,24 @@
+.main__container-shop {
+    margin: 0 auto;
+    width: 100%; 
+    padding: 100px 85px 0px 85px;
+    box-sizing: border-box;
+
+    &__title {
+        text-align: center; 
+        font-size: 2em;
+        margin-bottom: 20px;
+        font-family: $main-font;
+        font-weight: $font-medium;
+        letter-spacing: -0.41px;
+    }
+
+    &__filters {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        padding: 20px 0;
+        position: static;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,54 @@
+.custom-select {
+    font-family: sans-serif;
+    position: relative;
+    z-index: 1;  
+}
+
+.select-title {
+    color: $main-black;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    font-size: 1rem;
+    align-items: baseline;
+}
+.select-trigger {
+    cursor: pointer;
+    color: $main-brown;
+    font-weight: $font-small;
+    font-size: 12px;
+}
+
+.select-dropdown {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    border: 1px solid black; 
+    background-color: white;
+    white-space: nowrap;
+    min-width: 100%;
+    width: auto;
+    display: none;
+    z-index: 1000; 
+}
+
+.select-dropdown li {
+    padding: 8px 16px;
+    cursor: pointer;
+    clear: both;
+}
+
+.select-dropdown li:hover {
+    text-decoration: underline;
+}
+
+.arrow {
+    width: 8px; /* Regola la larghezza secondo le tue esigenze */
+    height: auto;
+    vertical-align: middle; /* Per allineare l'SVG con il testo */
+}
+
+/* Esempio per cambiare colore all'SVG inline al passaggio del mouse */
+.select-trigger:hover .arrow {
+    fill: $main-brown; /* Cambia il colore del riempimento dell'SVG */
+}

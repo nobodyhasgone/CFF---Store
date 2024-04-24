@@ -127,9 +127,9 @@
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .footer{
-        padding: 0;
+        padding: 20px 0 0 0;
     }
     .footer__top {
         padding: 0 20px; // Riduci il padding laterale per più spazio
