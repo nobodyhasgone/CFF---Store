@@ -1,24 +1,52 @@
-.main__container-shop {
-    margin: 0 auto;
-    width: 100%; 
-    padding: 100px 85px 0px 85px;
-    box-sizing: border-box;
+.product-section {
+  max-width:1280px;
+  padding-top: 100px; 
+  margin: 0 auto;
+  &__back-button{
+    padding: 20px 16px;
+  }
+}
 
-    &__title {
-        text-align: center; 
-        font-size: 2em;
-        margin-bottom: 20px;
-        font-family: $main-font;
-        font-weight: $font-medium;
-        letter-spacing: -0.41px;
-    }
+.product-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+/* Media query per dispositivi con schermi fino a 1024px */
+@media (max-width: 1024px) {
+  .product-content-container {
+    flex-direction: row; /* Conferma che gli elementi rimangano affiancati */
+    align-items: flex-start; /* Mantiene gli elementi ancorati in alto */
+  }
+}
 
-    &__filters {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; 
-        padding: 20px 0;
-        position: static;
-        z-index: 1;
-    }
+/* Media query per dispositivi con schermi fino a 768px */
+@media (max-width: 768px) {
+  .product-section {
+    margin-left: 0;
+    padding-top: 20px; /* Riduci il padding-top per un aspetto più compatto */
+  }
+
+  .product-section__back-button {
+    width: 100%; /* Estende il pulsante su tutta la larghezza per enfatizzare la navigabilità */
+    padding-top: 80px; /* Aggiustamento del padding per una migliore accessibilità */
+    box-sizing: border-box; /* Assicura che padding e bordi siano inclusi nella larghezza */
+    display: flex; /* Usa flex per centrare il contenuto */
+    justify-content: left; /* Centra il contenuto orizzontalmente */
+  }
+
+  .global-back-button {
+    display: flex; /* Rende flex per mantenere icona e testo allineati */
+    align-items: center; /* Centra gli elementi verticalmente */
+  }
+
+  .product-content-container {
+    flex-direction: column; /* Cambia in layout verticale */
+    justify-content: flex-start; /* Assicura che gli elementi inizino dall'alto */
+    align-items: flex-start; /* Allinea gli elementi all'inizio del contenitore */
+    padding: 0; /* Rimuove il padding per permettere una migliore gestione dello spazio */
+  }
 }

@@ -15,9 +15,17 @@
 @import 'src/scss/components/componentsDesk/overlayaccount';
 @import 'src/scss/components/componentsMob/navbarmobile';
 @import 'src/scss/components/componentsCross/filtersoverlay';
-@import 'src/scss/components/componentsCross/productpage';
+@import 'src/scss/components/componentsCross/shoppage';
 @import 'src/scss/components/componentsCross/sortby';
 @import 'src/scss/components/componentsCross/arrowup';
+@import 'src/scss/components/componentsCross/productpage';
+@import 'src/scss/components/componentsDesk/caroselloprodotto';
+@import 'src/scss/components/componentsCross/productdescription';
+@import 'src/scss/components/componentsDesk/accordionmenuprodotto';
+@import 'src/scss/components/componentsPlus/notifications';
+@import 'src/scss/components/componentsPlus/sizechart';
+
+@import 'src/scss/components/componentsMob/carosellomobile';
 
 /* Global */
 body {
@@ -33,4 +41,4 @@ a {
 header {
     width: 100%;
     position: relative;
-  }
+}

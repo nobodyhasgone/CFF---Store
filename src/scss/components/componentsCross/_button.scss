@@ -62,7 +62,7 @@ $radius: 16px;
 /* Chips */
 
 @mixin chips ($backgroundcolor, $colorfont, $bordercolor){
-    padding: $pad-l;
+    padding: $pad-l; 
     border: 1px solid black;
     font-family: $main-font;
     font-weight: $font-medium;
@@ -70,8 +70,14 @@ $radius: 16px;
     background-color: $backgroundcolor;
     color: $colorfont;
     border-color: $bordercolor;
-    border-radius: 16px;
+    border-radius: 24px;
     cursor: pointer;
+    display: inline-flex; // Utilizza inline-flex per mantenere il bottone della grandezza del contenuto
+    align-items: center; // Allinea centralmente i contenuti sull'asse verticale
+    justify-content: center; // Centra i contenuti sull'asse orizzontale
+    position: relative; // Imposta il bottone come riferimento per il posizionamento assoluto dell'icona
+    overflow: hidden; // Previene l'overflow dell'icona all'esterno del bottone
+    white-space: nowrap;
 }
 .big_chips{
     @include chips ($main-white, $main-black, $main-black)
@@ -86,18 +92,27 @@ $radius: 16px;
 }
 .small_chips{
     @include chips ($main-white, $main-black, $main-black);
-    &{
-        padding: $pad-sm;
-    }
+    padding: $pad-sm;
+    border-radius: 16px;
 }
 .small_chips-active{
     @include chips ($main-white, $main-black, $main-black);
     padding: $pad-sm;
-    &:hover{
-        padding: $pad-sm;
-        background-color:$main-brown ;
+    border-radius: 16px;
+    &:active, &.selected{
+        background-color: $main-brown;
         color: $main-white;
         border-color: $main-brown;
+    }
+    &::after {
+        content: ''; 
+        display: block; 
+        width: 12px;
+        height: 12px;
+        background-image: url('./src/images/icons/close-icon.svg');
+        background-size: cover; 
+        filter: invert(100%);
+        margin-left: 8px; 
     }
 }
 .small_chips-unselected{
@@ -131,6 +146,7 @@ $radius: 16px;
 }
 .btn_default-primary-active{
     @include btn_default($main-black, $main-white, $main-black);
+    width: 100%;
     &:hover{
         background-color:$main-brown ;
         color: $main-white;
@@ -139,8 +155,9 @@ $radius: 16px;
 }
 .btn_default-primary-disabled{
     @include btn_default($main-grey, $main-white, $main-grey);
+    cursor: not-allowed;
     &:hover{
-        background-color: $main-black;
+        background-color: $main-grey;
     }
 }
 .btn_default-primary2{
@@ -168,3 +185,33 @@ $radius: 16px;
 .btn_default-secondary2{
     @include btn_default($main-trasparent, $main-white, $main-white);
 }
+
+.global-back-button {
+    display: inline-flex;
+    align-items: center; 
+    border: none;
+    cursor: pointer; 
+  
+    &__icon {
+      width: 12px; 
+      height: 14px; 
+      margin-right: 8px;
+    }
+  
+    &__text {
+      color: black; 
+      font-size: 16px;
+      font-family: $main-font;
+      font-weight: $font-medium;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  
+    &:visited, &:link, &:active {
+      color: black; 
+      text-decoration: none;
+    }
+  }
+  

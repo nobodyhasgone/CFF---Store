@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('cardsContainer');
-    const numCards = 36; // Assumendo che tu voglia generare 36 card
+    const numCards = 12; // Assumendo che tu voglia generare 36 card
 
     // Generazione delle card
     for (let i = 0; i < numCards; i++) {
@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
         card.innerHTML = `
             <div class="card__image-container">
                 <img src="../src/images/product/imgproduct.svg" class="card__image" alt="Product">
+                <a href="productpage.html" class="card__btn-link">
                 <button class="card__btn">Material</button>
+            </a>
             </div>
             <h2 class="card__name">Lumberjack Jacket</h2>
             <p class="card__description">Sandal suede shearling Lumberjack Jacket</p>

@@ -1,0 +1,100 @@
+
+// /* Stili generali dello slider */
+// .slider {
+//     max-width: 767px;
+//     width: 100%;
+//     height: auto; /* Altezza auto per adattarsi al contenuto */
+// }
+
+// /* Personalizzazione delle frecce */
+// .slick-prev, .slick-next {
+//     z-index: 50; /* Assicurati che siano sopra ogni altro contenuto */
+//     top: 50%; /* Centra verticalmente */
+//     transform: translateY(-50%); /* Centra perfettamente */
+//     font-size: 24px;
+// }
+
+// .slick-prev {
+//     left: 10px; /* Distanza dal bordo sinistro */
+// }
+
+// .slick-next {
+//     right: 10px; /* Distanza dal bordo destro */
+// }
+
+// /* Personalizzazione dei puntini */
+// .slick-dots {
+//     position: absolute;
+//     bottom: -35px; /* Posiziona i puntini sotto lo slider */
+//     width: 100%;
+//     text-align: center;
+// }
+
+// .slick-dots li {
+//     display: inline-block;
+//     gap: 8px;
+// }
+
+// .slick-dots li button:before {
+//     font-size: 10px;
+// }
+// .slider img {
+//     width: 100%; /* Assicura che le immagini si adattino alla larghezza dello slider */
+//     height: auto; /* Mantiene le proporzioni originali delle immagini */
+// }
+// /* Modifica lo sfondo dei puntini attivi */
+// .slick-dots li.slick-active button:before {
+//     color: $main-brown; /* Rosso per il punto attivo */
+// }
+
+.carousel-mobile {
+    .slider {
+        max-width: 767px;
+        width: 100%;
+        height: auto; // Altezza auto per adattarsi al contenuto
+
+        img {
+            width: 100%; // Assicura che le immagini si adattino alla larghezza dello slider
+            height: auto; // Mantiene le proporzioni originali delle immagini
+        }
+
+        // Personalizzazione delle frecce
+        .slick-prev,
+        .slick-next {
+            z-index: 50; // Assicurati che siano sopra ogni altro contenuto
+            top: 50%; // Centra verticalmente
+            transform: translateY(-50%); // Centra perfettamente
+            font-size: 24px; // Dimensione del font per le frecce
+
+            &.slick-prev {
+                left: 10px; // Distanza dal bordo sinistro
+            }
+
+            &.slick-next {
+                right: 10px; // Distanza dal bordo destro
+            }
+        }
+
+        // Personalizzazione dei puntini
+        .slick-dots {
+            position: absolute;
+            bottom: -35px; // Posiziona i puntini sotto lo slider
+            width: 100%;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                gap: 8px;
+
+                button:before {
+                    font-size: 10px; // Dimensione del font dei puntini
+                }
+            }
+
+            // Modifica lo sfondo dei puntini attivi
+            li.slick-active button:before {
+                color: $main-brown; // Colore per il punto attivo
+            }
+        }
+    }
+}

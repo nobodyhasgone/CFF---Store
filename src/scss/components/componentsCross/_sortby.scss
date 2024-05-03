@@ -10,6 +10,9 @@
     font-weight: $font-medium;
     font-size: 1rem;
     align-items: baseline;
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
 }
 .select-trigger {
     cursor: pointer;

@@ -1,0 +1,201 @@
+.carousel-product {
+    display: flex;
+    align-items: center;
+  
+    &__images-column {
+      display: flex;
+      flex-direction: column;
+      max-height: 750px;
+      width: 90px;
+      align-items: center;
+      overflow: hidden;
+    }
+    &__scroll-button {
+        width: 90px;
+        height: 40px;
+        background-color: rgba(131, 111, 82, 0.1);
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--up, &--down {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__scroll-icon {
+        width: 18px;
+        height: auto; 
+    }
+    &__images-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      cursor: pointer;
+
+    &:first-child {
+        margin-top: 0; 
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+      &__image {
+        width: 88px;
+        height: 132px;
+      }
+    }
+  
+    &__selected-image-container {
+      height: 750px;
+      width: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 40px;
+    }
+    &__selected-image{
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+        object-fit: cover;
+    }
+  }
+
+.carousel-product__selected-image-container {
+    position: relative;
+    & .carousel-product__selected-image {
+        &:hover {
+            cursor: zoom-in;
+        }
+    }
+}
+
+.carousel-product__image {
+    width: 88px;
+    height: 132px;
+    box-sizing: border-box;
+
+    &--selected {
+        border: 2px solid black;
+    }
+}
+
+.carousel-product__images-container {
+    transition: transform 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0; 
+    margin: 0; 
+    list-style: none;
+
+    li {
+        transition: transform 1s ease-in-out;
+    }
+}
+.favorite-icon {
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    right: 0; 
+    width: 40px;
+    height: 40px;
+    border: 1px solid black; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 500;
+    cursor: pointer;
+    &:hover{
+        background-color: $main-grey;
+        transition: 0.3s ease-in-out;
+    }
+    & img{
+        filter:invert(100%)
+    }
+}
+
+/* Media Query for screens up to 1024px */
+@media (max-width: 1024px) {
+    .carousel-product__images-column {
+        max-height: 438px;
+        box-sizing: border-box;
+    }
+
+    .carousel-product__images-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .carousel-product__selected-image-container {
+        width: 292px;
+        height: 438px;
+    }
+}
+
+
+/* Media Query for screens up to 768px */
+@media (max-width: 768px) {
+    .product-section{
+        margin-left: 0;
+        padding:0;
+        width: 100%;
+    }
+    .carousel-product {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .carousel-product__images-column {
+        display: none; 
+    }
+
+    .carousel-product__selected-image-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+    }
+    .carousel-product__image {
+        width: 100%; /* Larghezza completa per ogni immagine */
+        height: auto; /* Altezza automatica per mantenere l'aspetto */
+        object-fit: cover; /* Copre l'area disponibile senza perdere le proporzioni */
+    }
+    .carousel-product__selected-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .carousel-product__selected-image-container {
+        width: 100%; /* Larghezza completa */
+        height: auto; /* Altezza automatica per adattarsi all'immagine interna */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .product-section__back-button{
+        margin-left: 10px;
+    }
+}
+
+.carousel-arrow {
+    display: none;
+}
+
+
+
+

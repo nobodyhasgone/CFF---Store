@@ -41,7 +41,7 @@ $main-grey: #8E8E93;
       }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .mobile-navbar {
       display: flex;
       align-items: center;
@@ -73,12 +73,14 @@ $main-grey: #8E8E93;
       display: none;
     }
   }
-  @media (min-width: 769px) {
+  @media (min-width: 1025px) {
     .mobile-navbar,
     .side-menu {
         display: none; 
     }
 }
+
+
 
 .side-menu {
   width: 100%;

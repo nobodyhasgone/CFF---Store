@@ -1,13 +1,20 @@
-<main class="main__container-shop">
-    <h1 class="main__container-shop__title">Shop</h1>
-    <section class="main__container-shop__filters">
-        <button id="toggleFilters" class="btn_filter-active">Filters</button>
-        <sergey-import src="sortby.html" />
-    </section>
+<section class="product-section" id="change-carosello">
+  <!-- Pulsante Back -->
+  <div class="product-section__back-button">
+    <a href="shop.html" class="global-back-button">
+      <img src="./src/images/icons/arrow_back.svg" alt="Back" class="global-back-button__icon">
+      <span class="global-back-button__text">Back</span>
+    </a>    
+  </div>
+  <div class="carousel-mobile">
+    <sergey-import src="carosellomobile.html" />
+  </div>
+  <div class="product-content-container">
+    <div class="carosello-desktop-hidden">
+    <sergey-import src="caroselloprodotto.html" />
+  </div>
+    <sergey-import src="productdescription.html" />
+  </div>
+  <sergey-import src="accordionmenprodotto.html" />
 
-    <sergey-import src="card.html" />
-
-    <div class="filters-overlay">
-        <sergey-import src="filtersoverlay.html" />
-    </div>
-</main>
+</section>

@@ -55,3 +55,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleziona tutti i bottoni con la classe 'small_chips'
+    const buttons = document.querySelectorAll('.small_chips');
+
+    // Aggiungi un event listener per il click a ogni bottone
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Aggiungi o rimuovi anche 'small_chips-active' se necessario
+            this.classList.toggle('small_chips-active');
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleziona il bottone 'Clear all'
+    const clearButton = document.querySelector('.btn_default-secondary');
+
+    // Aggiungi un event listener per il click a 'Clear all'
+    clearButton.addEventListener('click', function() {
+        // Seleziona tutti i bottoni con la classe 'small_chips-active'
+        const activeButtons = document.querySelectorAll('.small_chips-active');
+        
+        // Rimuovi la classe 'small_chips-active' da ogni bottone
+        activeButtons.forEach(button => {
+            button.classList.remove('small_chips-active');
+        });
+    });
+});

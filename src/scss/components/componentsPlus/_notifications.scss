@@ -1,0 +1,38 @@
+.stock-alert {
+    display: none;
+    &__message {
+        font-size: 16px;
+        margin-bottom: 20px;
+        font-family: $main-font;
+        letter-spacing: 1px;
+        font-weight: $font-medium;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        font-family: $main-font;
+        letter-spacing: 0.8px;
+        font-weight: $font-medium;
+        margin-bottom: 10px;
+    }
+
+    &__required {
+        color: $main-brown;
+    }
+
+    &__input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        &::placeholder{
+            color: $main-grey;
+            letter-spacing: 1px;
+            font-family: $main-font;
+            font-weight: $font-medium;
+        }
+    }
+}

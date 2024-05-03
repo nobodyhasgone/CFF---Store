@@ -1,0 +1,62 @@
+.accordion {
+    margin: 80px 0;
+    &__item {
+        border-bottom: 1px solid black;
+        padding: 16px;
+        font-family: $main-font;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    &__button {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__icon {
+        transition: transform 0.3s ease;
+        width: 17px;
+        height: auto;
+    }
+
+    &__content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding-left: 10px;
+    }
+    &__table {
+        width: 100%; // Usa l'intera larghezza disponibile per la tabella
+        border-collapse: collapse; // Rimuove gli spazi tra le celle
+        
+        tr {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1); // Riga orizzontale con opacità al 10%
+        }
+
+        td {
+            vertical-align: middle;
+            
+            &:first-child {
+                text-align: left;
+                font-weight: bold;
+                font-family: $font-big;
+                padding: 15px 30px 15px 0;
+            }
+            &:nth-child(2) { // Seleziona tutte le seconde celle di ciascuna riga
+                padding: 15px 0; // Padding personalizzato per la seconda colonna
+            }
+        }
+    }
+}
+

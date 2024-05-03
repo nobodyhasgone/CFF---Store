@@ -1,0 +1,182 @@
+// Stili per i dettagli del prodotto
+.product-details {
+    padding: 0 0 0 9%;
+}
+
+// Titolo del prodotto
+.product-title {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: $font-medium;
+    font-family: $main-font;
+}
+
+// Sottotitolo del prodotto
+.product-subtitle {
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin: 10px 0 30px;
+    font-weight: $font-medium;
+    font-family: $main-font;
+}
+
+// Prezzo del prodotto
+.product-price {
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin: 10px 0 50px;
+    font-weight: $font-medium;
+    font-family: $main-font;
+}
+
+// Colore del prodotto
+.product-color {
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: $font-medium;
+    font-family: $main-font;
+    letter-spacing: 1px;
+    span {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        color: #c1b197; 
+    }
+}
+
+// Forma circolare
+.product-shape {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #c1b197; // Colore di default, da personalizzare
+}
+
+// Sottosezione del prodotto
+.product-section-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 10px;
+    font-weight: $font-medium;
+    font-family: $main-font;
+}
+
+// Descrizione del prodotto
+.product-description {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: $font-medium;
+    font-family: $main-font;
+}
+
+// Informazioni sul modello
+.product-model-info {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    margin-bottom: 20px;
+    font-weight: $font-medium;
+    font-family: $main-font;
+}
+
+// Icona e link per la tabella delle taglie
+.product-size-chart {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .size-chart-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .size-chart-link {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        margin-left: 10px;
+        text-decoration: none;
+        color: #000;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+// Select per la selezione delle taglie
+.size-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Media query per dispositivi con schermi fino a 1024px */
+@media (max-width: 1024px) {
+    .product-title {
+        font-size: 32px; /* Ridimensionato per schermi più piccoli */
+    }
+
+    .product-subtitle {
+        margin-bottom: 25px; /* Margine modificato per schermi più piccoli */
+    }
+
+    .product-color {
+        margin-top: 50px; /* Margine superiore aumentato per schermi più piccoli */
+    }
+}
+
+/* Media query per dispositivi con schermi fino a 768px */
+@media (max-width: 768px) {
+    .product-details {
+        padding: 16px; /* Aggiunge padding intorno al contenuto */
+        text-align: left;
+        position: relative;
+    }
+
+    /* Specifica ulteriormente per elementi singoli se necessario */
+    .product-title,
+    .product-subtitle,
+    .product-price,
+    .product-color,
+    .product-section-title,
+    .product-description,
+    .product-model-info,
+    .product-size-chart {
+        text-align: left; 
+    }
+
+    .product-size-chart {
+        display: flex;
+        justify-content: left;
+    }
+}
+/* Media query per dispositivi con larghezza dello schermo fino a 768px */
+@media (max-width: 768px) {
+    .sticky-container {
+        display: flex; /* Utilizza un layout flessibile per posizionare gli elementi affiancati */
+        align-items: stretch; /* Allinea gli elementi verticalmente al centro */
+        background-color: white;
+    }
+    #size-selection-form {
+        display: flex; /* Utilizza un layout flessibile per il form */
+        align-items: center; /* Allinea gli elementi verticalmente al centro */
+        width: 100%; /* Assicura che il form occupi l'intera larghezza del suo contenitore */
+    }
+
+    .size-select {
+        flex-grow: 1; /* Permette agli elementi di espandersi e occupare lo spazio disponibile */
+        margin: 0 12px 0 0; /* Margini interni per separare gli elementi */
+    }
+
+    .btn_default-primary-active {
+        white-space: nowrap; /* Evita interruzioni di linea nel testo del pulsante */
+    }
+
+    .size-select {
+        border: 1px solid #ccc; /* Aggiunge un bordo visibile per il menu a tendina */
+        padding: 16px; /* Padding interno per il testo nel menu a tendina */
+        box-sizing: border-box; /* Includi il padding e il bordo nel calcolo delle dimensioni dell'elemento */
+    }
+}
+

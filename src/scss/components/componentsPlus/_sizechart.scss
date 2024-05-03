@@ -1,0 +1,302 @@
+.size-chart {
+    width: 70%;
+    max-height: 90%;
+    background: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    overflow: auto;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding-bottom: 24px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 24px 40px 0;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0 40px;
+    }
+
+    &__title {
+        font-family: $main-font;
+        font-weight: $font-medium;
+        font-size: 24px;
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+    &__close {
+        cursor: pointer;
+        img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+    }
+  
+    &__info {
+        display: flex;
+        flex-direction: column;
+        p{
+        font-family: $main-font;
+        font-weight: $font-medium;
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        }
+    }
+    &__subtitle{
+        font-family: $main-font;
+        font-weight: $font-big;
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        margin-top: 0;
+    }
+    &__details-title{
+        font-family: $main-font;
+        font-weight: $font-small;
+        font-size: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    &__images {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        .size-chart__image-wrapper {
+            flex: 1; // Distribuisce lo spazio equamente tra i wrapper delle immagini
+            display: block; // Span di default è inline, lo impostiamo a block per un migliore controllo
+            padding: 10px; // Spazio intorno all'immagine all'interno del wrapper
+            max-width: 100%; // Assicura che il wrapper non superi il contenitore padre
+    
+            img {
+                width: 100%; // Larghezza massima dell'immagine è 100% del suo contenitore
+                height: auto; // Mantiene il rapporto di aspetto originale dell'immagine
+                display: block; // Rimuove spazi extra sotto l'immagine
+            }
+        }
+    }
+
+    .size-chart__button,
+    .size-chart__help-link {
+        display: none; // Nascondi di default questi elementi
+    }
+     // Media query per schermi sotto i 768px
+     @media (max-width: 768px) {
+            width: 100vw; 
+            height: 100vh; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: none; 
+            border-radius: 0;
+        .size-chart__container{
+            padding: 16px 16px 0;
+        }
+        .size-chart__actions {
+            padding: 0 16px 24px;
+        }
+        &__body {
+            flex-direction: column;
+
+            &__info,
+            &__images {
+                width: 100%; 
+            }
+        }
+
+        .size-chart__button{
+            display: block;
+            width: 100%;
+            background-color: white; 
+            color: black; 
+            text-align: center; 
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 60px 0 0;
+            text-transform: uppercase;
+            padding: 10px 16px;
+            font-family: $main-font;
+            letter-spacing: 1px;
+        }
+        .size-chart__help-link{
+            display: block;
+            background-color: transparent;
+            color: black;
+            text-align: center;
+            margin: 16px 0 0;
+            &:hover {
+                color: $main-brown;
+            }
+        }
+        .size-chart__table{
+            margin-top: 0;
+        }
+    }
+}
+
+.size-chart__table {
+    margin: 55px auto 0 auto;
+    padding: 0 140px;
+    border-collapse: collapse; 
+    tbody, thead{
+        font-size: 16px;;
+    }
+    th, td {
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+        padding: 8px 12px;
+        font-size: 13px;
+        font-family: $main-font;
+        font-weight: $font-medium;
+    }
+    td {
+        border-bottom: 1px solid #ccc; 
+    }
+    td:first-child {
+        font-family: $main-font;
+        font-weight: $font-big;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+}
+
+.overlay__size-chart {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: 1000;
+}
+.overlay__size-chart, .size-chart {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .overlay__size-chart{
+        display: none;
+        background-color: white;
+        opacity: 1;
+    }
+}
+
+// Overlay per Messages
+.size-chart__overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $main-white;
+    transition: right 0.5s ease;
+    z-index: 100;
+    overflow-y: auto;
+
+    &-content {
+        padding: 16px;
+        position: relative;
+    }
+
+    &-close-container {
+        position: absolute;
+        top: 25px;
+        right: 15px;
+    }
+
+    &-close-btn {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        width: 24px;
+        height: 16px;
+    }
+    &-close-icon {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url('./src/images/icons/close-icon.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &-title {
+        margin: 0 0 30px;
+        font-size: 24px;
+        font-family: $main-font;
+        font-weight: $font-medium;
+        letter-spacing: 1.5px;
+    }
+
+    &-description {
+        margin: 0 0 40px;
+        font-weight: $font-medium;
+        font-size: 18px;
+        color: $main-black;
+    }
+
+    .size-chart__contact-info {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            color: $main-black;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: $main-font;
+
+            &:hover {
+                color: $main-brown;
+            }
+        }
+    }
+
+    .size-chart__icon {
+        width: 18px;
+        height: 20px;
+        margin-right: 4.5px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .size-chart__phone-icon {
+        background-image: url('./src/images/icons/mobile-icon.png');
+    }
+
+    .size-chart__email-icon {
+        background-image: url('./src/images/icons/email-icon.png');
+    }
+
+    .size-chart__address-icon {
+        background-image: url('./src/images/icons/position-icon.png');
+    }
+}
