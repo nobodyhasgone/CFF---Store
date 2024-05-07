@@ -69,3 +69,133 @@
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 99;
   }
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-image img {
+    width: 50px; // Regola in base alle tue necessità
+    height: auto;
+    margin-right: 10px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-name {
+    font-size: 16px;
+    margin: 0;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    color: grey;
+}
+
+
+.popup-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1100;
+}
+.confirmation-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 1500;
+  width: calc(100vw - 30px);
+  max-width: 500px;
+  border-radius: 8px;
+
+  .popup-content {
+      padding: 20px;
+      text-align: center;
+      .popup-close-area {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+      .popup-close-btn {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        width: 24px;
+        height: 16px;
+
+        .popup-close-icon {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url('./src/images/icons/close-icon.svg'); // Usa la tua icona locale
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+      p {
+          font-family: $main-font;
+          font-size: 16px;
+          margin-bottom: 15px;
+          color: $neutral-grey;
+      }
+
+      .popup-button {
+          border: none;
+          padding: 6px 24px;
+          cursor: pointer;
+          font-size: 12px;
+          font-weight: $font-medium;
+          font-family: $main-font;
+          text-transform: uppercase;
+          letter-spacing: 2.2px;
+          border-radius: 3px;
+          &__cancel{
+            background-color: #e4e4e4;
+            color: black;
+            &:hover{
+              background-color: #a2a2a2;
+            }
+          }
+          &__ok{
+            color: white;
+            background-color: green;
+          }
+      }
+  }
+}
+
+
+.mini-card-container {
+  display: none;
+  margin-top: 20px;
+}
+
+.mini-card-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-card-item {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

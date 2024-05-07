@@ -7,7 +7,32 @@
             </button>
         </div>
         <h4 class="cart-title">Cart</h4>
+        <div class="mini-card-container" id="miniCardContainer">
+            <ul class="mini-card-list" id="miniCardList">
+                <!-- Le mini-card verranno aggiunte qui -->
+            </ul>
+        </div>
+        
     </div>
+
     <p class="cart-empty-message">You have no items in your shopping bag.</p>
   </div>
+  <!-- Page Background -->
   <div id="pageOverlay" class="page-background"></div>
+
+  <!-- Pop-up di conferma -->
+<div id="confirmationPopup" class="confirmation-popup">
+    <div class="popup-content">
+        <div class="popup-close-area">
+            <button id="popupClose" class="popup-close-btn" aria-label="Close" role="button">
+                <span class="popup-close-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+        <p>Are you sure you would like to remove this item from the shopping cart?</p>
+        <button id="cancelRemove" class="popup-button popup-button__cancel">CANCEL</button>
+        <button id="confirmRemove" class="popup-button popup-button__ok">OK</button>
+    </div>
+</div>
+
+<!-- Page Background -->
+<div id="popupOverlay" class="popup-background"></div>
