@@ -1410,6 +1410,46 @@ body.home .header__submenu-link:hover {
   text-decoration: none;
 }
 
+.header__icon-item {
+  list-style: none;
+}
+
+.header__icon-link {
+  text-decoration: none;
+}
+
+.header__icon--cart {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header__icon--cart:hover {
+  transform: scale(1.1);
+}
+
+.header__icon-badge {
+  position: absolute;
+  text-transform: none;
+  top: -9px;
+  right: -8px;
+  background-color: #886E4C;
+  color: white;
+  border-radius: 20px;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-family: "Futura Std";
+  font-weight: 600;
+  text-decoration: none;
+  display: none;
+  pointer-events: none;
+}
+
 .search-container-wrapper {
   position: absolute;
   width: 100%;
@@ -1603,9 +1643,11 @@ body.home .header__submenu-link:hover {
   justify-content: space-between;
 }
 .cart-overlay .cart-content {
+  flex-grow: 1;
   padding: 20px;
   padding-top: 38px;
   position: relative;
+  overflow-y: auto;
 }
 .cart-overlay .cart-close-area {
   position: absolute;
@@ -1639,7 +1681,7 @@ body.home .header__submenu-link:hover {
 .cart-overlay .cart-empty-message {
   text-align: center;
   margin-top: auto;
-  padding-bottom: 100%;
+  padding-top: 60%;
   font-size: 14px;
   font-family: "Futura Std";
   font-weight: 500;
@@ -1760,6 +1802,11 @@ body.home .header__submenu-link:hover {
   background-color: green;
 }
 
+.mini-card-container {
+  display: none;
+  margin-top: 20px;
+}
+
 .mini-card-list {
   list-style: none;
   padding: 0;
@@ -1773,6 +1820,48 @@ body.home .header__submenu-link:hover {
   padding: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mini-card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 384px;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 24px 0 24px 16px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  display: none;
+}
+
+.subtotal-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  align-items: baseline;
+  text-transform: uppercase;
+}
+
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 95%;
+  margin: 0;
+  gap: 8px;
+}
+.checkout-container p {
+  font-size: 12px;
+}
+
+#subtotal-amount {
+  font-size: 24px;
+}
+
+.subtotal-checkout {
+  font-size: 12px;
 }
 
 .login-panel {

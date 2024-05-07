@@ -13,9 +13,11 @@
     justify-content: space-between; // Distribuisce lo spazio
   
     .cart-content {
-      padding: 20px;
-      padding-top: 38px;
-      position: relative;
+      flex-grow: 1;
+        padding: 20px;
+        padding-top: 38px;
+        position: relative;
+        overflow-y: auto;
     }
   
     .cart-close-area {
@@ -53,7 +55,7 @@
     .cart-empty-message {
       text-align: center;
       margin-top: auto; 
-      padding-bottom: 100%;
+      padding-top: 60%;
       font-size: 14px;
       font-family: $main-font;
       font-weight: $font-medium;
@@ -198,4 +200,43 @@
   padding: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mini-card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(400px - 16px);
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 24px 0 24px 16px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  display: none; 
+}
+
+.subtotal-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  align-items: baseline;
+  text-transform: uppercase;
+}
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 95%;
+  margin: 0;
+  gap: 8px;
+  p {
+    font-size: 12px;
+  }
+}
+#subtotal-amount{
+  font-size: 24px;
+}
+.subtotal-checkout{
+  font-size: 12px;
 }
