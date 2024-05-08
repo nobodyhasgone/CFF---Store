@@ -11,11 +11,15 @@
   </div>
   <div class="mobile-navbar__icons">
     <a href="#" class="mobile-navbar__icon-link mobile-navbar__icon-link--search" aria-label="Search" onclick="toggleMenu('search-menu')">
-        <img src="./src/images/icons/magnifierb.svg" alt="Search" class="visually-hidden">
+        <img src="./src/images/icons/magnifierb.svg" alt="Search" class="visually-hidden invert-color">
     </a>
     <a href="#" class="mobile-navbar__icon-link mobile-navbar__icon-link--cart" aria-label="View Cart" onclick="toggleMenu('cart-menu')">
-        <img src="./src/images/icons/shoppingbagb.svg" alt="Cart" class="visually-hidden">
+        <div class="mobile-navbar__icon-wrapper">
+            <img src="./src/images/icons/shoppingbagb.svg" alt="Cart" class="mobile-navbar__icon invert-color">
+            <span id="cartIconBadge__mobile" class="header__icon-badge__mobile">0</span>
+        </div>
     </a>
+    
 </div>
 <!-- Menu a tendina per Search -->
 <div id="search-menu" class="side-menu" style="display: none;">
@@ -34,6 +38,7 @@
         </span>
     </form> 
 </div>
+
 <!-- Menu a tendina per Cart -->
 <div id="cart-menu" class="side-menu" style="display: none;">
     <div class="side-menu__top">
@@ -42,8 +47,27 @@
             <img src="./src/images/icons/close-icon.svg" alt="Close menu" />
         </div>
     </div>
-    <p class="cart__mobile">You have no items in your shopping bag.</p>
+    <div class="mini-card-container__mobile" id="miniCardContainer__mobile">
+        <ul class="mini-card-list__mobile" id="miniCardList__mobile">
+            <!-- Le mini-card verranno aggiunte qui -->
+        </ul>
+    </div>
+    
+
+<p class="cart-empty-message__mobile">You have no items in your shopping bag.</p>
+
+<div class="mini-card-footer__mobile">
+    <div class="subtotal-container__mobile">
+        <span class="subtotal-checkout__mobile">Subtotal</span>
+        <span id="subtotal-amount__mobile">€0</span>
+    </div>
+    <div class="checkout-container__mobile">
+        <p>Gift codes or discounts applied at checkout</p>
+        <button class="btn_default-primary-active">Proceed to checkout</button>
+    </div>
 </div>
+</div>
+
 <!-- Menu a tendina -->
 <div id="side-menu" class="side-menu" style="display: none;">
     <div class="side-menu__close" onclick="toggleMenu('side-menu')">
@@ -125,3 +149,4 @@
           </ul>
       </div>
 </nav>
+
