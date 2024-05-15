@@ -140,6 +140,8 @@ $radius: 16px;
     color: $colorfont;
     border-color: $bordercolor;
     cursor: pointer;
+    letter-spacing: 1px;
+    // width: 100%;
 }
 .btn_default-primary{
     @include btn_default($main-black, $main-white, $main-black);
@@ -165,6 +167,7 @@ $radius: 16px;
 }
 .btn_default-secondary{
     @include btn_default($main-white, $main-black, $main-black);
+    // width: 100%;
 }
 .btn_default-secondary-active{
     @include btn_default($main-trasparent, $main-black, $main-black);
@@ -214,4 +217,3 @@ $radius: 16px;
       text-decoration: none;
     }
   }
-  

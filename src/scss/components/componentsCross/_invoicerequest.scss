@@ -1,0 +1,72 @@
+.invoice-request {
+    padding: 16px 8px;
+    border-radius: 8px;
+    margin-top: 16px;
+
+    &__title {
+        font-size: 16px;
+        font-weight: $font-big;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+    }
+
+    &__radio-group {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__radio {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: $font-medium;
+    }
+
+    &__radio-input {
+        margin-right: 8px;
+        width: 16px;
+        height: 16px;
+    }
+
+    &__details {
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    &__label {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    &__required {
+        color: $main-brown;
+    }
+
+    &__input-field {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 16px;
+        border: 1px solid black;
+        margin-bottom: 8px;
+
+        &::placeholder {
+            color: rgba(119, 119, 119, 1);
+            font-size: 14px;
+            font-weight: $font-medium;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__note {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    &--visible .invoice-request__details {
+        display: flex;
+    }
+}

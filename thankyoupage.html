@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <sergey-import src="head.html" />
+   
+    <title>Thank you</title>
+</head>
+<body>
+    <sergey-import src="header.html" />
+
+    <main class="thank-you">
+        <div class="thank-you__container" style="padding: 16px; display: flex; flex-direction: column;">
+            <!-- Order confirmation section -->
+            <div class="thank-you__confirmation">
+                <div class="thank-you__additional-content">
+                    <p class="thank-you__order-number">Order #12345</p>
+                    <h1 class="thank-you__title">Thank you! <br/> Your order is confirmed.</h1>
+                    <p class="thank-you__details">
+                        Your confirmation email is on the way. You will get notified when the order is shipped. You can always manage your order inside your account section.
+                    </p>
+                    <!-- Only visible on desktop -->
+                    <div class="thank-you__manage-container">
+                        <a href="#" class="thank-you__manage-order">
+                            <button class="btn_default-primary-active">Continue shopping</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="thank-you__content">
+                <!-- Only visible on desktop -->
+                <div class="thank-you__left-column">
+                    <img src="./src/images/typage/thank you.svg" alt="Thank You" class="thank-you__product-image">
+                </div>
+        
+                <!-- Account creation form -->
+                <div class="thank-you__right-column">
+                    <form class="thank-you__form" action="#" method="post">
+                        <h2 class="thank-you__form-title">CREATE ACCOUNT</h2>
+                        <p class="thank-you__form-description">
+                            For a faster buying experience and an easy order management, you can save your data and create an account.
+                        </p>
+
+                        <div class="password-container">
+                            <label for="typassword" class="thank-you__label">Password<span class="thank-you__required">*</span></label>
+                            <div class="thank-you__input-wrapper">
+                                <input type="password" id="typassword" class="thank-you__input" placeholder="Enter password">
+                                <span class="thank-you__icon" id="toggle-password-typage"></span>
+                            </div>
+                        </div>
+                        
+                        
+
+                        <label class="thank-you__checkbox-label">
+                            <input type="checkbox" class="thank-you__checkbox">
+                            Sign up for Newsletter
+                        </label>
+                        <br>
+                        <label class="thank-you__checkbox-label">
+                            <input type="checkbox" class="thank-you__checkbox">
+                            I agree with the storage and handling of my data by this website
+                        </label>
+                        <p class="thank-you__terms">
+                            By creating an account, I agree with the <a href="#" class="thank-you__link">Terms and Conditions</a> and <a href="#" class="thank-you__link">Privacy Policy</a>.
+                        </p>
+                    </form>
+                    <div class="thank-you__button-container">
+                        <button type="submit" class="btn_default-secondary btn-long btn-short">Create account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="desktop-only-footer">
+        <sergey-import src="footer.html"></sergey-import>
+    </footer>
+    
+<script src="src/js/showhidepassword.js"></script>
+</body>
+</html>

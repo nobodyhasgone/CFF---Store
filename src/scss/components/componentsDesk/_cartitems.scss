@@ -1,0 +1,205 @@
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    &__header, &__row {
+        text-align: left;
+        border-bottom: 1px solid #bbb;
+    }
+
+    &__cell--header {
+        font-weight: $font-medium;
+        font-family: $main-font;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #bbb;
+        padding-bottom: 10px;
+    }
+
+    &__cell--product,
+    &__cell--price,
+    &__cell--quantity,
+    &__cell--total,
+    &__cell--actions {
+        padding: 20px 5px;
+    }
+    &__cell--price{
+        font-size: 15px;
+        font-family: $main-font;
+        color: #222;
+        font-weight: $font-small;
+    }
+    &__cell--total{
+        font-size: 15px;
+        font-family: $main-font;
+        color: #222;
+        font-weight: $font-small;
+    }
+    
+
+    .product-details {
+        display: flex;
+        flex-wrap: wrap; 
+        align-items: flex-start;
+        padding: 0;
+        @media (max-width: 990px) {
+            flex-direction: column;
+        }
+
+        img {
+            flex: 0 0 50px;
+            height: auto;
+            margin-right: 10px; 
+        }
+    }
+    .product-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            @media (max-width: 990px) {
+                margin-left: 0;
+            }
+        
+            &__title {
+                margin-top: 0;
+                margin-bottom: 5px;
+                font-size: 16px;
+                font-family: $main-font;
+                font-weight: $font-medium;
+                letter-spacing: 0.8px;
+                text-transform: uppercase;
+                color: #222222;
+                &-link{
+                    &:hover{
+                        color:$main-brown;
+                        cursor: pointer;
+                    }
+                }
+            }
+        
+            &__description {
+                margin-top: 0;
+                margin-bottom: 5px;
+                font-size: 10px;
+                font-family: $main-font;
+                font-weight: $font-medium;
+                letter-spacing: 0.5px;
+                color: #777777;
+                line-height: 14px;
+            }
+        
+            &__color {
+                margin-top: 0;
+                margin-bottom: 10px;
+                margin-right: 10px;
+                font-family: $main-font;
+                font-weight: $font-small;
+                text-transform: uppercase;
+                min-width: 50px;
+                color: black;
+                &-selected{
+                    font-size: 12px;
+                    color: black;
+                    text-transform: lowercase;
+                    text-transform: capitalize;
+                }
+            }
+        
+            &__size {
+                margin-top: 0;
+                margin-right: 10px;
+                font-family: $main-font;
+                font-weight: $font-small;
+                text-transform: uppercase;
+                min-width: 50px;
+                color: black;
+                &-selected{
+                    font-size: 12px;
+                    color: black;
+                }
+            }
+        }
+
+    .actions {
+        display: flex;
+        justify-content: space-around;
+        &__icon {
+            cursor: pointer;  // Fa apparire la mano al passaggio del mouse, indicando che l'icona è cliccabile
+            display: inline-flex; // Mantiene le icone allineate e consente l'uso di flex properties
+            align-items: center; // Centra l'icona verticalmente
+        }
+        &__icon--edit, &__icon--delete {
+            width: 24px;
+            height: 24px;
+        }
+        &__icon--edit{
+            background-image: url("./src/images/cart/pen-to-square-regular.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            &:hover{
+                filter: invert(100%);
+            }
+        }
+        &__icon--delete{
+            background-image: url("./src/images/cart/xmark-solid.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            &:hover{
+                filter: invert(100%);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-table,
+    .cart-table__cell--header,
+    .cart-table__cell--product,
+    .cart-table__cell--price,
+    .cart-table__cell--quantity,
+    .cart-table__cell--total,
+    .cart-table__cell--actions,
+    .product-info,
+    .actions {
+        font-size: calc(100% - 1px); /* Riduce leggermente la dimensione del font in modo proporzionale */
+    }
+
+    .cart-table {
+        width: 100%; /* Mantiene la tabella a larghezza piena fino a 480px */
+    }
+
+    .product-details img {
+        width: 45px; /* Riduce leggermente la larghezza delle immagini */
+        height: auto; /* Mantiene le proporzioni dell'immagine */
+    }
+
+    .actions__icon {
+        width: 20px; /* Riduce la dimensione delle icone di azione */
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-table,
+    .cart-table__cell--header,
+    .cart-table__cell--product,
+    .cart-table__cell--price,
+    .cart-table__cell--quantity,
+    .cart-table__cell--total,
+    .cart-table__cell--actions,
+    .product-info,
+    .actions {
+        font-size: 12px; /* Imposta una dimensione fissa del font per dispositivi molto piccoli */
+    }
+
+    .product-details img {
+        width: 40px; /* Imposta una dimensione fissa per le immagini */
+    }
+
+    .actions__icon {
+        width: 18px; /* Riduce ulteriormente la dimensione delle icone */
+        height: 18px;
+    }
+}
+

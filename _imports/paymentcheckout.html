@@ -1,0 +1,69 @@
+<main class="container-main">
+    <div class="container-wrapper">
+        <div class="checkout-progress-indicator-container">
+            <div class="progress-indicator-wrapper">
+                <sergey-import src="progressindicator2.html" />
+            </div>
+        </div>
+        <div class="checkout-layout">
+
+            <aside class="checkout-layout__right-column">
+
+                <sergey-import src="cardtotal.html" />
+                <sergey-import src="ordersummary.html" />
+                <div class="shipping-to">
+                    <div class="shipping-to__header">
+                        <span class="shipping-to__title">SHIPPING TO:</span>
+                        <img src="src/images/productpage/matita.svg" alt="Edit" class="shipping-to__icon">
+                    </div>
+                    <div class="shipping-to__details">
+                        <span class="shipping-to__name">John Doe</span>
+                        <span class="shipping-to__address">1234, Elm Street</span>
+                        <span class="shipping-to__extra">Apt. 2B</span>
+                        <span class="shipping-to__location">USA, New York, 10001</span>
+                        <span class="shipping-to__phone">+1 555-1234</span>
+                    </div>
+                </div>
+                
+                <div class="bottom-section">
+                    <h2 class="bottom-section__title">Shipping method:</h2>
+                    <span class="bottom-section__subtitle">Free shipping</span>
+                </div>
+
+            </aside>
+
+            <section class="checkout-layout__left-column">
+
+                <div class="billing-address">
+                    <h2 class="billing-address__title">Billing Address</h2>
+                    <label class="billing-address__checkbox">
+                        <input type="checkbox" class="billing-address__input">
+                        <span class="billing-address__label">Same as shipping address</span>
+                    </label>
+                </div>
+                
+                <div class="apply-discount">
+                    <h2 class="apply-discount__title">Apply Discount Code</h2>
+                    <form class="apply-discount__form">
+                        <input type="text" class="apply-discount__input" placeholder="Insert your code">
+                        <button type="submit" class="apply-discount__button">Apply</button>
+                    </form>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-method__header">
+                        <h2 class="payment-method__title">Payment Method</h2>
+                        <p class="payment-method__security">All transactions are secure and encrypted.</p>
+                    </div>
+                    <div class="payment-method__paypal">
+                        <sergey-import src="paypal.html" />
+                    </div>
+                    <div class="payment-method__credit-card">
+                        <sergey-import src="creditcard.html" />
+                    </div>
+                </div>
+                <sergey-import src="invoicerequest.html" />
+                
+            </section>
+        </div>
+</main>

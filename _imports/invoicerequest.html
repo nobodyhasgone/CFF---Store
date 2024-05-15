@@ -1,0 +1,27 @@
+<form class="invoice-request">
+    <h2 class="invoice-request__title">Invoice Request</h2>
+    <div class="invoice-request__radio-group">
+        <label class="invoice-request__radio">
+            <input type="radio" name="invoice-request" value="yes" class="invoice-request__radio-input">
+            <span>Yes</span>
+        </label>
+        <label class="invoice-request__radio">
+            <input type="radio" name="invoice-request" value="no" class="invoice-request__radio-input" checked>
+            <span>No</span>
+        </label>
+    </div>
+    <div class="invoice-request__details">
+        <label for="fiscal-code" class="invoice-request__label">Fiscal Code
+            <span class="invoice-request__required">*</span>
+        </label>
+        <input type="text" id="fiscal-code" name="fiscal-code" class="invoice-request__input-field" placeholder="Fiscal Code">
+        
+        <p class="invoice-request__note">Please fill out at least one of the fields below*</p>
+        
+        <label for="pec" class="invoice-request__label">PEC</label>
+        <input type="text" id="pec" name="pec" class="invoice-request__input-field" placeholder="PEC">
+        
+        <label for="sdi" class="invoice-request__label">SDI</label>
+        <input type="text" id="sdi" name="sdi" class="invoice-request__input-field" placeholder="SDI">
+    </div>
+</form>

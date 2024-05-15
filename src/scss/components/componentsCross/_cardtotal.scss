@@ -1,0 +1,74 @@
+
+@mixin card-styles($bg-color, $padding) {
+    background-color: $bg-color;
+    padding: $padding;
+}
+
+@mixin card-section {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid white;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+
+    & > div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    & > div:last-child {
+        margin-bottom: 0;
+    }
+
+    & > span {
+        font-size: 14px;
+    }
+}
+
+.order-total {
+    @include card-styles(rgba(131, 111, 82, 0.1), 16px);
+
+    &__section {
+        @include card-section;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: $font-big;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    &__label {
+        font-size: 12px;
+        font-weight: $font-small;
+        letter-spacing: 1px;
+        &-1{
+            font-size: 16px;
+            font-weight: $font-medium;
+            letter-spacing: 0.8px;
+        }
+    }
+
+    &__value {
+        font-size: 12px;
+        font-weight: $font-small;
+        letter-spacing: 1px;
+        &-1{
+            font-size: 16px;
+            font-weight: $font-medium;
+            letter-spacing: 1px;
+        }
+        &-2{
+            font-weight: $font-big;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__footer{
+        display: flex;
+        justify-content: space-between;
+    }
+}

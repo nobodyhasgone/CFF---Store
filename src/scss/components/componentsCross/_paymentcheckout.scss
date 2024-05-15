@@ -1,0 +1,185 @@
+.shipping-to {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        border-bottom: 1px solid white;
+        padding-bottom: 8px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: $font-big;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        filter: brightness(0) saturate(100%) invert(41%) sepia(65%) saturate(650%) hue-rotate(360deg) brightness(91%) contrast(84%);
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        & > span:first-child {
+            padding-bottom: 4px;
+        }
+
+        & > span {
+            font-size: 16px;
+            font-weight: $font-medium;
+            letter-spacing: 0.8px;
+        }
+
+        & > span:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__name,
+    &__address,
+    &__extra,
+    &__location,
+    &__phone {
+        font-size: 14px;
+    }
+}
+
+.bottom-section {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__title {
+            text-transform: uppercase;
+            font-weight: $font-big;
+            font-size: 16px;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            font-weight: $font-medium;
+            letter-spacing: 0.8px;
+        }
+    }
+}
+
+.billing-address {
+    padding: 0 0 40px;
+    margin-bottom: 16px;
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: $font-big;
+        font-size: 16px;
+        margin-bottom: 12px;
+        padding: 0 0 8px;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        margin-right: 8px;
+        margin-left: 0;
+    }
+
+    &__label {
+        font-size: 14px;
+    }
+}
+
+.apply-discount {
+    padding: 0 0 40px;
+    margin-bottom: 16px;
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: $font-big;
+        font-size: 16px;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        padding-bottom: 4px;
+    }
+
+    &__input {
+        border: none;
+        font-size: 14px;
+        padding: 0;
+        margin-right: 8px;
+        width: 100%;
+        outline: none;
+        &::placeholder{
+            letter-spacing: 1px;
+            font-family: $main-font;
+            font-size: 16px;
+            font-weight: $font-medium;
+        }
+    }
+
+    &__button {
+        background: transparent;
+        border: none;
+        color: black;
+        padding: 0 16px;
+        font-size: 16px;
+        font-weight: $font-medium;
+        cursor: pointer;
+        letter-spacing: 0.8px;
+    }
+}
+
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0 0;
+
+    &__header {
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: $font-big;
+        font-size: 16px;
+        margin-bottom: 4px;
+        letter-spacing: 1px;
+    }
+
+    &__security {
+        font-size: 12px;
+        font-weight: $font-small;
+        font-family: $main-font;
+    }
+
+    &__paypal,
+    &__credit-card {
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

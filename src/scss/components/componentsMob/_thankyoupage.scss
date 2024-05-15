@@ -1,0 +1,265 @@
+.thank-you {
+    padding: 75px 8px 0;
+    @media (min-width: 768px){
+        padding: 110px 80px 0;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__confirmation {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgba(131, 111, 82, 0.2);
+        padding-bottom: 20px;
+
+    }
+    &__order-number{
+        margin-bottom: 8px;
+        color: $main-brown;
+        font-weight: $font-medium;
+        font-family: $main-font;
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        height: 20px;
+    }
+
+    &__title{
+        margin-bottom: 8px;
+        font-weight: $font-small;
+        font-family: $main-font;
+        font-size: 24px;
+        letter-spacing: 1px;
+        line-height: 28px;
+    }
+    &__details {
+        margin-bottom: 8px;
+        font-weight: $font-medium;
+        font-family: $main-font;
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        line-height: 20px;
+    }
+
+    &__manage-container {
+        display: none;
+    }
+    &__manage-order {
+        display: none; // Hidden by default
+    }
+
+    @media (min-width: 768px) {
+        .thank-you {
+            &__confirmation {
+                text-align: center; // Centra il testo per i dispositivi desktop
+            }
+    
+            &__manage-order {
+                display: block;
+            }
+            &__manage-container {
+                padding: 20px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+    
+            &__additional-content {
+                display: block; // Mostra il contenitore solo su desktop
+                width: 60%; // Imposta la larghezza al 50%
+                margin: 0 auto; // Centra il contenitore
+            }
+        }
+    }
+
+    &__product-image {
+        display: none; // Hidden by default
+    }
+
+    &__right-column{
+        padding-top: 20px;
+    }
+
+    &__form {
+        padding: 20px 0;
+        &-title {
+            text-transform: uppercase;
+            font-weight: $font-big;
+            font-size: 16px;
+            font-family: $main-font;
+            letter-spacing: 1px;
+        }
+
+        &-description{
+            font-family: $main-font;
+            font-size: 16px;
+            font-weight: $font-medium;
+            letter-spacing: 0.8px;
+        }
+    }
+    &__label {
+        display: block;
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: $font-medium;
+        letter-spacing: 0.8px;
+        margin-bottom: 4px;
+    }
+
+    &__required{
+        color: $main-brown;
+    }
+    &__input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+    }
+    &__input {
+        flex: 1;
+        padding: 16px;
+        border: 1px solid black;
+        &::placeholder{
+            font-size: 16px;
+            font-weight: $font-medium;
+            letter-spacing: 1px;
+            font-family: $main-font;
+        }
+    }
+
+    &__icon {
+        cursor: pointer;
+        background-image: url("./src/images/icons/icon-eye.png");
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 20px;
+    }
+    &__checkbox-label {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 8px;
+        margin-left: -3px;
+        margin-right: 4px;
+    }
+    &__terms {
+        margin-bottom: 16px;
+    }
+
+    &__link {
+        color: black;
+        text-decoration: underline;
+
+        &:hover {
+            color: $main-brown;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column; 
+
+        &__left-column {
+            display: none; 
+        }
+
+        &__right-column {
+            width: 100%;
+        }
+    }
+    &__button-container {
+        display: none; 
+        width: auto; 
+        margin: 20px 0; 
+    }
+    &__button-container {
+        display: block;
+        text-align: left;
+    }
+
+    @media (min-width: 768px) {
+        .btn-short {
+            width: 50%; // Imposta la larghezza del bottone al 50% solo su desktop
+        }
+    }
+
+    @media (min-width: 768px) {
+        &__content {
+            flex-direction: row;
+            margin: 0 auto;
+            justify-content: space-between;
+
+            &__left-column {
+                display: block;
+                max-width: 50%;
+                padding-top: 50px;
+            }
+
+            &__right-column{
+                max-width: 50%;
+                padding-top: 50px;
+            }
+        }
+    }
+        &__form {
+            padding-top: 0;
+            margin-top: 0;
+            &-title{
+                margin: 0;
+            }
+        }
+}
+
+.btn_default-secondary{
+        &:hover{
+            background-color: $main-black;
+            color: $main-white;
+            border-color: $main-black;
+        }
+}
+
+@media (min-width: 768px) {
+    .thank-you {
+        &__manage-order,
+        &__product-image {
+            display: block;
+        }
+        &__product-image{
+            width: 100%;
+            height: auto;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+        }
+        &__left-column{
+            max-width: 50%;
+            padding-top: 50px;
+            margin-right: 16px;
+        }
+        &__right-column{
+            max-width: 50%;
+            padding-top: 50px;
+        }
+    }
+}
+
+.desktop-only-footer {
+    display: none; // Nasconde il footer per impostazione predefinita su tutti i dispositivi
+
+    // Media query per dispositivi con larghezza minima di 768px
+    @media (min-width: 768px) {
+        display: block; // Mostra il footer solo su dispositivi desktop
+    }
+}
+.password-container {
+    @media (min-width: 768px) {
+        display: none; // Nasconde il contenitore su desktop
+    }
+}

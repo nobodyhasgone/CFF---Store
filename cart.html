@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <sergey-import src="head.html" />
+    <title>Cart</title>
+</head>
+<body>
+    <sergey-import src="header.html" />
+    <!-- Contenitore principale della pagina -->
+    <div class="cart-container">
+        <!-- Titolo della pagina -->
+        <h1 class="cart-container__title">Shopping Cart</h1>
+
+        <!-- Componente Articoli nel carrello -->
+        <sergey-import src="cartitems.html" />
+
+        <div class="cart-actions">
+    <div class="cart-actions__group-column-left">
+        <a href="/clear-cart" class="cart-actions__button cart-actions__button--clear">
+            <button class="cart-actions__button-style">Continue Shopping</button>
+        </a>
+    </div>
+    <div class="cart-actions__group-column-right">
+        <a href="/continue-shopping" class="cart-actions__button cart-actions__button--continue">
+            <button class="cart-actions__button-style">Clear Shopping Cart</button>
+        </a>
+        <a href="/update-cart" class="cart-actions__button cart-actions__button--update">
+            <button class="cart-actions__button-style">Update Cart</button>
+        </a>
+    </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-footer__wrapper">
+                <div class="cart-footer__column cart-footer__column--discount">
+                    <h3 class="cart-footer__title">APPLY DISCOUNT CODE</h3>
+                    <form class="cart-footer__form-column1">
+                        <input type="text" placeholder="Enter discount code" class="cart-footer__input-no-border">
+                        <span class="cart-footer__apply">Apply</span>
+                    </form>
+                </div>
+                <div class="cart-footer__wrapper--right">
+                    <div class="cart-footer__column cart-footer__column--shipping">
+                        <h3 class="cart-footer__title">ESTIMATE SHIPPING AND TAX</h3>
+                        <p class="cart-footer__subtitle">Enter your destination to get a shipping estimate.</p>
+                        <form class="cart-footer__form-column2">
+                            <label class="cart-footer__label">Country
+                                <select class="cart-footer__select">
+                                    <option value="usa">USA</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="uk">UK</option>
+                                </select>
+                            </label>
+                            <label class="cart-footer__label">State/Province
+                                <select class="cart-footer__select">
+                                    <option value="none">Please select a regione, state or province.</option>
+                                    <option value="california">California</option>
+                                    <option value="ontario">Ontario</option>
+                                    <option value="london">London</option>
+                                </select>
+                            </label>
+                            <label class="cart-footer__label cart-footer__label-last">Zip/Postal Code
+                                <input type="text" placeholder="Zip code" class="cart-footer__input">
+                            </label>
+                        </form>
+                        <div class="cart-footer__shipping-option">
+                            <h3 class="cart-footer__title">FREE SHIPPING</h3>
+                            <div class="cart-footer__radio-group">
+                                <input type="radio" checked class="cart-footer__radio">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="cart-footer__column cart-footer__column--summary">
+                        <sergey-import src="cardtotal.html" />
+                        <div class="cart-footer__checkout-multiple">
+                            <a href="#" class="cart-footer__link">Check Out with Multiple Addresses</a>
+                        </div>
+                        <a href="#" class="cart-footer__checkout">
+                            <button class="btn_default-primary-active">Check Out</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <sergey-import src="subscribe.html" />
+    <sergey-import src="footer.html" />
+    <script src="src/js/counter.js"></script>
+    <script src="src/js/header.js"></script>
+    <script src="/src/js/navbar.js"></script>
+    <script src="src/js/arrowup.js"></script>
+</body>
+</html>

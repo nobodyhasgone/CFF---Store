@@ -1,0 +1,39 @@
+<table class="cart-table">
+    <thead>
+        <tr class="cart-table__header">
+            <th class="cart-table__cell--header">PRODUCT</th>
+            <th class="cart-table__cell--header">PRICE</th>
+            <th class="cart-table__cell--header">QUANTITY</th>
+            <th class="cart-table__cell--header">TOTAL</th>
+            <th class="cart-table__cell--header"></th> <!-- Cella vuota per spazio -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="cart-table__row">
+            <td class="cart-table__cell--product">
+                <div class="product-details">
+                    <img src="./src/images/productpage/A_407A 3.svg" alt="Product Image">
+                    <div class="product-info">
+                        <a class="product-info__title-link"><h3 class="product-info__title">TRUCKER JACKET</h3></a>
+                        <p class="product-info__description">Light Soft Suede Unlined Jacket</p>
+                        <span class="product-info__color">Color: <span class="product-info__color-selected">Light Blue</span></span>
+                        <span class="product-info__size">Size: <span class="product-info__size-selected">50</span></span>
+                    </div>
+                    
+                </div>
+            </td>
+            <td class="cart-table__cell--price">€1,770.00</td>
+            <td class="cart-table__cell--quantity">
+                <!-- Qui inseriremo il componente contatore -->
+                <sergey-import src="counter.html" />
+            </td>
+            <td class="cart-table__cell--total">€1,770.00</td>
+            <td class="cart-table__cell--actions">
+                <div class="actions">
+                    <span class="actions__icon actions__icon--edit"></span>
+                    <span class="actions__icon actions__icon--delete"></span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

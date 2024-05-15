@@ -1,0 +1,215 @@
+.container-main{
+    position: relative;
+    z-index: 2;
+    max-width: 100vw;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.container-wrapper{
+    max-width: 540px;
+    margin: auto;
+    padding: 0 15px;
+    @media (min-width: 768px) {
+        max-width: 1200px;
+        padding: 0 30px;
+    }
+}
+.checkout-progress-indicator-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-information {
+    &__title {
+        font-weight: $font-big;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 20px 0 10px;
+        margin-bottom: 10px;
+    }
+
+    &__account {
+        text-align: left;
+        margin-bottom: 0;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        flex-wrap: wrap;
+        font-weight: $font-medium;
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        line-height: 20px;
+    }
+
+    &__account-text {
+        margin-right: 5px;
+        font-size: 16px;
+    }
+
+    &__sign-in,
+    &__create-account {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+            color: $main-brown;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 27px;
+        border: none;
+        padding: 0;
+        margin-top: 23px;
+    }
+
+    &__label {
+        font-size: 16px;
+        font-weight: $font-medium;
+        text-transform: none;
+        margin-bottom: 5px;
+        letter-spacing: 0.8px;
+    }
+
+    &__required {
+        color: $main-brown;
+    }
+
+    &__input {
+        margin-right: 0;
+        border: 1px solid #000;
+        height: 2.875rem;
+        font-size: 1rem;
+        padding: 0 1.0625rem;
+        font-weight: $font-medium;
+        color: #000;
+        letter-spacing: 1px;
+    }
+}
+
+.checkout-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+
+        &__left-column {
+            width: 64.5%;
+            float: left;
+            margin: 0 0 20px;
+            padding: 0 120px 0 0;
+            order: 0; /* Mostra la colonna di sinistra dopo la colonna di destra su schermi grandi */
+        }
+
+        &__right-column {
+            width: 35.5%;
+            order: 1; /* Mostra la colonna di destra prima della colonna di sinistra su schermi grandi */
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+.container-main {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-wrapper {
+    max-width: 540px;
+    margin: auto;
+    padding: 0 15px;
+
+    @media (min-width: 768px) {
+        max-width: 1200px;
+        padding: 0 15px;
+        margin: auto;
+    }
+}
+
+.shipping-address {
+    &__title {
+        font-weight: $font-big;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        border: none;
+        padding: 0;
+    }
+
+    &__label {
+        font-size: 16px;
+        font-weight: $font-medium;
+        text-transform: none;
+        margin-bottom: 5px;
+        letter-spacing: 0.8px;
+    }
+
+    &__required {
+        color: $main-brown;
+    }
+
+    &__input {
+        margin-right: 0;
+        border: 1px solid #000;
+        height: 2.875rem;
+        font-size: 1rem;
+        padding: 0 1.0625rem;
+        font-weight: $font-medium;
+        color: #000;
+        letter-spacing: 1px;
+    }
+
+    &__select {
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+.shipping-methods {
+    &__title {
+        font-weight: $font-big;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin: 20px 0 10px;
+    }
+
+    &__option {
+        width: auto;
+        padding: 5px 15px 10px 0;
+        font-weight: $font-medium;
+        font-size: 16px;
+    }
+}

@@ -25,8 +25,21 @@
 @import 'src/scss/components/componentsPlus/notifications';
 @import 'src/scss/components/componentsPlus/sizechart';
 @import 'src/scss/components/componentsMob/carosellomobile';
-
 @import 'src/scss/components/componentsPlus/carditem';
+@import 'src/scss/components/componentsCross/headercheckout';
+@import 'src/scss/components/componentsCross/progress-indicator';
+@import 'src/scss/components/componentsCross/formcheckoutstep1';
+@import 'src/scss/components/componentsCross/ordersummary';
+@import 'src/scss/components/componentsCross/cardtotal';
+@import 'src/scss/components/componentsCross/paymentcheckout';
+@import 'src/scss/components/componentsCross/paypal';
+@import 'src/scss/components/componentsCross/creditcard';
+@import 'src/scss/components/componentsCross/invoicerequest';
+@import 'src/scss/components/componentsMob/thankyoupage';
+
+@import 'src/scss/components/componentsDesk/cart';
+@import 'src/scss/components/componentsDesk/cartitems';
+@import 'src/scss/components/componentsCross/counter';
 
 /* Global */
 body {

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="product">
                             <span class="product-image-container"></span>
                             <div class="product-item-details">
-                                <strong class="product-name">LUMBERJACK JACKET</strong>
+                            <strong class="product-name"><a href="productpage.html">LUMBERJACK JACKET</a></strong>
                                 <div class="product-item-material">Sandal suede shearling Lumberjack Jacket</div>
                                 <div class="product-item-options">
                                     <dl class="product-option-list">

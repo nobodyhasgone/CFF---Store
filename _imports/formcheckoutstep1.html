@@ -1,0 +1,119 @@
+<main class="container-main">
+    <div class="container-wrapper">
+
+        <div class="checkout-progress-indicator-container">
+            <div class="progress-indicator-wrapper">
+                <sergey-import src="progressindicator.html" />
+            </div>
+        </div>
+
+        <div class="checkout-layout">
+            <aside class="checkout-layout__right-column">
+                <h2 class="order-summary__title">ORDER SUMMARY</h2>
+                <sergey-import src="ordersummary.html"></sergey-import>
+            </aside>
+
+            <section class="checkout-layout__left-column">
+
+                <section class="contact-information">
+                    <h2 class="contact-information__title">Contact Information</h2>
+                    <p class="contact-information__account">
+                        <span class="contact-information__account-text">Already have an account?</span>
+                        <a href="#" class="contact-information__sign-in">
+                            <span>Sign in</span>
+                        </a>
+                        <span>or</span>
+                        <a href="#" class="contact-information__create-account">
+                            <span>Create account</span>
+                        </a>
+                    </p>
+                    <form class="contact-information__form">
+                        <div class="contact-information__field">
+                            <label for="email" class="contact-information__label">E-mail Address
+                                <span class="contact-information__required">*</span>
+                            </label>
+                            <input type="email" id="email" class="contact-information__input" placeholder="E-mail">
+                        </div>
+                    </form>
+                </section>
+
+                <section class="shipping-address">
+                    <h2 class="shipping-address__title">SHIPPING ADDRESS</h2>
+                    <form class="shipping-address__form">
+                        <div class="shipping-address__field">
+                            <label for="first-name" class="shipping-address__label">First Name
+                                <span class="shipping-address__required">*</span>
+                            </label>
+                            <input type="text" id="first-name" class="shipping-address__input" placeholder="First Name">
+                        </div>
+                        <div class="shipping-address__field">
+                            <label for="last-name" class="shipping-address__label">Last Name
+                                <span class="shipping-address__required">*</span>
+                            </label>
+                            <input type="text" id="last-name" class="shipping-address__input" placeholder="Last Name">
+                        </div>
+                        <div class="shipping-address__field">
+                            <label for="company" class="shipping-address__label">Company</label>
+                            <input type="text" id="company" class="shipping-address__input" placeholder="Company">
+                        </div>
+                        <div class="shipping-address__field">
+                            <label for="street-address" class="shipping-address__label">Street Address
+                                <span class="shipping-address__required">*</span>
+                            </label>
+                            <input type="text" id="street-address" class="shipping-address__input" placeholder="Street nr">
+                            <br>
+                            <input type="text" id="street-extra" class="shipping-address__input" placeholder="Stair, entrance, etc">
+                        </div>
+                        <div class="shipping-address__field">
+                            <label for="country" class="shipping-address__label">Country
+                                <span class="shipping-address__required">*</span>
+                            </label>
+                            <select id="country" class="shipping-address__input">
+                                <option value="">Select a country</option>
+                                <option value="us">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="it">Italy</option>
+                                <option value="fr">France</option>
+                                <option value="de">Germany</option>
+                                <option value="ca">Canada</option>
+                                <option value="au">Australia</option>
+                                Aggiungi più opzioni qui
+                            </select>
+                        </div>
+                        <div class="shipping-address__field">
+                            <label for="city" class="shipping-address__label">City
+                                <span class="shipping-address__required">*</span>
+                            </label>
+                            <input type="text" id="city" class="shipping-address__input" placeholder="City">
+                        </div>
+                        <div class="shipping-address__field">
+                            <label for="zip-code" class="shipping-address__label">Zip/Postal Code
+                                <span class="shipping-address__required">*</span>
+                            </label>
+                            <input type="text" id="zip-code" class="shipping-address__input" placeholder="Zip code">
+                        </div>
+                        <div class="shipping-address__field">
+                            <label for="phone-number" class="shipping-address__label">Phone Number
+                                <span class="shipping-address__required">*</span>
+                            </label>
+                            <input type="text" id="phone-number" class="shipping-address__input" placeholder="Phone Number">
+                        </div>
+                    </form>
+                </section>
+                <!-- Sezione Metodi di Spedizione -->
+                <div class="shipping-methods">
+                    <h2 class="shipping-methods__title">SHIPPING METHODS</h2>
+                    <p class="shipping-methods__option">Free Shipping</p>
+                    <a href="payment.html" target="_blank"><button class="btn_default-primary-active">Continue</button></a>
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+</main>
+
+
+
+

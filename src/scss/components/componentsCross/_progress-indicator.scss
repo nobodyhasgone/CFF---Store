@@ -1,0 +1,88 @@
+@mixin circle($number, $bg-color, $text-color) {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: $bg-color;
+    color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: $font-medium;
+    font-family: $main-font;
+
+    &::after {
+        content: "#{$number}";
+    }
+}
+
+.progress-indicator-wrapper {
+    margin: 38px 0 45px;
+    height: 60px;
+    text-align: center;
+
+    .progress-indicator {
+        &__container {
+            display: flex;
+            align-items: center;
+        }
+
+        &__line {
+            width: 104px;
+            height: 2px;
+            background-color: black;
+            margin: 0;
+        }
+
+        &__description {
+            display: flex;
+            justify-content: space-between;
+            width: 175px;
+            margin-top: 6px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: $font-small;
+
+            span {
+                &:first-child {
+                    margin-left: -8px; // Sposta leggermente la scritta "Shipping" a sinistra
+                }
+            }
+        }
+
+        &__circle {
+            &--step1 {
+                @include circle(1, black, white);
+            }
+
+            &--step2 {
+                @include circle(2, white, black);
+            }
+
+            &--completed {
+                @include circle(2, black, white);
+            }
+        }
+
+        &--step1 {
+            .progress-indicator__circle--step1 {
+                @include circle(1, black, white);
+            }
+
+            .progress-indicator__circle--step2 {
+                @include circle(2, white, black);
+            }
+        }
+
+        &--completed {
+            .progress-indicator__circle--step1 {
+                @include circle(1, black, white);
+            }
+
+            .progress-indicator__circle--step2 {
+                @include circle(2, black, white);
+            }
+        }
+    }
+}

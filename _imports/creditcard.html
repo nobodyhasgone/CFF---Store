@@ -1,0 +1,67 @@
+<div class="credit-card">
+    <label class="credit-card__label">
+        <input type="radio" name="payment-method" class="credit-card__input" data-target=".credit-card__details">
+        <span class="credit-card__name">Credit Card</span>
+    </label>
+    <div class="credit-card__details">
+        <!-- Icone Carte di Credito -->
+        <div class="credit-card__icons">
+            <img src="src/images/payment/Visa.svg" alt="Visa" class="credit-card__icon">
+            <img src="src/images/payment/Mastercard.svg" alt="Mastercard" class="credit-card__icon">
+            <img src="src/images/payment/Amex.svg" alt="Amex" class="credit-card__icon">
+            <img src="src/images/payment/UnionPay.svg" alt="Discover" class="credit-card__icon">
+        </div>
+        
+        <!-- Numero Carta di Credito -->
+        <div class="credit-card__input-wrapper">
+            <label for="cc-number" class="credit-card__label">Card Number
+                <span class="credit-card__required">*</span>
+            </label>
+            <input type="text" id="cc-number" class="credit-card__input-field" placeholder="1234 1234 1234">
+
+            <!-- Data di Scadenza e CVC -->
+            <div class="credit-card__expiry-cvc">
+                <div class="credit-card__field">
+                    <label for="cc-expiration" class="credit-card__label">Expiration Date
+                        <span class="credit-card__required">*</span>
+                    </label>
+                    <input type="text" id="cc-expiration" class="credit-card__input-field" placeholder="MM / YY">
+                </div>
+                <div class="credit-card__field">
+                    <label for="cc-cvc" class="credit-card__label">CVC
+                        <span class="credit-card__required">*</span>
+                    </label>
+                    <input type="text" id="cc-cvc" class="credit-card__input-field" placeholder="123">
+                </div>
+            </div>
+
+            <!-- Paese -->
+            <label for="cc-country" class="credit-card__label">Country
+                <span class="credit-card__required">*</span>
+            </label>
+            <select id="cc-country" class="credit-card__input-field">
+                <option value="">Select Country</option>
+                <option value="US">United States</option>
+                <option value="GB">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <!-- Aggiungi altre opzioni se necessario -->
+            </select>
+        </div>
+
+        <!-- Checkbox per Memorizzare la Carta -->
+        <label class="credit-card__remember">
+            <input type="checkbox" class="credit-card__checkbox">
+            <span>Safely remember card information</span>
+        </label>
+        <!-- Checkbox per Termini e Condizioni -->
+        <label class="credit-card__terms">
+            <input type="checkbox" class="credit-card__checkbox">
+            <span>I agree to the&nbsp; </span>
+            <span><a href="#" class="credit-card__link">Terms and Conditions</a></span>
+            <span class="credit-card__required">*</span>
+        </label>
+
+        <!-- Pulsante Continua -->
+        <a href="thankyoupage.html"><button class="btn_default-primary-disabled credit-card__button-continue">place order</button></a>
+    </div>
+</div>

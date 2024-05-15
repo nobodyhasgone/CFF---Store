@@ -1,0 +1,65 @@
+.counter {
+    display: flex;
+    border: 2px solid #eaeaea; // Bordi esterni visibili
+    width: 120px;
+    height: 40px;
+
+    &__button, &__value {
+        flex: 1 0 auto;
+        width: 40px; // Larghezza quadrata
+        height: 40px; // Altezza quadrata
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+    }
+
+    &__button {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        font-size: 26px;
+        &--decrease{
+            color: #eaeaea;
+            &:hover{
+                color: black;
+            }
+        }
+        &--increase{
+            color: #eaeaea;
+            &:hover{
+                color: black;
+            }
+        }
+    }
+
+    // &__value {
+    //     border-left: 2px solid #eaeaea;
+    //     border-right: 2px solid #eaeaea;
+    // }
+}
+@media (max-width: 768px) {
+    .counter {
+        width: 100px; // Riduzione della larghezza del contatore
+        height: 35px; // Riduzione dell'altezza del contatore
+    }
+
+    .counter__button, .counter__value {
+        width: 33px; // Riduzione proporzionale della larghezza dei bottoni e del valore
+        height: 35px; // Altezza uniforme
+        font-size: 20px; // Riduzione della dimensione del font dei bottoni
+    }
+}
+
+@media (max-width: 480px) {
+    .counter {
+        width: 80px; // Ulteriore riduzione della larghezza del contatore
+        height: 30px; // Ulteriore riduzione dell'altezza del contatore
+    }
+
+    .counter__button, .counter__value {
+        width: 26px; // Ulteriore riduzione della larghezza
+        height: 30px; // Altezza uniforme
+        font-size: 16px; // Riduzione ulteriore della dimensione del font dei bottoni
+    }
+}
