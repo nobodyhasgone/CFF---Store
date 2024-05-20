@@ -1,0 +1,108 @@
+<div class="header-master-right">
+    <ul class="header-master-right__list">
+        <li class="header-master-right__item">
+            <span class="icon header-master-right__icon header-master-right__icon--search"></span>
+        </li>
+
+        <li class="header-master-right__item">
+            <span class="icon header-master-right__icon header-master-right__icon--email"></span>
+        </li>
+
+        <li class="header-master-right__item">
+            <a href="login.html">
+                <span class="icon header-master-right__icon header-master-right__icon--wishlist"></span>
+            </a>
+        </li>
+
+        <li class="header-master-right__item">
+            <span class="icon header-master-right__icon header-master-right__icon--account"></span>
+        </li>
+
+        <li class="header-master-right__item">
+            <span class="icon header-master-right__icon header-master-right__icon--cart">
+                <sergey-import src="headmastercart.html" />
+            </span>
+        </li>
+    </ul>
+</div>
+
+<div class="search-panel">
+    <div class="search-panel__inner">
+        <div class="search-panel__header">
+            <span>Search</span>
+            <span class="icon search-panel__close-icon"></span>
+        </div>
+        <div class="search-panel__content">
+            <form class="search-panel__form">
+                <input type="text" class="search-panel__input" placeholder="Start browsing..." />
+                <span><button type="button" class="search-panel__button">Search</button></span>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="overlay"></div> -->
+<div class="email-panel">
+    <div class="email-panel__container">
+        <div class="email-panel__header">
+            <span>Contact Us</span>
+            <span class="icon email-panel__close-icon"></span>
+        </div>
+        <p class="email-panel__text">
+            Unfortunately, it is currently not possible to order directly through our website from your country. However, we're happy to support you in finalising your order. To purchase, please reach out to our customer service.
+        </p>
+        <div class="email-panel__info">
+            <div class="email-panel__info-item">
+                <span class="icon email-panel__phone-icon"></span>
+                <a href="tel:+1234567890">Phone Number</a>
+            </div>
+            <div class="email-panel__info-item">
+                <span class="icon email-panel__email-icon"></span>
+                <a href="mailto:email@example.com">Email Address</a>
+            </div>
+            <div class="email-panel__info-item">
+                <span class="icon email-panel__address-icon"></span>
+                <address>
+                    <a href="https://www.google.com/maps?q=1234+Example+St,+City,+Country" target="_blank">
+                        1234 Example St, City, Country
+                    </a>
+                </address>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="account-panel">
+    <div class="account-panel__container">
+        <div class="account-panel__header">
+            <span>Sign in</span>
+            <span class="icon account-panel__close-icon"></span>
+        </div>
+        <form class="account-panel__form">
+            <div class="account-panel__form-group">
+                <label>
+                    <div style="display: inline;">
+                        <span>Email</span>
+                        <span class="required">*</span>
+                    </div>
+                </label>
+                <input type="email" placeholder="Enter Email" required>
+            </div>
+            <div class="account-panel__form-group">
+                <label class="account-panel__password-label">
+                    <div style="display: inline;">
+                        <span>Password</span>
+                        <span class="required">*</span>
+                    </div>
+                    <a href="#"><span class="account-panel__forgot">Forgot?</span></a>
+                </label>
+                <div class="account-panel__password-wrapper">
+                    <input type="password" placeholder="Enter Password" required>
+                    <span class="icon account-panel__toggle-password"></span>
+                </div>
+            </div>
+            <button type="submit" class="btn_default-primary-active">Login</button>
+        </form>
+        <p>Not registered yet?<a href="#"><span class="account-panel__create">Create an account</span></a></p>
+    </div>
+</div>

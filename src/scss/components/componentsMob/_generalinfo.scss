@@ -1,0 +1,32 @@
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add some space between sections */
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid #ccc; /* Add a border to distinguish sections */
+        border-radius: 8px; /* Add some border-radius for better appearance */
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px; /* Space between header and content */
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__subtitle {
+        padding: 5px 0;
+        font-weight: bold;
+    }
+}

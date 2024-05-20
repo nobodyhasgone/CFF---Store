@@ -1,0 +1,22 @@
+.myaccount-buttons {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    &__button {
+        border-radius: 8px;
+        border: none; /* No border by default */
+        padding: 0; /* No padding by default */
+        background: none; /* Transparent background by default */
+        cursor: pointer;
+        font-size: 1rem;
+        
+        &--active {
+            border: 1px solid black;
+            padding: 4px 12px;
+        }
+    }
+}

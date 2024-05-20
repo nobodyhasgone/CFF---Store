@@ -1,0 +1,401 @@
+$overlay-color: rgba(0, 0, 0, 0.5);
+
+.header-master-right {
+    display: flex;
+    flex-direction: row;
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        margin: 0 10px;
+    }
+
+    &__icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__icon--search {
+        background-image: url('./src/images/icons/magnifierb.svg');
+    }
+
+    &__icon--email {
+        background-image: url('./src/images/icons/messageb.svg');
+    }
+
+    &__icon--account {
+        background-image: url('./src/images/icons/accountb.svg');
+    }
+
+    &__icon--wishlist {
+        background-image: url('./src/images/icons/heartb.svg');
+    }
+
+    &__icon--cart {
+        background-image: url('./src/images/icons/shoppingbagb.svg');
+    }
+}
+
+.search-panel {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    z-index: 1000;
+
+    &--active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        height: 100%;
+        box-sizing: border-box; /* Ensure padding doesn't affect total width/height */
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 16px;
+    }
+
+    &__close-icon {
+        background-image: url('./src/images/icons/close-icon.svg');
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__content {
+        flex-grow: 1;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid black;
+        padding-bottom: 16px;
+    }
+
+    &__input {
+        flex-grow: 1;
+        border: none;
+        outline: none;
+        padding: 8px 0;
+    }
+
+    &__button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-master-right__item:nth-child(2),
+    .header-master-right__item:nth-child(3),
+    .header-master-right__item:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .search-panel {
+        height: 100px;
+        background-color: $main-brown;
+        top: 85px;
+        right: 80px;
+        left: 80px;
+        width: auto;
+        transform: translateX(0);
+        border-radius: 8px;
+        width: 100%;
+        max-width: calc(100% - 160px);
+    }
+
+    .search-panel__inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 40px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .search-panel__header {
+        display: none;
+    }
+
+    .search-panel__content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 115px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .search-panel__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid white;
+        padding: 30px 0 0;
+        width: 100%
+    }
+
+    .search-panel__input {
+        padding: 0 8px;
+        outline: none;
+        background-color: transparent;
+        text-align: center;
+        &::placeholder{
+            color:white;
+        }
+    }
+
+    .search-panel__button {
+        padding: 0;
+        color: white;
+        flex-shrink: 0;
+    }
+}
+
+// .overlay {
+//     display: none;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: $overlay-color;
+//     z-index: 999; /* Mettere l'overlay sopra il contenuto della pagina */
+// }
+
+.overlay--active {
+    display: block;
+}
+
+.email-panel, .account-panel {
+    display: none; /* Nascondere il pannello per default */
+}
+
+@media (min-width: 769px) {
+    .email-panel, .account-panel {
+        position: fixed;
+        top: 0;
+        right: -440px; /* Nascondere inizialmente il pannello fuori dalla vista */
+        width: 440px;
+        height: 100vh;
+        background-color: white;
+        overflow-y: hidden;
+        transition: right 0.3s ease;
+        z-index: 1000; /* Mettere il pannello sopra l'overlay */
+        display: block; /* Mostrare il pannello solo per schermi > 768px */
+    }
+
+    .email-panel--active, .account-panel--active {
+        right: 0; /* Far apparire il pannello */
+    }
+
+    .email-panel__container, .account-panel__container {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        box-sizing: border-box; /* Assicurarsi che il padding non influisca sulla larghezza/altezza totale */
+    }
+
+    .email-panel__header, .account-panel__header  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .email-panel__close-icon, .account-panel__close-icon {
+        background-image: url('./src/images/icons/close-icon.svg');
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .email-panel__text, .account-panel__text {
+        margin-bottom: 16px;
+    }
+
+    .email-panel__info, .account-panel__info  {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .email-panel__info-item, .account-panel__info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        
+        &:last-child {
+            margin-bottom: 0; /* Rimuovere il margine inferiore dall'ultimo elemento */
+        }
+    }
+
+    .email-panel__info-item a {
+        color: black;
+        text-decoration: none;
+    
+        &:visited,
+        &:active {
+            color: black;
+        }
+    
+        &:hover {
+            color: $main-brown;
+        }
+    }
+
+    address {
+        font-style: normal;
+        cursor: pointer;
+    
+        &:hover {
+            color: $main-brown;
+        }
+    }
+
+    .email-panel__info-item > .icon, .account-panel__info-item > .icon {
+        margin-right: 3px;
+    }
+
+    .email-panel__phone-icon {
+        background-image: url('./src/images/icons/mobile-icon.png');
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .email-panel__email-icon {
+        background-image: url('./src/images/icons/email-icon.png');
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .email-panel__address-icon {
+        background-image: url('./src/images/icons/position-icon.png');
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .account-panel__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .account-panel__form-group {
+        margin-bottom: 16px;
+
+        label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+
+            .required {
+                color: $main-brown;
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    }
+
+    .account-panel__password-wrapper {
+        position: relative;
+
+        input {
+            width: 100%; 
+            flex-grow: 1;
+        }
+
+        .account-panel__toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url('./src/images/icons/icon-eye.png');
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .account-panel__toggle-password--active {
+            background-image: url('./src/images/icons/icon-eye-slash.png');
+        }
+    }
+
+    .account-panel__forgot {
+        text-decoration: underline;
+        color: black;
+
+        &:hover {
+            color: $main-brown;
+        }
+
+        &:visited,
+        &:active {
+            color: black;
+        }
+    }
+
+    .account-panel__create {
+        color: black;
+        margin-left: 5px;
+        text-decoration: underline;
+
+        &:hover {
+            color: $main-brown;
+        }
+
+        &:visited,
+        &:active {
+            color: black;
+        }
+    }
+}

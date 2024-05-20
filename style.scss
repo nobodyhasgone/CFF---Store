@@ -36,10 +36,20 @@
 @import 'src/scss/components/componentsCross/creditcard';
 @import 'src/scss/components/componentsCross/invoicerequest';
 @import 'src/scss/components/componentsMob/thankyoupage';
-
 @import 'src/scss/components/componentsDesk/cart';
 @import 'src/scss/components/componentsDesk/cartitems';
 @import 'src/scss/components/componentsCross/counter';
+
+@import 'src/scss/components/headerMaster/headermaster';
+@import 'src/scss/components/headerMaster/headermasterleft';
+@import 'src/scss/components/headerMaster/headermasterleft2';
+@import 'src/scss/components/headerMaster/headermasterright';
+@import 'src/scss/components/headerMaster/headmastercart';
+
+@import 'src/scss/components/componentsMob/mylogin';
+@import 'src/scss/components/componentsMob/myaccountbutton';
+@import 'src/scss/components/componentsMob/generalinfo';
+
 
 /* Global */
 body {
