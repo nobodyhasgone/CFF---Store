@@ -1,0 +1,287 @@
+// .mini-card-container {
+//     display: none; /* Nasconde il container di default */
+// }
+
+// .minicart-container {
+//     max-height: calc(100vh - 300px);
+//     border: none;
+//     padding: 7px 0;
+//     margin: 0;
+//     height: auto;
+// }
+
+// .minicart-items {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+// }
+
+// .product-item {
+//     border-bottom: 1px solid black;
+//     padding: 15px 0;
+// }
+
+// .product {
+//     margin: 0;
+//     box-sizing: border-box;
+// }
+
+// .product-image-container {
+//     float: left;
+//     width: 74px;
+//     height: 110px;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+
+// .product-item-details {
+//     position: relative;
+//     padding-right: 30px;
+//     padding-left: 85px;
+// }
+
+// .product-name {
+//     display: block;
+//     margin: 0;
+//     font-weight: 500;
+//     font-size: 16px;
+//     line-height: 20px;
+//     letter-spacing: 0.8px;
+//     margin-bottom: 5px;
+//     text-transform: uppercase;
+//     a {
+//         color:black;
+//         &:visited, &:link {
+//             color: #000;
+//         }
+//         &:hover {
+//             color: $main-brown;
+//             cursor: pointer;
+//         }
+//     }
+// }
+
+// .product-item-material {
+//     font-size: 10px;
+//     line-height: 14px;
+//     letter-spacing: 0.5px;
+//     margin-bottom: 5px;
+// }
+
+// .product-item-color {
+//     margin-bottom: 8px;
+// }
+
+// .product-item-options {
+//     display: flex; 
+//     flex-direction: column;
+//     gap: 8px;
+//     align-items: left; 
+//     margin-bottom: 8px;
+// }
+
+// .product-option-list {
+//     width: auto;
+//     min-width: 50px;
+//     font-weight: 400;
+//     font-size: 12px;
+//     display: flex;
+//     margin: 0;
+//     justify-content: left;
+// }
+
+// .label {
+//     color: #000;
+//     font-size: 12px;
+//     display: inline-block;
+//     margin-right: 4px;
+//     text-transform: uppercase;
+// }
+
+// .values {
+//     color: #000;
+//     font-size: 12px;
+//     display: inline-block;
+//     margin: 0;
+// }
+
+// .quantity-edit {
+//     margin-top: 8px;
+
+//     .label {
+//         margin-right: 8px;
+//     }
+
+//     .quantity-select {
+//         width: 60px;
+//     }
+
+//     .edit-actions {
+//         margin-top: 8px;
+//         display: flex;
+//         gap: 10px;
+
+//         a {
+//             font-size: 12px;
+//             text-decoration: underline;
+//             cursor: pointer;
+//             color: #000;
+
+//             &:hover {
+//                 color: #555;
+//             }
+//         }
+//     }
+// }
+
+// .product-item-actions {
+//     margin-top: 9px;
+// }
+
+// .product-actions {
+//     float: none;
+//     margin: 0;
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+// .secondary, .primary {
+//     display: inline-block;
+// }
+
+// .link-underline {
+//     overflow: visible;
+//     position: relative;
+//     text-decoration: underline;
+//     font-weight: 500;
+//     font-size: 16px;
+//     line-height: 20px;
+//     letter-spacing: 0.8px;
+// }
+
+// .secondary a {
+//     &:visited, &:link {
+//         color: black;
+//     }
+//     &:hover {
+//         color: $main-brown;
+//     }
+// }
+
+// .primary__edit {
+//     background-image: url("./src/images/productpage/matita.svg");
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     width: 17px;
+//     height: 17px;
+//     display: inline-block;
+// }
+
+// .edit-actions {
+//     display: flex;
+//     gap: 10px;
+//     align-items: center;
+
+//     a {
+//         font-size: 12px;
+//         text-decoration: underline;
+//         cursor: pointer;
+//         color: #000;
+
+//         &:hover {
+//             color: #555;
+//         }
+//     }
+// }
+
+// .product-option-list {
+//     display: flex;
+//     gap: 5px;
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+
+//     &--active {
+//         display: flex;
+//         padding-top: 4px;
+//     }
+
+//     &--disabled {
+//         display: none;
+//     }
+
+//     &__label {
+//         color: #333;
+//         margin-right: 4px;
+//     }
+
+//     &__values {
+//         display: flex;
+//         justify-content: center; 
+//         align-items: center; 
+//         gap: 5px;
+//         margin-left: 0; 
+//         margin-right: auto;
+//     }
+// }
+
+// .quantity-multiplier {
+//     margin-left: 3px;
+//     margin-right: 3px;
+// }
+
+// .quantity-edit {
+//     display: flex;
+//     gap: 5px;
+//     align-items: center;
+// }
+
+// #quantity-select {
+//     padding: 5px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     font-size: 14px;
+//     outline: none;
+// }
+
+// #quantity-number,
+// #unit-price,
+// #unit-price-disabled {
+//     display: inline-block;
+// }
+
+.header-master-right__icon--cart {
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+        // Stili per lo stato hover dell'icona del carrello
+        color: $main-brown;
+    }
+}
+
+.cart-icon-badge {
+    position: absolute;
+    top: 22px;
+    right: 83px;
+    background-color: $main-brown;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 8px;
+    display: none; // Hidden by default
+    z-index: 1; // Assicurati che il badge sia sopra l'icona del carrello
+    pointer-events: none; // Impedisci interazioni con il badge
+}
+// Media query per dispositivi con larghezza dello schermo fino a 768px
+@media (max-width: 768px) {
+    .cart-icon-badge {
+        top: 3px;
+        right: 18px;
+    }
+}
+
+// Stile per mantenere il colore del testo bianco durante l'hover
+.header-master-right__item:hover .cart-icon-badge {
+    color: white;
+}

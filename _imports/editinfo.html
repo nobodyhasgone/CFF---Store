@@ -1,0 +1,31 @@
+<div class="edit__container-xl">
+    <div class="edit-info__container">
+        <!-- Pulsante Back -->
+        <div class="edit-info__back-button">
+            <a href="mylogin.html" class="edit-info__global-back-button">
+                <img src="./src/images/icons/arrow_back.svg" alt="Back" class="edit-info__global-back-button__icon">
+                <span class="edit-info__global-back-button__text">Back</span>
+            </a>    
+        </div>
+
+        <h2 class="edit-info__title">General info</h2>
+
+        <form class="edit-info__form">
+            <label for="name" class="edit-info__label">Name<span class="required">*</span></label>
+            <input type="text" class="edit-info__input" id="name" placeholder="Name">
+            
+            <label for="surname" class="edit-info__label">Surname<span class="required">*</span></label>
+            <input type="text" class="edit-info__input" id="surname" placeholder="Surname">
+            
+            <label for="email" class="edit-info__label">E-mail<span class="required">*</span></label>
+            <input type="email" class="edit-info__input" id="email" placeholder="Email">
+            
+            <button type="submit" class="btn_default-primary-active edit-info__save-button">Save Changes</button>
+
+            <div class="edit-info__buttons-wrapper">
+                <button type="button" class="btn_default-primary-active">Save and Edit</button>
+                <button type="submit" class="btn_default-secondary btn_default-secondary__extra">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

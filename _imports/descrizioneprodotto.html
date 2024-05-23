@@ -1,0 +1,23 @@
+<div class="product-details">
+    <div class="product-info-container">
+        <h1 class="product-title" id="product-title"></h1>
+        <h2 class="product-subtitle" id="product-subtitle"></h2>
+        <p class="product-price" id="product-price"></p>
+        <p class="product-color" id="product-color">COLOR: <span id="product-color-value"></span></p>
+        <div class="product-shape" id="product-shape"></div>
+        <h2 class="product-section-title">size</h2>
+        <div class="product-size-chart">
+            <img src="./src/images/icons/ruler.svg" alt="Size Chart" class="size-chart-icon">
+            <a href="#" class="size-chart-link">Size Chart</a>
+        </div>
+    </div>
+    <div class="sticky-container">
+        <form id="size-selection-form">
+            <select name="size" id="size-select" class="size-select">
+                <option value="selectSize">Select size</option>
+                <!-- Options will be populated dynamically -->
+            </select>
+            <button class="btn_default-primary-active button-size" type="submit">ADD TO CART</button>
+        </form>
+    </div>
+</div>

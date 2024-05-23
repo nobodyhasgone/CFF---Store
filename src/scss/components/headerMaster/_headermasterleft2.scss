@@ -15,7 +15,8 @@
         position: relative;
         padding: 0 13px;
 
-        &:hover .headermasterleft2__dropdown {
+        &:hover .headermasterleft2__dropdown,
+        .headermasterleft2__dropdown:hover {
             display: flex;
         }
     }
@@ -51,7 +52,8 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Aggiunge box shadow */
         z-index: 1000;
         padding: 10px;
-        margin-top: 20px;
+        margin-top: 8px; 
+        pointer-events: auto;
 
         &-content {
             display: flex;
@@ -82,7 +84,7 @@
                     display: block;
 
                     &:hover {
-                        text-decoration: underline;
+                        color: $main-brown;
                     }
                 }
             }

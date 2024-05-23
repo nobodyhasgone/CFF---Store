@@ -1,0 +1,277 @@
+[
+    {
+        "id": 1,
+        "name": "Ajax Full-Zip Sweatshirt",
+        "price": 69.00,
+        "color": "Black",
+        "description": "A comfortable full-zip sweatshirt made from premium materials, perfect for casual wear.",
+        "images": [
+            "./src/images/product1/image1.jpg",
+            "./src/images/product1/image2.jpg",
+            "./src/images/product1/image3.jpg"
+        ],
+        "sizes": {
+            "40": 10,
+            "42": 5,
+            "44": 7,
+            "46": 0,
+            "48": 8,
+            "50": 6,
+            "52": 2,
+            "54": 4,
+            "56": 0
+        }
+    },
+    {
+        "id": 2,
+        "name": "Strike Endurance Tee",
+        "price": 39.00,
+        "color": "Red",
+        "description": "Stylish and versatile, this jacket is designed for both comfort and performance.",
+        "images": [
+            "./src/images/product2/image1.jpg",
+            "./src/images/product2/image2.jpg",
+            "./src/images/product2/image3.jpg"
+        ],
+        "sizes": {
+            "40": 12,
+            "42": 6,
+            "44": 0,
+            "46": 4,
+            "48": 10,
+            "50": 5,
+            "52": 0,
+            "54": 2,
+            "56": 1
+        }
+    },
+    {
+        "id": 3,
+        "name": "Grayson Crewneck Sweatshirt",
+        "price": 64.00,
+        "color": "Yellow",
+        "description": "A classic crew-neck t-shirt made from soft, breathable fabric for all-day comfort.",
+        "images": [
+            "./src/images/product3/image1.jpg",
+            "./src/images/product3/image2.jpg",
+            "./src/images/product3/image3.jpg"
+        ],
+        "sizes": {
+            "40": 3,
+            "42": 6,
+            "44": 8,
+            "46": 4,
+            "48": 0,
+            "50": 5,
+            "52": 3,
+            "54": 2,
+            "56": 1
+        }
+    },
+    {
+        "id": 4,
+        "name": "Proteus Fitness Jackshirt",
+        "price": 45.00,
+        "color": "Black",
+        "description": "Elegant and functional, this raincoat provides excellent protection from the elements.",
+        "images": [
+            "./src/images/product4/image1.jpg",
+            "./src/images/product4/image2.jpg",
+            "./src/images/product4/image3.jpg"
+        ],
+        "sizes": {
+            "40": 1,
+            "42": 6,
+            "44": 8,
+            "46": 4,
+            "48": 0,
+            "50": 5,
+            "52": 3,
+            "54": 0,
+            "56": 0
+        }
+    },
+    {
+        "id": 5,
+        "name": "Mach Street Sweatshirt",
+        "price": 62.00,
+        "color": "Black",
+        "description": "These jeans are crafted from high-quality denim and offer a perfect blend of style and durability.",
+        "images": [
+            "./src/images/product5/image1.jpg",
+            "./src/images/product5/image2.jpg",
+            "./src/images/product5/image3.jpg"
+        ],
+        "sizes": {
+            "40": 3,
+            "42": 6,
+            "44": 8,
+            "46": 4,
+            "48": 3,
+            "50": 0,
+            "52": 3,
+            "54": 2,
+            "56": 4
+        }
+    },
+    {
+        "id": 6,
+        "name": "Logan HeatTec Tee",
+        "price": 24.00,
+        "color": "White",
+        "description": "A lightweight hoodie that combines warmth with a sleek, modern design.",
+        "images": [
+            "./src/images/product6/image1.jpg",
+            "./src/images/product6/image2.jpg",
+            "./src/images/product6/image3.jpg",
+            "./src/images/product6/image4.jpg"
+        ],
+        "sizes": {
+            "40": 12,
+            "42": 19,
+            "44": 21,
+            "46": 34,
+            "48": 10,
+            "50": 27,
+            "52": 30,
+            "54": 20,
+            "56": 10
+        }
+    },
+    {
+        "id": 7,
+        "name": "Breathe-Easy Tank",
+        "price": 34.00,
+        "color": "Black",
+        "description": "This polo shirt is made from moisture-wicking fabric, ideal for both casual and athletic wear.",
+        "images": [
+            "./src/images/product7/image1.jpg",
+            "./src/images/product7/image2.jpg",
+            "./src/images/product7/image3.jpg"
+        ],
+        "sizes": {
+            "40": 12,
+            "42": 6,
+            "44": 12,
+            "46": 14,
+            "48": 7,
+            "50": 0,
+            "52": 0,
+            "54": 13,
+            "56": 9
+        }
+    },
+    {
+        "id": 8,
+        "name": "Circe Hooded Ice Fleece",
+        "price": 68.00,
+        "color": "Grey",
+        "description": "A cozy, knitted sweater that is perfect for layering during the colder months.",
+        "images": [
+            "./src/images/product8/image1.jpg",
+            "./src/images/product8/image2.jpg"
+        ],
+        "sizes": {
+            "40": 12,
+            "42": 6,
+            "44": 9,
+            "46": 4,
+            "48": 10,
+            "50": 8,
+            "52": 0,
+            "54": 13,
+            "56": 17
+        }
+    },
+    {
+        "id": 9,
+        "name": "Gwyn Endurance Tee",
+        "price": 24.00,
+        "color": "Black",
+        "description": "These chinos offer a tailored fit and are made from a stretchable fabric for maximum comfort.",
+        "images": [
+            "./src/images/product9/image1.jpg",
+            "./src/images/product9/image2.jpg"
+        ],
+        "sizes": {
+            "40": 12,
+            "42": 6,
+            "44": 0,
+            "46": 0,
+            "48": 10,
+            "50": 13,
+            "52": 30,
+            "54": 20,
+            "56": 11
+        }
+    },
+    {
+        "id": 10,
+        "name": "Juno Jacket",
+        "price": 177.00,
+        "color": "Purple",
+        "description": "A versatile dress that can be dressed up or down, made from soft and flowy material.",
+        "images": [
+            "./src/images/product10/image1.jpg",
+            "./src/images/product10/image2.jpg",
+            "./src/images/product10/image3.jpg"
+        ],
+        "sizes": {
+            "40": 1,
+            "42": 4,
+            "44": 8,
+            "46": 4,
+            "48": 0,
+            "50": 0,
+            "52": 35,
+            "54": 6,
+            "56": 11
+        }
+    },
+    {
+        "id": 11,
+        "name": "Radiant Tee",
+        "price": 22.00,
+        "color": "Pink",
+        "description": "Comfortable and breathable, these shorts are perfect for lounging or light workouts.",
+        "images": [
+            "./src/images/product11/image1.jpg",
+            "./src/images/product11/image2.jpg"
+        ],
+        "sizes": {
+            "40": 0,
+            "42": 6,
+            "44": 8,
+            "46": 0,
+            "48": 10,
+            "50": 14,
+            "52": 15,
+            "54": 20,
+            "56": 11
+        }
+    },
+    {
+        "id": 12,
+        "name": "Eos V-Neck Hoodie",
+        "price": 54.00,
+        "color": "white",
+        "description": "A stylish blazer that adds a touch of sophistication to any outfit, made from premium materials.",
+        "images": [
+            "./src/images/product12/image1.jpg",
+            "./src/images/product12/image2.jpg",
+            "./src/images/product12/image3.jpg",
+            "./src/images/product12/image4.jpg"
+        ],
+        "sizes": {
+            "40": 15,
+            "42": 0,
+            "44": 0,
+            "46": 0,
+            "48": 19,
+            "50": 0,
+            "52": 17,
+            "54": 23,
+            "56": 11
+        }
+    }
+]

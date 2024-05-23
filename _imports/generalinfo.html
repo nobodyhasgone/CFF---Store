@@ -1,59 +1,63 @@
 <div class="information">
-    <!-- Sezione 1 -->
-    <div class="information__section">
-        <div class="information__header">
-            <span>General info</span>
-            <svg class="information__icon" aria-hidden="true">
-                <!-- SVG content here -->
-            </svg>
-        </div>
-        <div class="information__subtitle">Name</div>
-        <div class="information__subtitle">Surname</div>
-        <div class="information__subtitle">email@gmail.com</div>
-    </div>
+    <ul class="information__list">
+        <!-- Sezione 1 -->
+        <li class="information__section">
+            <div class="information__header">
+                <span class="information__title">General info</span>
+                <svg class="information__icon information__icon--general-info" aria-hidden="true"></svg>
+            </div>
+            <span class="information__subtitle">Name</span>
+            <span class="information__subtitle">Surname</span>
+            <span class="information__subtitle">email@gmail.com</span>
+        </li>
 
-    <!-- Sezione 2 -->
-    <div class="information__section">
-        <div class="information__header">
-            <span>General info</span>
-            <svg class="information__icon" aria-hidden="true">
-                <!-- SVG content here -->
-            </svg>
-        </div>
-        <div class="information__subtitle">Name</div>
-        <div class="information__subtitle">Surname</div>
-    </div>
+        <!-- Sezione 2 -->
+        <li class="information__section">
+            <div class="information__header">
+                <span class="information__title">Billing address</span>
+                <svg class="information__icon information__icon--billing-address" aria-hidden="true">
+                    <!-- SVG content here -->
+                </svg>
+            </div>
+            <span class="information__subtitle">Line 1</span>
+            <span class="information__subtitle">Line 2</span>
+        </li>
 
-    <!-- Sezione 3 -->
-    <div class="information__section">
-        <div class="information__header">
-            <span>General info</span>
-            <svg class="information__icon" aria-hidden="true">
-                <!-- SVG content here -->
-            </svg>
-        </div>
-        <div class="information__subtitle">Name</div>
-        <div class="information__subtitle">Surname</div>
-    </div>
+        <!-- Sezione 3 -->
+        <li class="information__section">
+            <div class="information__header">
+                <span class="information__title">Shipping addresses</span>
+                <svg class="information__icon information__icon--shipping-address" aria-hidden="true">
+                    <!-- SVG content here -->
+                </svg>
+            </div>
+            <span class="information__subtitle">Line 1</span>
+            <span class="information__subtitle">Line 2</span>
+        </li>
 
-    <!-- Sezione 4 -->
-    <div class="information__section">
-        <div class="information__header">
-            <span>General info</span>
-            <svg class="information__icon" aria-hidden="true">
-                <!-- SVG content here -->
-            </svg>
-        </div>
-        <div class="information__subtitle">Name</div>
-    </div>
+        <!-- Sezione 4 -->
+        <li class="information__section">
+            <div class="information__header">
+                <span class="information__title">Payment method</span>
+                <svg class="information__icon information__icon--payment-method" aria-hidden="true">
+                    <!-- SVG content here -->
+                </svg>
+            </div>
+            <span class="information__subtitle">Paypal</span>
+        </li>
 
-    <!-- Sezione 5 -->
-    <div class="information__section">
-        <div class="information__header">
-            <span>General info</span>
-            <svg class="information__icon" aria-hidden="true">
-                <!-- SVG content here -->
-            </svg>
-        </div>
+        <!-- Sezione 5 -->
+        <li class="information__section">
+            <div class="information__header">
+                <span class="information__title">Newsletter</span>
+                <svg class="information__icon information__icon--newsletter" aria-hidden="true">
+                    <!-- SVG content here -->
+                </svg>
+            </div>
+        </li>
+    </ul>
+
+    <div class="edit-info__container" style="display: none;">
+        <sergey-import src="editinfo.html" />
     </div>
 </div>

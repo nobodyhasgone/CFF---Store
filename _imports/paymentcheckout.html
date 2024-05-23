@@ -45,10 +45,14 @@
                 <div class="apply-discount">
                     <h2 class="apply-discount__title">Apply Discount Code</h2>
                     <form class="apply-discount__form">
-                        <input type="text" class="apply-discount__input" placeholder="Insert your code">
-                        <button type="submit" class="apply-discount__button">Apply</button>
+                        <input type="text" id="discount-code" class="apply-discount__input" placeholder="Insert your code">
+                        <button type="submit" id="apply-discount" class="apply-discount__button">Apply</button>
+                        <button type="button" id="remove-discount" class="apply-discount__button" style="display:none;">Remove</button>
                     </form>
+                    <p id="discount-message" class="apply-discount__message"></p>
                 </div>
+                
+                
 
                 <div class="payment-method">
                     <div class="payment-method__header">

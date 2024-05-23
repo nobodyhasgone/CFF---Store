@@ -1,38 +1,39 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-    const container = document.getElementById('cardsContainer');
-    const numCards = 12; // Assumendo che tu voglia generare 36 card
+// document.addEventListener('DOMContentLoaded', function() {
+//     const container = document.getElementById('cardsContainer');
+//     const numCards = 12; 
 
-    // Generazione delle card
-    for (let i = 0; i < numCards; i++) {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-            <div class="card__image-container">
-                <img src="../src/images/product/imgproduct.svg" class="card__image" alt="Product">
-                <a href="productpage.html" class="card__btn-link">
-                <button class="card__btn">Material</button>
-            </a>
-            </div>
-            <h2 class="card__name">Lumberjack Jacket</h2>
-            <p class="card__description">Sandal suede shearling Lumberjack Jacket</p>
-            <div class="card__bottom">
-                <span class="card__price">€ 00.000,00</span>
-                <span class="card__favorite"><img src="../src/images/product/hearticon.svg" alt="Add to Favorites"></span>
-            </div>
-        `;
-        container.appendChild(card);
-    }
+//     // Generazione delle card
+//     for (let i = 0; i < numCards; i++) {
+//         const card = document.createElement('div');
+//         card.className = 'card';
+//         card.innerHTML = `
+//             <div class="card__image-container">
+//                 <img src="../src/images/product/imgproduct.svg" class="card__image" alt="Product">
+//                 <a href="productpage.html" class="card__btn-link">
+//                 <button class="card__btn">Material</button>
+//             </a>
+//             </div>
+//             <h2 class="card__name">Lumberjack Jacket</h2>
+//             <p class="card__description">Sandal suede shearling Lumberjack Jacket</p>
+//             <div class="card__bottom">
+//                 <span class="card__price">€ 00.000,00</span>
+//                 <span class="card__favorite"><img src="../src/images/product/hearticon.svg" alt="Add to Favorites"></span>
+//             </div>
+//         `;
+//         container.appendChild(card);
+//     }
 
-    // Aggiunta degli event listeners per il toggle delle icone dei cuori
-    container.addEventListener('click', function(event) {
-        if (event.target.parentElement.classList.contains('card__favorite')) {
-            const img = event.target;
-            const isHeartFull = img.src.includes('full-heart.svg');
-            img.src = isHeartFull ? '../src/images/product/hearticon.svg' : '../src/images/product/full-heart.svg';
-        }
-    });
-});
+//     // Aggiunta degli event listeners per il toggle delle icone dei cuori
+//     container.addEventListener('click', function(event) {
+//         if (event.target.parentElement.classList.contains('card__favorite')) {
+//             const img = event.target;
+//             const isHeartFull = img.src.includes('full-heart.svg');
+//             img.src = isHeartFull ? '../src/images/product/hearticon.svg' : '../src/images/product/full-heart.svg';
+//         }
+//     });
+// });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -4,6 +4,9 @@
     display: flex;
     justify-content: center;
     min-height: 45px;
+    position: fixed;
+    transition: background-color 0.3s, margin-bottom 0.3s;
+    z-index: 1000;
 
     &__container {
         width: 100%;
@@ -49,6 +52,7 @@
             img {
                 max-width: 70.4px;
                 height: auto;
+                transition: filter 0.3s;
             }
         }
     }
@@ -84,4 +88,32 @@
     @media (max-width: 768px) {
         display: none;
     }
+}
+
+.headmaster--transparent {
+    background-color: transparent;
+}
+
+.headmaster__container--no-border {
+    border-bottom: none;
+}
+
+.hamburger__line--white {
+    background-color: white !important;
+}
+
+.headermasterleft2__link--white {
+    color: white !important;
+    &:hover{
+        color: black !important;
+    }
+}
+
+
+.headmaster__logo--invert img {
+    filter: invert(100%);
+}
+
+.header-master-right__icon--invert {
+    filter: invert(100%);
 }

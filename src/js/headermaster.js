@@ -73,14 +73,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchPanel = document.querySelector('.search-panel');
     const closeIcon = document.querySelector('.search-panel__close-icon');
 
-    searchIcon.addEventListener('click', () => {
-        closeAllPanels();
-        searchPanel.classList.toggle('search-panel--active');
-    });
+    if (searchIcon && searchPanel && closeIcon) {
+        searchIcon.addEventListener('click', () => {
+            const isActive = searchPanel.classList.contains('search-panel--active');
+            closeAllPanels();
+            if (!isActive) {
+                searchPanel.classList.add('search-panel--active');
+            }
+        });
 
-    closeIcon.addEventListener('click', () => {
-        searchPanel.classList.remove('search-panel--active');
-    });
+        closeIcon.addEventListener('click', () => {
+            searchPanel.classList.remove('search-panel--active');
+        });
+    }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -140,3 +145,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const headmaster = document.querySelector(".headmaster");
+    const headmasterContainer = document.querySelector(".headmaster__container");
+    const hamburgerLines = document.querySelectorAll(".hamburger__line");
+    const headermasterleftLinks = document.querySelectorAll(".headermasterleft2__link");
+    const logoImg = document.querySelector(".headmaster__logo img");
+    const rightIcons = document.querySelectorAll(".header-master-right__icon--search, .header-master-right__icon--email, .header-master-right__icon--wishlist, .header-master-right__icon--account, .header-master-right__icon--cart");
+
+    function applyTransparentStyles() {
+        headmaster.classList.add("headmaster--transparent");
+        headmasterContainer.classList.add("headmaster__container--no-border");
+        hamburgerLines.forEach(line => line.classList.add("hamburger__line--white"));
+        headermasterleftLinks.forEach(link => link.classList.add("headermasterleft2__link--white"));
+        if (logoImg) {
+            logoImg.parentNode.classList.add("headmaster__logo--invert");
+        }
+        rightIcons.forEach(icon => icon.classList.add("header-master-right__icon--invert"));
+    }
+
+    function removeTransparentStyles() {
+        headmaster.classList.remove("headmaster--transparent");
+        headmasterContainer.classList.remove("headmaster__container--no-border");
+        hamburgerLines.forEach(line => line.classList.remove("hamburger__line--white"));
+        headermasterleftLinks.forEach(link => link.classList.remove("headermasterleft2__link--white"));
+        if (logoImg) {
+            logoImg.parentNode.classList.remove("headmaster__logo--invert");
+        }
+        rightIcons.forEach(icon => icon.classList.remove("header-master-right__icon--invert"));
+    }
+
+    if (document.body.classList.contains("home-page")) {
+        applyTransparentStyles();
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                removeTransparentStyles();
+            } else {
+                applyTransparentStyles();
+            }
+        });
+    }
+});
+

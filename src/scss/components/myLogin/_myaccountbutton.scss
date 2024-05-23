@@ -1,0 +1,56 @@
+.myaccount-buttons {
+    border-top: 1px solid rgba(234, 234, 234, 1);
+    border-bottom: 1px solid rgba(234, 234, 234, 1);
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    &__button {
+        border-radius: 8px;
+        border: none; /* No border by default */
+        padding: 0; /* No padding by default */
+        background: none; /* Transparent background by default */
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 5px 12px;
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: $font-medium;
+        letter-spacing: 0.8px;
+        line-height: 20px;
+
+        &--active {
+            padding: 4px 12px;
+            border: 1px solid black;
+
+            @media (min-width: 768px) {
+                border: none; /* Remove border for screens larger than 768px */
+                padding: 0;
+            }
+        }
+
+        @media (min-width: 768px) {
+            &:not(.myaccount-buttons__button--active) {
+                color: rgba(119, 119, 119, 1); /* Color for non-active buttons */
+                padding: 0;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: column; /* Vertical alignment for larger screens */
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-top: none;
+        border-bottom: none;
+    }
+}
+
+
+.myhidden-buttons {
+    display: flex; /* Default display for larger screens */
+    @media (max-width: 768px) {
+        display: none; /* Hide by default on smaller screens */
+    }
+}

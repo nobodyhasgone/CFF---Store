@@ -7,12 +7,17 @@
 </head>
 
 <body>
-    <sergey-import src="header.html" />
-    <div class="login__title">
-        My account
+    <sergey-import src="headermaster.html" />
+    <div class="login-container">
+        <div class="login__title">My account</div>
+        <div class="account-container">
+            <sergey-import src="myaccountbutton.html" />
+            <sergey-import src="generalinfo.html" />
+            <sergey-import src="orders.html" />
+            <sergey-import src="returns.html" /> 
+        </div>
     </div>
-    <sergey-import src="myaccountbutton.html" />
-    <sergey-import src="generalinfo.html" />
     <script src="src/js/myaccountbutton.js"></script>
+    <script src="src/js/edit.js"></script>
 </body>
 </html>

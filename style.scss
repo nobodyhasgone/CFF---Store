@@ -1,6 +1,6 @@
 @import 'src/scss/color';
 @import 'src/scss/fonts';
-@import 'src/scss/components/componentsDesk/header';
+// @import 'src/scss/components/componentsDesk/header';
 @import 'src/scss/components/componentsCross/button';
 @import 'src/scss/components/componentsDesk/section';
 @import 'src/scss/components/componentsDesk/footer';
@@ -8,19 +8,19 @@
 @import 'src/scss/components/componentsDesk/visual';
 @import 'src/scss/components/componentsCross/subscription.scss';
 @import 'src/scss/components/componentsCross/login';
-@import 'src/scss/components/componentsDesk/navbar';
-@import 'src/scss/components/componentsDesk/searchbar';
-@import 'src/scss/components/componentsDesk/overlaymessages';
-@import 'src/scss/components/componentsDesk/overlaycart';
-@import 'src/scss/components/componentsDesk/overlayaccount';
-@import 'src/scss/components/componentsMob/navbarmobile';
+// @import 'src/scss/components/componentsDesk/navbar';
+// @import 'src/scss/components/componentsDesk/searchbar';
+// @import 'src/scss/components/componentsDesk/overlaymessages';
+// @import 'src/scss/components/componentsDesk/overlaycart';
+// @import 'src/scss/components/componentsDesk/overlayaccount';
+// @import 'src/scss/components/componentsMob/navbarmobile';
 @import 'src/scss/components/componentsCross/filtersoverlay';
 @import 'src/scss/components/componentsCross/shoppage';
 @import 'src/scss/components/componentsCross/sortby';
 @import 'src/scss/components/componentsCross/arrowup';
 @import 'src/scss/components/componentsCross/productpage';
 @import 'src/scss/components/componentsDesk/caroselloprodotto';
-@import 'src/scss/components/componentsCross/productdescription';
+// @import 'src/scss/components/componentsCross/productdescription';
 @import 'src/scss/components/componentsDesk/accordionmenuprodotto';
 @import 'src/scss/components/componentsPlus/notifications';
 @import 'src/scss/components/componentsPlus/sizechart';
@@ -39,16 +39,23 @@
 @import 'src/scss/components/componentsDesk/cart';
 @import 'src/scss/components/componentsDesk/cartitems';
 @import 'src/scss/components/componentsCross/counter';
-
+@import 'src/scss/components/paginaProdotto/paginaprodotto';
+@import 'src/scss/components/paginaProdotto/carosello';
+@import 'src/scss/components/paginaProdotto/descrizioneprodotto';
+@import 'src/scss/components/paginaProdotto/testprodotto';
+@import 'src/scss/components/paginaProdotto/minicart';
 @import 'src/scss/components/headerMaster/headermaster';
 @import 'src/scss/components/headerMaster/headermasterleft';
 @import 'src/scss/components/headerMaster/headermasterleft2';
 @import 'src/scss/components/headerMaster/headermasterright';
 @import 'src/scss/components/headerMaster/headmastercart';
 
-@import 'src/scss/components/componentsMob/mylogin';
-@import 'src/scss/components/componentsMob/myaccountbutton';
-@import 'src/scss/components/componentsMob/generalinfo';
+@import 'src/scss/components/myLogin/mylogin';
+@import 'src/scss/components/myLogin/myaccountbutton';
+@import 'src/scss/components/myLogin/generalinfo';
+@import 'src/scss/components/myLogin/orders';
+@import 'src/scss/components/myLogin/returns';
+@import 'src/scss/components/myLogin/editinfo';
 
 
 /* Global */

@@ -150,6 +150,20 @@
         letter-spacing: 0.8px;
     }
 }
+.apply-discount__message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.apply-discount__message--error {
+    color: red;
+}
+
+.apply-discount__message--success {
+    color: green;
+}
+
+
 
 .payment-method {
     display: flex;

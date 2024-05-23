@@ -1,0 +1,73 @@
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add some space between sections */
+    padding: 16px;
+    @media (min-width: 768px) {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        @media (min-width: 768px) {
+            &:nth-child(-n + 4) {
+                border-bottom: 1px solid rgba(234, 234, 234, 1); /* Add border-bottom for the first four children on larger screens */
+                padding: 20px 0;
+            }
+            &:first-child {
+            padding-top: 0; /* Remove padding-top for the first child */
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5px;
+        margin-bottom: 10px; /* Space between header and content */
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: $font-medium;
+        font-family: $main-font;
+        letter-spacing: 2px;
+        line-height: 32px;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        background-image: url("src/images/productpage/matita.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        filter: brightness(0) saturate(100%) invert(44%) sepia(34%) saturate(411%) hue-rotate(354deg) brightness(93%) contrast(97%);
+    }
+
+    &__subtitle {
+        padding: 5px 0;
+        font-weight: $font-medium;
+        font-family: $main-font;
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        line-height: 20px;
+    }
+}
+
+
+.edit-info__container{
+    display: none; /* Hide edit-info and billing-address containers by default */
+}

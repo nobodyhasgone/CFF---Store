@@ -1,50 +1,263 @@
+// .card {
+//   background: #FFF;
+//   overflow: hidden;
+//   transition: transform 0.3s ease;
+//   position: relative;
+//   overflow: hidden;
+
+//   .card__image-container {
+//     position: relative;
+//     width: 100%;
+//     height: auto; 
+
+//     .card__image {
+//         width: 100%;
+//         height: auto; 
+//     }
+
+//     .card__btn {
+//         position: absolute;
+//         bottom: 20px; 
+//         left: 15px; 
+//         right: 15px; 
+//         background-color: $main-white;
+//         color: $main-black; 
+//         border: none; 
+//         text-align: center; 
+//         padding: 10px 0; 
+//         opacity: 0; 
+//         transition: opacity 0.3s ease; 
+//         width: calc(100% - 30px);
+//         font-weight: $font-small;
+//         font-family: $main-font;
+//         letter-spacing: 1px;
+//         cursor: pointer;
+//     }
+// }
+
+// &:hover .card__btn {
+//     opacity: 1; 
+// }
+
+//   &__image {
+//       width: 100%;
+//       height: auto;
+//   }
+
+//   &__name{
+//     text-transform: uppercase;
+//     padding: 3px 0;
+//     text-align: left;
+//     margin: 0;
+//     font-size: 12px;
+//     font-family: $main-font;
+//     font-weight: $font-small;
+//     letter-spacing: 1px;
+//   }
+//   &__description {
+//       text-align: left;
+//       font-size: 10px;
+//       padding: 3px 0;
+//       margin: 0;
+//       font-family: $main-font;
+//       font-weight: $font-small;
+//       letter-spacing: 0.5px;
+//     }
+//     &__price{
+//       text-align: left;
+//       font-size: 12px;
+//       font-family: $main-font;
+//       font-weight: $font-small;
+//     }
+
+//   &__bottom {
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-between;
+//       padding: 10px 0;
+//   }
+//   &__favorite{
+//     cursor: pointer;
+//   }
+// }
+
+
+// // Se vuoi aggiungere un'icona di cuore specifica per la wish card, puoi farlo così:
+// .wish__card img {
+//   background-image: url('./src/images/product/hearticon2.svg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   width: 16px;
+//   height: 16px;
+// }
+
+// .shop-section__cards {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr); 
+//   grid-gap: 50px;
+// }
+
+
+// .pagination {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 10px;
+//   margin: 30px 0;
+//   padding-top: 30px;
+
+//   .page-number {
+//       position: relative;
+//       display: inline-block;
+//       cursor: pointer;
+//       user-select: none;
+//       font-size: 18px;
+//       font-family: $main-font;
+      
+//       &.current-page::after {
+//         content: '';
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//         bottom: -10px;
+//         height: 2px;
+//         background-color: black;
+//         width: 100%;
+//       }
+      
+//       &:hover {
+//         color: $main-brown; 
+//       }
+//   }
+
+//   .pagination-arrow {
+//       order: 2; // Inizialmente posizionata a destra
+//       cursor: pointer;
+//       width: 36px; 
+//       height: 36px; 
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       border: 1px solid #C4C4C4; 
+//       background-color: white; 
+//       border-radius: 50%; 
+//       transition: background-color 0.3s ease, border-color 0.3s ease;
+
+//       .arrow {
+//           width: 30%;
+//           height: auto;
+//           filter: invert(30%); 
+//           transition: filter 0.3s ease;
+//       }
+
+//       &:hover {
+//           background-color: $main-brown; 
+//           border-color: $main-brown;
+          
+//           .arrow {
+//               filter: none; 
+//           }
+//       }
+//   }
+// }
+
+// .loading-overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.5);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 1000;
+// }
+
+// .loading-spinner {
+//   border: 16px solid #f3f3f3;
+//   border-radius: 50%;
+//   border-top: 16px solid #3498db;
+//   width: 120px;
+//   height: 120px;
+//   animation: spin 2s linear infinite;
+// }
+
+// @keyframes spin {
+//   0% { transform: rotate(0deg); }
+//   100% { transform: rotate(360deg); }
+// }
+
+
+// .shop-section__cards {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr); 
+//   grid-gap: 50px;
+
+//   @media (max-width: 1024px) {
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 30px;
+//   }
+
+//   @media (max-width: 768px) {
+//     grid-template-columns: repeat(2, 1fr);
+//     gap: 30px;
+//   }
+// }
+
+.shop-section {
+  padding: 0 80px;
+
+  @media (max-width: 1199px) and (min-width: 768px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
 .card {
   background: #FFF;
   overflow: hidden;
   transition: transform 0.3s ease;
   position: relative;
-  overflow: hidden;
 
-  .card__image-container {
+  &__image-container {
     position: relative;
-    width: 100%;
-    height: auto; 
-
-    .card__image {
-        width: 100%;
-        height: auto; 
-    }
-
-    .card__btn {
-        position: absolute;
-        bottom: 20px; 
-        left: 15px; 
-        right: 15px; 
-        background-color: $main-white;
-        color: $main-black; 
-        border: none; 
-        text-align: center; 
-        padding: 10px 0; 
-        opacity: 0; 
-        transition: opacity 0.3s ease; 
-        width: calc(100% - 30px);
-        font-weight: $font-small;
-        font-family: $main-font;
-        letter-spacing: 1px;
-        cursor: pointer;
-    }
-}
-
-&:hover .card__btn {
-    opacity: 1; 
-}
-
-  &__image {
-      width: 100%;
-      height: auto;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.2);
   }
 
-  &__name{
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    right: 15px;
+    background-color: $main-white;
+    color: $main-black;
+    border: none;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: calc(100% - 30px);
+    font-weight: $font-small;
+    font-family: $main-font;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  &:hover &__btn {
+    opacity: 1;
+  }
+
+  &__name {
     text-transform: uppercase;
     padding: 3px 0;
     text-align: left;
@@ -54,35 +267,36 @@
     font-weight: $font-small;
     letter-spacing: 1px;
   }
+
   &__description {
-      text-align: left;
-      font-size: 10px;
-      padding: 3px 0;
-      margin: 0;
-      font-family: $main-font;
-      font-weight: $font-small;
-      letter-spacing: 0.5px;
-    }
-    &__price{
-      text-align: left;
-      font-size: 12px;
-      font-family: $main-font;
-      font-weight: $font-small;
-    }
+    text-align: left;
+    font-size: 10px;
+    padding: 3px 0;
+    margin: 0;
+    font-family: $main-font;
+    font-weight: $font-small;
+    letter-spacing: 0.5px;
+  }
 
   &__bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
   }
-  &__favorite{
+
+  &__price {
+    text-align: left;
+    font-size: 12px;
+    font-family: $main-font;
+    font-weight: $font-small;
+  }
+
+  &__favorite {
     cursor: pointer;
   }
 }
 
-
-// Se vuoi aggiungere un'icona di cuore specifica per la wish card, puoi farlo così:
 .wish__card img {
   background-image: url('./src/images/product/hearticon2.svg');
   background-repeat: no-repeat;
@@ -93,8 +307,24 @@
 
 .shop-section__cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 50px;
+
+  @media (max-width: 1199px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+.size-select {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
 }
 
 
@@ -113,49 +343,49 @@
       user-select: none;
       font-size: 18px;
       font-family: $main-font;
-      
+
       &.current-page::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -10px;
-        height: 2px;
-        background-color: black;
-        width: 100%;
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -10px;
+          height: 2px;
+          background-color: black;
+          width: 100%;
       }
-      
+
       &:hover {
-        color: $main-brown; 
+          color: $main-brown;
       }
   }
 
   .pagination-arrow {
-      order: 2; // Inizialmente posizionata a destra
+      order: 2;
       cursor: pointer;
-      width: 36px; 
-      height: 36px; 
+      width: 36px;
+      height: 36px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid #C4C4C4; 
-      background-color: white; 
-      border-radius: 50%; 
+      border: 1px solid #C4C4C4;
+      background-color: white;
+      border-radius: 50%;
       transition: background-color 0.3s ease, border-color 0.3s ease;
 
       .arrow {
           width: 30%;
           height: auto;
-          filter: invert(30%); 
+          filter: invert(30%);
           transition: filter 0.3s ease;
       }
 
       &:hover {
-          background-color: $main-brown; 
+          background-color: $main-brown;
           border-color: $main-brown;
-          
+
           .arrow {
-              filter: none; 
+              filter: none;
           }
       }
   }
@@ -186,21 +416,4 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-
-
-.shop-section__cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  grid-gap: 50px;
-
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
 }
