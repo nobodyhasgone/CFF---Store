@@ -33,3 +33,8 @@
         flex-direction: row;
     }
 }
+
+.section-container {
+    display: none; /* Nascondi tutte le sezioni per impostazione predefinita */
+    width: 100%;
+}

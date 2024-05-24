@@ -49,8 +49,6 @@
 
 
 .myhidden-buttons {
-    display: flex; /* Default display for larger screens */
-    @media (max-width: 768px) {
-        display: none; /* Hide by default on smaller screens */
-    }
+    display: none; /* Nascondi pulsanti */
 }
+

@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <sergey-import src="head.html" />
     <title>Login</title>
 </head>
-
 <body>
     <sergey-import src="headermaster.html" />
     <div class="login-container">
         <div class="login__title">My account</div>
         <div class="account-container">
             <sergey-import src="myaccountbutton.html" />
-            <sergey-import src="generalinfo.html" />
-            <sergey-import src="orders.html" />
-            <sergey-import src="returns.html" /> 
+            <div class="section-container" id="info-section">
+                <sergey-import src="generalinfo.html" />
+            </div>
+            <div class="section-container" id="orders-section">
+                <sergey-import src="orders.html" />
+            </div>
+            <div class="section-container" id="returns-section">
+                <sergey-import src="returns.html" />
+            </div>
+            <div class="section-container" id="billing-address-section" style="display: none;">
+                <sergey-import src="billingaddress.html" />
+            </div>
         </div>
     </div>
     <script src="src/js/myaccountbutton.js"></script>
     <script src="src/js/edit.js"></script>
+    <script src="src/js/editbillingaddress.js"></script>
+    <script src="src/js/headermaster.js"></script>
+    <script src="src/js/idlook.js"></script>
 </body>
 </html>

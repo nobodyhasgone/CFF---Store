@@ -1,31 +1,30 @@
+<div class="billing-address__container">
+    <!-- Pulsante Back -->
+    <div class="billing-address__back-button">
+        <a href="mylogin.html" class="billing-address__global-back-button">
+            <img src="./src/images/icons/arrow_back.svg" alt="Back" class="billing-address__global-back-button__icon">
+            <span class="billing-address__global-back-button__text">Back</span>
+        </a>    
+    </div>
+    <h2 class="billing-address__title">Billing Address</h2>
+    <form class="billing-address__form">
+        <label for="billing-address-line1-unique" class="billing-address__label">Address Line 1<span class="required">*</span></label>
+        <input type="text" class="billing-address__input" id="billing-address-line1-unique" placeholder="Address Line 1">
+        
+        <label for="billing-address-line2-unique" class="billing-address__label">Address Line 2</label>
+        <input type="text" class="billing-address__input" id="billing-address-line2-unique" placeholder="Address Line 2">
+        
+        <label for="billing-city-unique" class="billing-address__label">City<span class="required">*</span></label>
+        <input type="text" class="billing-address__input" id="billing-city-unique" placeholder="City">
+        
+        <label for="billing-zipcode-unique" class="billing-address__label">Zip Code<span class="required">*</span></label>
+        <input type="text" class="billing-address__input" id="billing-zipcode-unique" placeholder="Zip Code">
 
+        <button type="submit" class="btn_default-primary-active billing-address__save-button">Save Changes</button>
 
-    <div class="billing-address__container">
-        <!-- Pulsante Back -->
-        <div class="billing-address__back-button">
-            <a href="mylogin.html" class="billing-address__global-back-button">
-                <img src="./src/images/icons/arrow_back.svg" alt="Back" class="billing-address__global-back-button__icon">
-                <span class="billing-address__global-back-button__text">Back</span>
-            </a>    
+        <div class="billing-address__buttons-wrapper">
+            <button type="button" class="btn_default-primary-active">Save and Edit</button>
+            <button type="submit" class="btn_default-secondary btn_default-secondary__extra">Cancel</button>
         </div>
-        <h2 class="billing-address__title">Billing Address</h2>
-        <form class="billing-address__form">
-            <label for="address-line1" class="billing-address__label">Address Line 1<span class="required">*</span></label>
-            <input type="text" class="billing-address__input" id="address-line1" placeholder="Address Line 1">
-            
-            <label for="address-line2" class="billing-address__label">Address Line 2</label>
-            <input type="text" class="billing-address__input" id="address-line2" placeholder="Address Line 2">
-            
-            <label for="city" class="billing-address__label">City<span class="required">*</span></label>
-            <input type="text" class="billing-address__input" id="city" placeholder="City">
-            
-            <label for="zipcode" class="billing-address__label">Zip Code<span class="required">*</span></label>
-            <input type="text" class="billing-address__input" id="zipcode" placeholder="Zip Code">
-
-            <button type="submit" class="btn_default-primary-active billing-address__save-button">Save Changes</button>
-
-            <div class="billing-address__buttons-wrapper">
-                <button type="button" class="btn_default-primary-active">Save and Edit</button>
-                <button type="submit" class="btn_default-secondary btn_default-secondary__extra">Cancel</button>
-            </div>
-        </form>
+    </form>
+</div>
