@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <sergey-import src="head.html" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+    <title>Create Account</title>
+</head>
+<body>
+    <sergey-import src="headermaster.html" />
+
+    <div class="create-account">
+        <div class="create-account__title">
+            <h2 class="create-account__header">Create New Customer Account</h2>
+        </div>
+        <div class="create-account__form-container">
+            <form action="/register" method="post" class="create-account__form">
+                <label for="name" class="create-account__label">Name<span class="asterisk">*</span></label>
+                <input type="text" id="name" name="name" class="create-account__input" placeholder="Enter name" required>
+                
+                <label for="last-name" class="create-account__label">Last Name<span class="asterisk">*</span></label>
+                <input type="text" id="last-name" name="last_name" class="create-account__input" placeholder="Enter last name" required>
+                
+                <label for="email" class="create-account__label">Email<span class="asterisk">*</span></label>
+                <input type="email" id="email" name="email" class="create-account__input" placeholder="Enter email" required>
+                
+                <label for="password" class="create-account__label">Password<span class="asterisk">*</span></label>
+                    <div class="create-account__input-container">
+                        <input type="password" id="password" name="password" class="create-account__input" placeholder="Enter password" required>
+                        <span class="create-account__icon"></span>
+                    </div>
+                <div class="password-strength" id="passwordStrength">
+                    <div class="password-strength__overlay"></div>
+                    Password Strength: <span id="passwordStrengthText">No Password</span>
+                </div>
+                <p>Password must contain:</p>
+                <ul class="create-account__password-requirements">
+                    <li>At least a lower case letter</li>
+                    <li>At least an upper case letter</li>
+                    <li>At least a special character (*, !, ?)</li>
+                    <li>At least a number</li>
+                    <li>At least 10 characters long</li>
+                </ul>
+                
+                <label for="confirm-password" class="create-account__label">Confirm Password<span class="asterisk">*</span></label>
+                    <div class="create-account__input-container">
+                        <input type="password" id="confirm-password" name="confirm_password" class="create-account__input" placeholder="Confirm Password" required>
+                        <span class="create-account__icon"></span>
+                    </div>
+                
+                <div class="create-account__checkboxes">
+                    <label class="create-account__checkbox-label">
+                        <input type="checkbox" name="newsletter" class="create-account__checkbox"> Sign Up for Newsletter
+                    </label>
+                    <label class="create-account__checkbox-label">
+                        <input type="checkbox" name="agree" class="create-account__checkbox"> I agree with the storage and handling of my data by this website
+                    </label>
+                    <label class="create-account__checkbox-label">
+                        <input type="checkbox" name="remember" class="create-account__checkbox"> Remember me
+                    </label>
+                </div>
+
+                <div class="fake-recaptcha">
+                    <div class="fake-recaptcha__left">
+                        <input type="checkbox" id="fakeRecaptchaCheckbox" class="fake-recaptcha__checkbox">
+                        <label for="fakeRecaptchaCheckbox" class="fake-recaptcha__label">Non sono un robot</label>
+                    </div>
+                    <div class="fake-recaptcha__right">
+                        <span class="fake-recaptcha__image"></span>
+                        <span class="fake-recaptcha__text">reCAPTCHA</span>
+                        <div class="fake-recaptcha__links">
+                            <a href="#" class="fake-recaptcha__link">Privacy</a>
+                            <span> - </span>
+                            <a href="#" class="fake-recaptcha__link">Termini</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="box-privacy">By creating an account I agree with <a class="terms__conditions"><span>Terms and Conditions</span></a> and <a class="privacy__policy"><span>Privacy Policy</span></a></p>
+                <button type="submit" class="btn_default-primary-active">Create An Account</button>
+            </form>
+        </div>
+    </div>
+
+    <sergey-import src="subscribe.html" />
+    <sergey-import src="footer.html" />
+    <sergey-import src="arrowup.html" />
+
+    <script src="src/js/captcha.js"></script>
+    <script src="src/js/password-strength.js"></script>
+    <script src="src/js/arrowup.js"></script>
+    <script src="src/js/headermaster.js"></script>
+    <script src="src/js/cart.js"></script>
+    <script src="src/js/minicart.js"></script>
+</body>
+</html>

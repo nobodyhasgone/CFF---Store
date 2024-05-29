@@ -1,0 +1,30 @@
+<div class="shipping-address__container">
+    <!-- Pulsante Back -->
+    <div class="shipping-address__back-button">
+        <a href="mylogin.html" class="shipping-address__global-back-button">
+            <img src="./src/images/icons/arrow_back.svg" alt="Back" class="shipping-address__global-back-button__icon">
+            <span class="shipping-address__global-back-button__text">Back</span>
+        </a>    
+    </div>
+    <h2 class="shipping-address__title">Shipping Address</h2>
+    <form class="shipping-address__form">
+        <label for="shipping-address-line1" class="shipping-address__label">Address Line 1<span class="required">*</span></label>
+        <input type="text" class="shipping-address__input" id="shipping-address-line1" placeholder="Address Line 1">
+        
+        <label for="shipping-address-line2" class="shipping-address__label">Address Line 2</label>
+        <input type="text" class="shipping-address__input" id="shipping-address-line2" placeholder="Address Line 2">
+        
+        <label for="shipping-city" class="shipping-address__label">City<span class="required">*</span></label>
+        <input type="text" class="shipping-address__input" id="shipping-city" placeholder="City">
+        
+        <label for="shipping-zipcode" class="shipping-address__label">Zip Code<span class="required">*</span></label>
+        <input type="text" class="shipping-address__input" id="shipping-zipcode" placeholder="Zip Code">
+
+        <button type="submit" class="btn_default-primary-active shipping-address__save-button">Save Changes</button>
+
+        <div class="shipping-address__buttons-wrapper">
+            <button type="button" class="btn_default-primary-active">Save and Edit</button>
+            <button type="submit" class="btn_default-secondary btn_default-secondary__extra">Cancel</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,284 @@
+.create-account {
+    margin: 0;
+    padding: 45px 0 80px;
+        
+    @media (min-width: 768px) {
+        padding: 85px 0 80px;
+    }
+
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px 0 10px;
+    }
+
+    &__header {
+        font-size: 24px; 
+        color: #000; 
+        font-weight: $font-medium; 
+        font-family: $main-font;
+        letter-spacing: 2px;
+    }
+
+    &__form-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        box-sizing: border-box;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 632px;
+        margin: 0 auto;
+    }
+
+    &__label {
+        margin-top: 24px;
+        font-size: 16px;
+        font-weight: $font-medium;
+        cursor: default;
+        letter-spacing: 0.8px;
+        font-family: $main-font;
+    }
+
+    &__input-container {
+        position: relative;
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0 1.0625rem;
+        height: 2.875rem;
+        margin-top: 5px;
+        box-sizing: border-box;
+        letter-spacing: 1px;
+        font-family: $main-font;
+        font-weight: $font-medium;
+        font-size: 16px;
+        &::placeholder{
+            color: rgb(119, 119, 119); 
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 52%;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        background-image: url('./src/images/icons/icon-eye.png'); /* Aggiorna il percorso con il percorso corretto dell'icona */
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    &__password-requirements {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        padding-left: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 1rem;
+            color: rgb(119, 119, 119);
+            font-family: $main-font;
+            font-size: 16px;
+            font-weight: $font-medium;
+            letter-spacing: 0.8px;
+    
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 16px;
+                height: 2px;
+                background-color: #000;
+            }
+        }
+    }
+
+    &__checkboxes {
+        margin-top: 24px;
+    }
+
+    &__checkbox-label {
+        display: block;
+        margin-bottom: 24px;
+        font-family: $main-font;
+        font-size: 1rem;
+        font-weight: $font-medium;
+        letter-spacing: 0.8px;
+        line-height: 24px;
+    }
+}
+
+.password-strength {
+    background-color: #f4f4f4;
+    width: 100%;
+    padding: 6px 9px;
+    box-sizing: border-box;
+    color: rgb(119, 119, 119);
+    position: relative; /* Added to position the overlay absolutely */
+    overflow: hidden;
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: $font-small;
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: #d3d3d3;
+        opacity: 0.5; /* Reduced opacity */
+        z-index: 1;
+        transition: width 0.5s, background-color 0.5s;
+    }
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &.weak .password-strength__overlay {
+        background-color: #ffafae;
+        width: 25%;
+    }
+
+    &.strong .password-strength__overlay {
+        background-color: #c5eeac;
+        width: 75%;
+    }
+
+    &.very-strong .password-strength__overlay {
+        background-color: #81b562;
+        width: 100%;
+    }
+}
+
+
+
+.fake-recaptcha {
+    height: 74px;
+    width: 300px;
+    border: 1px solid #d3d3d3;
+    background-color: #f9f9f9;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10px;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 4px 1px;
+    margin-bottom: 24px;
+}
+
+.fake-recaptcha__left {
+    display: inline-block;
+    height: 74px;
+    width: 206px;
+    display: flex;
+    align-items: center;
+}
+
+.fake-recaptcha__checkbox {
+    margin-right: 10px;
+}
+
+.fake-recaptcha__label {
+    font-size: 14px;
+}
+
+.fake-recaptcha__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+}
+
+.fake-recaptcha__image {
+    width: 32px;
+    height: 32px;
+    background-image: url('./src/images/icons/logo_48.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fake-recaptcha__text {
+    font-size: 10px;
+}
+
+.fake-recaptcha__links {
+    font-size: 8px;
+}
+
+.fake-recaptcha__link {
+    color: #000;
+    text-decoration: none;
+}
+
+.fake-recaptcha__link:hover {
+    text-decoration: underline;
+}
+
+/* Loading Spinner */
+.fake-recaptcha__image.loading {
+    background-image: none;
+    position: relative;
+}
+
+.fake-recaptcha__image.loading::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.asterisk{
+    color: $main-brown;
+}
+
+.terms__conditions,
+.privacy__policy{
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover{
+        color: $main-brown;
+    }
+    &:link, &:visited{
+        color: black;
+    }
+}
+
+.box-privacy{
+    color: #000;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    font-size: 16px;
+    margin-bottom: 40px;
+    letter-spacing: normal;
+}

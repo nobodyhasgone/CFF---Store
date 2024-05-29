@@ -34,33 +34,54 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.myaccount-buttons__button');
-    const infoSection = document.getElementById('info-section');
-    const ordersSection = document.getElementById('orders-section');
-    const returnsSection = document.getElementById('returns-section');
-    const billingAddressSection = document.getElementById('billing-address-section');
+    const sections = {
+        info: document.getElementById('info-section'),
+        orders: document.getElementById('orders-section'),
+        returns: document.getElementById('returns-section'),
+        billing: document.getElementById('billing-address-section'),
+        shipping: document.getElementById('shipping-address-section'),
+        payment: document.getElementById('payment-method-section')
+    };
 
-    const sections = [infoSection, ordersSection, returnsSection, billingAddressSection];
+    const hideAllSections = () => {
+        Object.values(sections).forEach(section => {
+            section.style.display = 'none';
+        });
+    };
 
     buttons.forEach(button => {
         button.addEventListener('click', function() {
             buttons.forEach(btn => btn.classList.remove('myaccount-buttons__button--active'));
             this.classList.add('myaccount-buttons__button--active');
 
-            sections.forEach(section => section.style.display = 'none');
+            hideAllSections();
 
-            if (this.id === 'info-button') {
-                infoSection.style.display = 'block';
-            } else if (this.id === 'orders-button') {
-                ordersSection.style.display = 'block';
-            } else if (this.id === 'returns-button') {
-                returnsSection.style.display = 'block';
+            switch (this.id) {
+                case 'info-button':
+                    sections.info.style.display = 'block';
+                    break;
+                case 'orders-button':
+                    sections.orders.style.display = 'block';
+                    break;
+                case 'returns-button':
+                    sections.returns.style.display = 'block';
+                    break;
+                case 'billing-button':
+                    sections.billing.style.display = 'block';
+                    break;
+                case 'shipping-button':
+                    sections.shipping.style.display = 'block';
+                    break;
+                case 'payment-button':
+                    sections.payment.style.display = 'block';
+                    break;
             }
         });
     });
 
-    // Mostra la sezione informazioni per impostazione predefinita
+    // Show info section by default
     document.getElementById('info-button').classList.add('myaccount-buttons__button--active');
-    infoSection.style.display = 'block';
+    sections.info.style.display = 'block';
 });
 
 
