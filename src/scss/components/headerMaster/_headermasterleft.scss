@@ -6,8 +6,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 24px;
-        height: 18px;
+        width: 22px;
+        height: 20px;
         cursor: pointer;
 
         &__line {
@@ -133,13 +133,11 @@
 
                                 li {
                                     padding: 5px 0;
+                                    font-family: $main-font;
+                                    font-weight: $font-medium;
+                                    font-size: 1rem;
                                     a {
                                         color: black;
-                                        text-decoration: none;
-
-                                        &:hover {
-                                            text-decoration: underline;
-                                        }
                                     }
                                 }
                             }

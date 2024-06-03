@@ -17,11 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.classList.remove('overlay--active');
         });
 
-        // Rimuovere l'event listener per l'overlay
-        //overlay.addEventListener('click', () => {
-        //    closeAllPanels();
-        //});
-
         cartPanel.addEventListener('click', (event) => {
             event.stopPropagation(); // Impedisce la propagazione del click
         });

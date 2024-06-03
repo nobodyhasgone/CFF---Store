@@ -5,7 +5,7 @@
 
 // Titolo del prodotto
 .product-title {
-    font-size: 30px;
+    font-size: 24px;
     text-transform: uppercase;
     margin: 0;
     font-weight: $font-medium;
@@ -14,20 +14,21 @@
 
 // Sottotitolo del prodotto
 .product-subtitle {
-    font-size: 18px;
-    letter-spacing: 1px;
-    margin: 10px 0 30px;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    margin: 10px 0 16px;
     font-weight: $font-medium;
     font-family: $main-font;
 }
 
 // Prezzo del prodotto
 .product-price {
-    font-size: 20px;
-    letter-spacing: 1px;
-    margin: 10px 0 30px;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    margin: 10px 0 16px;
     font-weight: $font-medium;
     font-family: $main-font;
+    color: #777;
 }
 
 // Colore del prodotto
@@ -46,11 +47,18 @@
 
 // Forma circolare
 .product-shape {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #c1b197; // Colore di default, da personalizzare
     border: 1px solid black;
+}
+
+@media (min-width: 768px) {
+    .product-shape {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 // Sottosezione del prodotto
@@ -58,7 +66,7 @@
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin: 20px 0 10px;
+    margin: 30px 0 20px;
     font-weight: $font-medium;
     font-family: $main-font;
 }

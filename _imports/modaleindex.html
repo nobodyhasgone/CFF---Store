@@ -1,0 +1,27 @@
+<div id="overlay-modal" class="overlay-modal">
+    <div id="modal1" class="modal">
+        <img src="./src/images/icons/italy_flag.png" alt="Italy Flag" class="modal__flag-icon">
+        <div class="modal__content">
+            <h2 class="modal__title">Your currently location is set to Italy</h2>
+            <p class="modal__description">Shop in EUR €<br>Get shipping options for Italy</p>
+        </div>
+        <div class="modal__buttons">
+            <button class="btn_default-primary-active modal__button--continue">Continue</button>
+            <button class="btn_default-secondary modal__button--change-country">Change Country</button>
+        </div>
+    </div>
+    <div id="modal2" class="modal modal--hidden">
+        <h2 class="modal__title">Change Country</h2>
+        <select class="modal__select">
+            <option value="italy">Italy</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <!-- Aggiungi altre opzioni qui -->
+        </select>
+        <div class="modal__additional-info">
+            <span>Can't find yours? <a href="#" class="modal__link">See the complete Country List</a></span>
+        </div>
+        <button class="btn_default-primary-active modal__button--continue">Continue</button>
+        <a href="#" class="modal__link modal__link--cancel">Cancel</a>
+    </div>
+</div>

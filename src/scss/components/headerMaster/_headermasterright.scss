@@ -79,6 +79,9 @@ $overlay-color: rgba(0, 0, 0, 0.5);
         justify-content: space-between;
         align-items: center;
         padding-bottom: 16px;
+        font-size: 24px;
+        font-family: $main-font;
+        font-weight: $font-medium;
     }
 
     &__close-icon {
@@ -99,21 +102,31 @@ $overlay-color: rgba(0, 0, 0, 0.5);
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid black;
-        padding-bottom: 16px;
+        padding: 40px 0 0;
     }
 
     &__input {
         flex-grow: 1;
         border: none;
         outline: none;
-        padding: 8px 0;
+        padding: 8px 0 0;
+        &::placeholder{
+            font-family: $main-font;
+            font-size: 1rem;
+            font-family: $font-medium;
+            color: black;
+        }
     }
 
     &__button {
         border: none;
         background: none;
         cursor: pointer;
-        padding: 8px 0;
+        padding: 8px 0 0;
+        font-size: 1rem;
+        font-family: $main-font;
+        font-weight: $font-medium;
+        line-height: 20px;
     }
 }
 
@@ -238,6 +251,11 @@ $overlay-color: rgba(0, 0, 0, 0.5);
         justify-content: space-between;
         align-items: center;
         margin-bottom: 16px;
+        font-size: 24px;
+        font-weight: $font-medium;
+        font-family: $main-font;
+        color: #000;
+        letter-spacing: 1.5px;
     }
 
     .email-panel__close-icon, .account-panel__close-icon {
@@ -250,7 +268,12 @@ $overlay-color: rgba(0, 0, 0, 0.5);
     }
 
     .email-panel__text, .account-panel__text {
-        margin-bottom: 16px;
+        margin-bottom: 40px;
+        font-size: 1rem;
+        font-family: $main-font;
+        letter-spacing: normal;
+        color: #000;
+        font-weight: $font-medium;
     }
 
     .email-panel__info, .account-panel__info  {
@@ -271,6 +294,10 @@ $overlay-color: rgba(0, 0, 0, 0.5);
     .email-panel__info-item a {
         color: black;
         text-decoration: none;
+        font-size: 16px;
+        font-weight: $font-medium;
+        font-family: $main-font;
+        letter-spacing: normal;
     
         &:visited,
         &:active {
@@ -285,6 +312,10 @@ $overlay-color: rgba(0, 0, 0, 0.5);
     address {
         font-style: normal;
         cursor: pointer;
+        font-size: 16px;
+        font-weight: $font-medium;
+        font-family: $main-font;
+        letter-spacing: normal;
     
         &:hover {
             color: $main-brown;
@@ -322,16 +353,17 @@ $overlay-color: rgba(0, 0, 0, 0.5);
     .account-panel__form {
         display: flex;
         flex-direction: column;
+        padding: 20px 0;
     }
 
     .account-panel__form-group {
-        margin-bottom: 16px;
+        margin-bottom: 40px;
 
         label {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
 
             .required {
                 color: $main-brown;
@@ -342,8 +374,16 @@ $overlay-color: rgba(0, 0, 0, 0.5);
             width: 100%;
             padding: 8px;
             border: 1px solid black;
-            border-radius: 4px;
+            border-radius: 1px;
             box-sizing: border-box;
+            font-size: 1rem;
+            font-weight: $font-medium;
+            font-family: $main-font;
+            &::placeholder{
+                padding: 0 9px;
+                letter-spacing: 0.8px;
+                font-size: 1rem;
+            }
         }
     }
 

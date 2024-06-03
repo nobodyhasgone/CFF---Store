@@ -15,7 +15,7 @@
 
             <section class="checkout-layout__left-column">
 
-                <section class="contact-information">
+                <!-- <section class="contact-information">
                     <h2 class="contact-information__title">Contact Information</h2>
                     <p class="contact-information__account">
                         <span class="contact-information__account-text">Already have an account?</span>
@@ -23,7 +23,7 @@
                             <span class="link-underline">Sign in</span>
                         </a>
                         <span>or</span>
-                        <a href="#" class="contact-information__create-account">
+                        <a href="createaccount.html" class="contact-information__create-account">
                             <span class="link-underline">Create account</span>
                         </a>
                     </p>
@@ -35,6 +35,51 @@
                             <input type="email" id="email" class="contact-information__input" placeholder="E-mail">
                         </div>
                     </form>
+                </section> -->
+                <section class="contact-information">
+                    <h2 class="contact-information__title">Contact Information</h2>
+                    <p class="contact-information__account">
+                        <span class="contact-information__account-text">Already have an account?</span>
+                        <a href="#" class="contact-information__sign-in">
+                            <span class="link-underline">Sign in</span>
+                        </a>
+                        <span>or</span>
+                        <a href="createaccount.html" class="contact-information__create-account">
+                            <span class="link-underline">Create account</span>
+                        </a>
+                    </p>
+                    <div class="contact-information__form-container">
+                        <form class="contact-information__form">
+                            <div class="contact-information__field">
+                                <label for="email" class="contact-information__label">E-mail Address
+                                    <span class="contact-information__required">*</span>
+                                </label>
+                                <input type="email" id="email" class="contact-information__input" placeholder="E-mail">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sign-in-panel">
+                        <div class="sign-in-panel__container">
+                            <div class="sign-in-panel__close">
+                                <span class="sign-in-panel__close-icon"></span>
+                            </div>
+                            <h2 class="sign-in-panel__title">Sign In</h2>
+                            <form class="sign-in-panel__form">
+                                <div class="sign-in-panel__field">
+                                    <label for="sign-in-email" class="sign-in-panel__label">E-mail Address <span class="required-indicator">*</span></label>
+                                    <input type="email" id="sign-in-email" class="sign-in-panel__input">
+                                </div>
+                                <div class="sign-in-panel__field">
+                                    <label for="sign-in-password" class="sign-in-panel__label">Password <span class="required-indicator">*</span></label>
+                                    <input type="password" id="sign-in-password" class="sign-in-panel__input">
+                                </div>
+                                <div class="sign-in-panel__actions">
+                                    <a href="forgotpassword.html" class="sign-in-panel__forgot-password"><span>Forgot Your Password?</span></a>
+                                    <button type="submit" class="btn_default-brown">Sign In</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="shipping-address">
@@ -106,14 +151,9 @@
                     <p class="shipping-methods__option">Free Shipping</p>
                     <a href="payment.html" target="_blank"><button class="btn_default-primary-active">Continue</button></a>
                 </div>
-
             </section>
-
         </div>
-
     </div>
 </main>
-
-
 
 

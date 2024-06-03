@@ -169,7 +169,6 @@ $radius: 16px;
 }
 .btn_default-secondary{
     @include btn_default($main-white, $main-black, $main-black);
-    // width: 100%;
 }
 .btn_default-secondary-active{
     @include btn_default($main-trasparent, $main-black, $main-black);
@@ -189,6 +188,17 @@ $radius: 16px;
 }
 .btn_default-secondary2{
     @include btn_default($main-trasparent, $main-white, $main-white);
+}
+.btn_default-brown{
+    @include btn_default($main-brown, $main-white, $main-brown);
+    font-size: 0.75rem;
+    line-height: 2.625rem;
+    padding: 0rem 2.375rem;
+    &:hover{
+        background-color: $main-black;
+        color: $main-white;
+        border-color: $main-black;
+    }
 }
 
 .global-back-button {

@@ -30,9 +30,16 @@
     
     &__input[type="email"],
     &__input[type="password"] {
-      width: 100%; // Utilizziamo il 100% per adattarci al contenitore flessibile
+      width: 100%; 
       padding: 10px 0;
       border: 1px solid $main-black;
+      &::placeholder{
+        font-size: 1rem;
+        font-weight: $font-medium;
+        font-family: $main-font;
+        color: #777;
+        letter-spacing: 1px;
+      }
     }
     
     &__forgot-password-link {

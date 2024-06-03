@@ -213,3 +213,89 @@
         font-size: 16px;
     }
 }
+
+.contact-information__form-container {
+    display: block;
+}
+
+.sign-in-panel {
+    display: none;
+    margin: 10px 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        background-color: #fff;
+        position: relative;
+        border: 1px solid rgba(0,0,0,0.2);
+    }
+
+    &__close {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__close-icon {
+        width: 20px;
+        height: 20px;
+        background-image: url('./src/images/icons/close-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-weight: $font-big;
+        text-align: left;
+        margin-bottom: 20px;
+        color: #222;
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__field {
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: $font-medium;
+        font-family: $main-font;
+        font-size: 16px;
+        letter-spacing: 0.8px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    &__forgot-password {
+        font-size: 14px;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: $main-brown;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.required-indicator{
+    color: $main-brown;
+}

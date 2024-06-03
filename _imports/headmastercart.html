@@ -2,7 +2,7 @@
 <div class="cart-panel">
     <div class="cart-panel__container">
         <div class="cart-panel__header">
-            <span>Shopping Cart</span>
+            <span>Cart</span>
             <span class="icon cart-panel__close-icon"></span>
         </div>
         <p class="cart-panel__empty-message">You have no items in your shopping bag.</p>
@@ -13,12 +13,30 @@
     <div class="cart-panel__subtotal">
         <div class="cart-panel__subtotal-content">
             <div class="cart-panel__subtotal-row">
-                <span>SUBTOTAL</span>
+                <span class="cart-panel__subtotal-title">SUBTOTAL</span>
                 <span class="cart-panel__subtotal-amount">€0.00</span>
             </div>
-            <p>Gift codes or discounts applied at checkout</p>
+            <p class="cart-panel__subtotal-subtitle">Gift codes or discounts applied at checkout</p>
             <a href="checkout.html"><button class="btn_default-primary-active">PROCEED TO CHECKOUT</button></a>
         </div>
     </div>
+
+<!-- Pop-up di conferma -->
+<div class="confirm-overlay"></div>
+<div class="confirm-popup">
+    <div class="confirm-popup__content">
+        <div class="confirm-popup__header">
+            <span class="confirm-popup__close-icon">
+                <img src="./src/images/icons/close-icon.svg" alt="Close">
+            </span>
+        </div>
+        <p class="confirm-popup__message">Are you sure you would like to remove this item from the shopping cart?</p>
+        <div class="confirm-popup__buttons">
+            <button class="btn_confirm-popup--cancel">Cancel</button>
+            <button class="btn_confirm-popup--ok">OK</button>
+        </div>
+    </div>
+</div>
+
 </div>
 
