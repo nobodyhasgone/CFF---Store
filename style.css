@@ -6338,6 +6338,197 @@ body {
   font-size: 12px;
 }
 
+/* Styles for the Returns section */
+.returns__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.returns__item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #EAEAEA;
+  padding: 16px 0;
+}
+
+.returns__item-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.returns__item-header-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.returns__item-info-label {
+  font-family: "Futura Std";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.returns__item-info--title {
+  font-family: "Futura Std";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+}
+.returns__item-info--date {
+  display: flex;
+  flex-direction: column;
+  font-family: "Futura Std";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 1px;
+}
+.returns__item-info-value {
+  font-family: "Futura Std";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+
+.returns__item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+}
+.returns__item-footer a {
+  color: #000;
+  text-decoration: none;
+}
+.returns__item-footer a:hover, .returns__item-footer a:visited {
+  color: #000;
+}
+.returns__item-footer-details {
+  font-family: "Futura Std";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.returns__item-footer-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("./src/images/icons/angle-right-solid.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: brightness(0) saturate(100%) invert(46%) sepia(5%) saturate(2842%) hue-rotate(354deg) brightness(95%) contrast(93%);
+}
+
+.returns__mobile-view {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .returns__mobile-view {
+    display: none;
+  }
+}
+.returns__desktop-view {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .returns__desktop-view {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .returns__item-desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 0 4px;
+    border-bottom: 1px solid #EAEAEA;
+  }
+  .returns__item-info-label-desktop {
+    font-family: "Futura Std";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .returns__item-info-value-desktop {
+    font-family: "Futura Std";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
+  .returns__item-info-desktop {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Aggiungi uno spazio tra l'etichetta e il valore */
+  }
+  .returns__item-info-desktop--number, .returns__item-info-desktop--date, .returns__item-info-desktop--total, .returns__item-info-desktop--status {
+    flex: 1;
+  }
+  .returns__item-info-desktop--number, .returns__item-info-desktop--date, .returns__item-info-desktop--total {
+    text-align: left;
+  }
+  .returns__item-info-desktop--status {
+    text-align: center;
+  }
+  .returns__item-info-desktop--status button {
+    margin: 0 auto;
+  }
+  .returns__item-info-desktop-label {
+    font-family: "Futura Std";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 1px;
+  }
+  .returns__item-info-desktop-value, .returns__item-info-desktop-date, .returns__item-info-desktop-total {
+    font-family: "Futura Std";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+  }
+  .returns__item-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0;
+  }
+  .returns__item-footer a {
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+  }
+  .returns__item-footer a:hover, .returns__item-footer a:visited {
+    color: #000;
+  }
+  .returns__item-footer-details {
+    font-family: "Futura Std";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    margin-right: 16px;
+  }
+  .returns__item-footer-icon-desktop {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url("./src/images/icons/right-arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
 .edit-info__content-container {
   display: none;
 }
@@ -7534,6 +7725,139 @@ body {
 
 .order-details__accordion--active .order-details__accordion-content {
   display: flex;
+}
+
+.btn-link {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+}
+
+.returns__details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.returns__details-header {
+  font-family: "Futura Std";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+.returns__details-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.returns__details-status-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.returns__details-status-info span {
+  font-family: "Futura Std";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  color: #777;
+}
+.returns__details-total {
+  font-family: "Futura Std";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.returns__details-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.returns__details-items p {
+  font-family: "Futura Std";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.returns__details-item-card {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.returns__details-item-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+}
+.returns__details-item-card-image {
+  width: 74px;
+  height: 106px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #777;
+}
+.returns__details-item-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.returns__details-item-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+.returns__details-item-card-name {
+  font-size: 16px;
+  font-family: "Futura Std";
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+.returns__details-item-card-description {
+  font-size: 10px;
+  font-family: "Futura Std";
+  line-height: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+.returns__details-item-card-color, .returns__details-item-card-size {
+  font-size: 12px;
+  font-family: "Futura Std";
+  line-height: 12px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.returns__details-item-card-price {
+  font-size: 16px;
+  font-family: "Futura Std";
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+
+.returns__details-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 100px;
+}
+@media (min-width: 768px) {
+  .returns__details-buttons {
+    flex-direction: row;
+  }
+}
+
+.extra-l {
+  width: 100%;
 }
 
 .create-account {

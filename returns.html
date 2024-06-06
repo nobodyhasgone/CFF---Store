@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <sergey-import src="head.html" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+    <title>Returns</title>
+</head>
+<body>
+    <sergey-import src="headermaster.html" />
+
+    <main class="mylogin__main-container">
+        <div class="edit-info__content-container">
+            <div class="mylogin__title-container">
+                <h1 class="mylogin__title">My account</h1>
+            </div>
+
+            <div class="mylogin__button-container">
+                <button id="information" class="mylogin__button">Information</button>
+                <button id="orders" class="mylogin__button">Orders</button>
+                <button id="returns" class="mylogin__button">Returns</button>
+            </div>
+        </div>
+
+        <div class="mylogin__module-container">
+            <div class="mylogin__spacer"></div>
+
+            <!-- Pulsante Back -->
+            <div class="edit-info__back-button">
+                <a href="mylogin.html" class="edit-info__global-back-button">
+                    <img src="./src/images/icons/arrow_back.svg" alt="Back" class="edit-info__global-back-button__icon">
+                    <span class="edit-info__global-back-button__text">Back</span>
+                </a>    
+            </div>
+
+            <!-- Container per i dettagli del ritorno -->
+            <div class="returns__details">
+                <div class="returns__details-header">
+                    <p>Return #54321</p>
+                </div>
+                <div class="returns__details-status">
+                    <div class="returns__details-status-info">
+                        <span><button class="pending">Pending</button></span>
+                        <span>17 nov 2022</span>
+                        <span>1 item</span>
+                    </div>
+                    <div class="returns__details-total">
+                        <span>€ 37.00</span>
+                    </div>
+                </div>
+                <div class="returns__details-items">
+                    <p>Item:</p>
+                    
+                    <div class="returns__details-item-card">
+                        <img src="./src/images/product1/image1.jpg" alt="Product 1" class="returns__details-item-card-image">
+                        <div class="returns__details-item-card-info">
+                            <div class="returns__details-item-card-header">
+                                <span class="returns__details-item-card-name">AJAX FULL-ZIP SWEATSHIRT</span>
+                                <button class="shipped">Shipped</button>
+                            </div>
+                            <span class="returns__details-item-card-description">A comfortable full-zip sweatshirt made from premium materials, perfect for casual wear.</span>
+                            <span class="returns__details-item-card-color">Color: Black</span>
+                            <span class="returns__details-item-card-size">Size: 40</span>
+                            <span class="returns__details-item-card-price">€ 37.00</span>
+                        </div>
+                    </div>
+                    <div class="returns__details-buttons">
+                        <button class="btn_default-primary-active">View tracking</button>
+                        <button class="btn_default-secondary extra-l">Contact customer service</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="src/js/headermaster.js"></script>
+    <script src="src/js/cart.js"></script>
+    <script src="src/js/minicart.js"></script>
+</body>
+</html>
