@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <sergey-import src="head.html" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+    <title>Edit General Info</title>
+</head>
+<body>
+    <sergey-import src="headermaster.html" />
+
+    <main class="mylogin__main-container">
+        <div class="edit-info__content-container">
+            <div class="mylogin__title-container">
+                <h1 class="mylogin__title">My account</h1>
+            </div>
+
+            <div class="mylogin__button-container">
+                <button id="information" class="mylogin__button">Information</button>
+                <button id="orders" class="mylogin__button">Orders</button>
+                <button id="returns" class="mylogin__button">Returns</button>
+            </div>
+        </div>
+
+        <div class="mylogin__module-container">
+            <div class="mylogin__spacer"></div>
+
+            <!-- Pulsante Back -->
+            <div class="edit-info__back-button">
+                <a href="mylogin.html" class="edit-info__global-back-button">
+                    <img src="./src/images/icons/arrow_back.svg" alt="Back" class="edit-info__global-back-button__icon">
+                    <span class="edit-info__global-back-button__text">Back</span>
+                </a>    
+            </div>
+            
+            <h2 class="edit-info__title">General info</h2>
+
+            <div class="edit-info__form-container">
+                <form id="edit-generalinfo-form" class="edit-info__form">
+                    <label for="name" class="edit-info__label">Name<span class="asterisk">*</span></label>
+                    <input type="text" id="name" name="name" class="edit-info__input" placeholder="Enter name" required>
+                    
+                    <label for="surname" class="edit-info__label">Surname<span class="asterisk">*</span></label>
+                    <input type="text" id="surname" name="surname" class="edit-info__input" placeholder="Enter surname" required>
+                    
+                    <label for="email" class="edit-info__label">E-mail<span class="asterisk">*</span></label>
+                    <input type="email" id="email" name="email" class="edit-info__input" placeholder="Enter email" required>
+                    
+                    <button type="submit" class="btn_default-primary-active edit-info__save-button">Save</button>
+
+                    <div class="edit-info__buttons-wrapper">
+                        <button type="button" class="btn_default-primary-active edit-info__save-and-edit-button">Save and Edit</button>
+                        <button type="button" class="btn_default-secondary btn_default-secondary__extra edit-info__cancel-button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="src/js/myloginbutton.js"></script>
+    <script src="src/js/crud.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loggedInUserEmail = localStorage.getItem('loggedInUser');
+            const user = getUser(loggedInUserEmail);
+            if (user) {
+                document.getElementById('name').value = user.name;
+                document.getElementById('surname').value = user.surname;
+                document.getElementById('email').value = user.email;
+            }
+
+            const saveAndEditButton = document.querySelector('.edit-info__save-and-edit-button');
+            if (saveAndEditButton) {
+                saveAndEditButton.addEventListener('click', function() {
+                    saveUserInfo();
+                    alert('General info updated successfully!');
+                });
+            }
+
+            const cancelButton = document.querySelector('.edit-info__cancel-button');
+            if (cancelButton) {
+                cancelButton.addEventListener('click', function() {
+                    clearUserInfo();
+                    alert('User information cleared!');
+                });
+            }
+
+            document.getElementById('edit-generalinfo-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                saveUserInfo();
+                alert('General info updated successfully!');
+                window.location.href = "mylogin.html";
+            });
+
+            function saveUserInfo() {
+                const updatedName = document.getElementById('name').value;
+                const updatedSurname = document.getElementById('surname').value;
+                const updatedEmail = document.getElementById('email').value;
+                updateUser(loggedInUserEmail, { name: updatedName, surname: updatedSurname, email: updatedEmail });
+                localStorage.setItem('loggedInUser', updatedEmail); // Aggiorna l'email dell'utente loggato
+            }
+
+            function clearUserInfo() {
+                updateUser(loggedInUserEmail, { name: '', surname: '', email: '' });
+                document.getElementById('name').value = '';
+                document.getElementById('surname').value = '';
+                document.getElementById('email').value = '';
+            }
+        });
+    </script>
+</body>
+</html>

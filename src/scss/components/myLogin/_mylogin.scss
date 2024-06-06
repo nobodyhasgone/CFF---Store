@@ -1,40 +1,705 @@
-.login-container {
+// .mylogin__main-container {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 0;
+//     margin: 0;
+
+//     @media (min-width: 768px) {
+//         flex-direction: row;
+//         max-width: 1280px;
+//         margin: 0 auto;
+//         padding: 0 80px;
+//     }
+// }
+
+// .mylogin__content-container {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 0;
+//     margin: 0;
+
+//     @media (min-width: 768px) {
+//         flex-direction: column;
+//         text-align: left;
+//         width: 30%;
+//     }
+// }
+
+// .mylogin__title-container {
+//     text-align: center;
+//     padding: 45px 0 20px;
+//     margin: 0 auto;
+
+//     .mylogin__title {
+//         font-size: 24px;
+//         font-family: $main-font;
+//         font-weight: $font-medium;
+//         line-height: 32px;
+//         letter-spacing: 2px;
+//     }
+
+//     @media (min-width: 768px) {
+//         padding: 110px 0 20px;
+//         margin-left: 0;
+//         box-sizing: border-box;
+//     }
+// }
+
+// .mylogin__button-container {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     gap: 16px;
+//     border-top: 1px solid #EAEAEA;
+//     border-bottom: 1px solid #EAEAEA;
+//     padding: 20px 0;
+
+//     @media (min-width: 768px) {
+//         flex-direction: column;
+//         border: none;
+//         align-items: flex-start;
+//         padding: 0;
+//     }
+// }
+
+// .mylogin__button {
+//     padding: 10px;
+//     border: none;
+//     background-color: transparent;
+//     cursor: pointer;
+//     font-family: $main-font;
+//     font-size: 16px;
+//     font-weight: $font-medium;
+//     letter-spacing: 0.8px;
+//     line-height: 20px;
+//     @media (min-width: 768px) {
+//         text-align: left;
+//         padding: 0;
+//     }
+// }
+
+// .mylogin__button--selected {
+//     border: 2px solid black;
+//     border-radius: 8px;
+//     padding: 4px 12px;
+
+//     @media (min-width: 768px) {
+//         border: none;
+//         color: #000;
+//         padding: 0;
+//     }
+// }
+
+// .mylogin__button--deselected {
+//     @media (min-width: 768px) {
+//         color: #777;;
+//     }
+// }
+
+// .mylogin__module-container {
+//     padding: 20px 16px;
+//     width: 100%;
+//     box-sizing: border-box;
+// }
+
+// .mylogin__spacer {
+//     width: 0;
+//     height: 0;
+
+//     @media (min-width: 768px) {
+//         width: 0;
+//         height: 171px;
+//     }
+// }
+
+// .mylogin__module-list {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+// }
+
+// .mylogin__module-item {
+//     margin-bottom: 16px;
+
+//     &:last-child {
+//         margin-bottom: 0;
+//     }
+// }
+
+// .mylogin__generalinfo-container {
+//     display: flex;
+//     flex-direction: column;
+//     padding-bottom: 20px;
+// }
+
+// .mylogin__generalinfo-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 16px;
+//     font-family: $main-font;
+//     font-weight: $font-medium;
+//     font-size: 24px;
+//     letter-spacing: 2px;
+//     line-height: 32px;
+
+//     .mylogin__generalinfo-icon {
+//         display: inline-block;
+//         width: 20px;
+//         height: 20px;
+//         background-image: url("./src/images/productpage/matita.svg");
+//         background-size: contain;
+//         filter: brightness(0) saturate(100%) invert(47%) sepia(5%) saturate(2943%) hue-rotate(354deg) brightness(92%) contrast(90%);
+//     }
+// }
+
+// .mylogin__generalinfo-field {
+//     margin-bottom: 8px;
+
+//     &:last-child {
+//         margin-bottom: 0;
+//     }
+// }
+
+// .mylogin__billingaddress-container {
+//     display: flex;
+//     flex-direction: column;
+//     padding-bottom: 20px;
+// }
+
+// .mylogin__billingaddress-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 16px;
+//     font-family: $main-font;
+//     font-weight: $font-medium;
+//     font-size: 24px;
+//     letter-spacing: 2px;
+//     line-height: 32px;
+
+//     .mylogin__billingaddress-icon {
+//         display: inline-block;
+//         width: 20px;
+//         height: 20px;
+//         background-image: url("./src/images/productpage/matita.svg");
+//         background-size: contain;
+//         filter: brightness(0) saturate(100%) invert(47%) sepia(5%) saturate(2943%) hue-rotate(354deg) brightness(92%) contrast(90%);
+//     }
+// }
+
+// .mylogin__billingaddress-field {
+//     margin-bottom: 8px;
+
+//     &:last-child {
+//         margin-bottom: 0;
+//     }
+// }
+
+// .mylogin__shippingaddresses-container {
+//     display: flex;
+//     flex-direction: column;
+//     padding-bottom: 20px;
+// }
+
+// .mylogin__shippingaddresses-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 16px;
+//     font-family: $main-font;
+//     font-weight: $font-medium;
+//     font-size: 24px;
+//     letter-spacing: 2px;
+//     line-height: 32px;
+
+//     .mylogin__shippingaddresses-icon {
+//         display: inline-block;
+//         width: 20px;
+//         height: 20px;
+//         background-image: url("./src/images/productpage/matita.svg");
+//         background-size: contain;
+//         filter: brightness(0) saturate(100%) invert(47%) sepia(5%) saturate(2943%) hue-rotate(354deg) brightness(92%) contrast(90%);
+//     }
+// }
+
+// .mylogin__shippingaddresses-field {
+//     margin-bottom: 8px;
+
+//     &:last-child {
+//         margin-bottom: 0;
+//     }
+// }
+
+// .mylogin__paymentmethod-container {
+//     display: flex;
+//     flex-direction: column;
+//     padding-bottom: 20px;
+// }
+
+// .mylogin__paymentmethod-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 16px;
+//     font-family: $main-font;
+//     font-weight: $font-medium;
+//     font-size: 24px;
+//     letter-spacing: 2px;
+//     line-height: 32px;
+
+//     .mylogin__paymentmethod-icon {
+//         display: inline-block;
+//         width: 20px;
+//         height: 20px;
+//         background-image: url("./src/images/productpage/matita.svg");
+//         background-size: contain;
+//         filter: brightness(0) saturate(100%) invert(47%) sepia(5%) saturate(2943%) hue-rotate(354deg) brightness(92%) contrast(90%);
+//     }
+// }
+
+// .mylogin__paymentmethod-field {
+//     margin-bottom: 8px;
+
+//     &:last-child {
+//         margin-bottom: 0;
+//     }
+// }
+
+// .mylogin__newsletter-container {
+//     display: flex;
+//     flex-direction: column;
+//     padding-bottom: 20px;
+// }
+
+// .mylogin__newsletter-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 16px;
+//     font-family: $main-font;
+//     font-weight: $font-medium;
+//     font-size: 24px;
+//     letter-spacing: 2px;
+//     line-height: 32px;
+
+//     .mylogin__newsletter-icon {
+//         display: inline-block;
+//         width: 20px;
+//         height: 20px;
+//         background-image: url("./src/images/productpage/matita.svg");
+//         background-size: contain;
+//         filter: brightness(0) saturate(100%) invert(47%) sepia(5%) saturate(2943%) hue-rotate(354deg) brightness(92%) contrast(90%);
+//     }
+// }
+
+
+.mylogin__main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
     @media (min-width: 768px) {
-        padding: 0 80px;
+        flex-direction: row;
         max-width: 1280px;
         margin: 0 auto;
+        padding: 0 80px;
     }
 }
 
-.login {
-    &__title {
+.mylogin__content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: 768px) {
+        flex-direction: column;
+        text-align: left;
+        width: 30%;
+    }
+}
+
+.mylogin__title-container {
+    text-align: center;
+    padding: 45px 0 20px;
+    margin: 0 auto;
+
+    .mylogin__title {
+        font-size: 24px;
         font-family: $main-font;
         font-weight: $font-medium;
-        font-size: 24px;
-        letter-spacing: 2px;
         line-height: 32px;
-        margin: 0 auto;
-        text-align: center; /* Center the title horizontally */
-        padding: 60px 16px 20px; /* Default padding */
+        letter-spacing: 2px;
+    }
 
-        @media (min-width: 768px) {
-            text-align: left;
-            padding: 110px 0 20px;
+    @media (min-width: 768px) {
+        padding: 110px 0 20px;
+        margin-left: 0;
+        box-sizing: border-box;
+    }
+}
+
+.mylogin__button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    border-top: 1px solid #EAEAEA;
+    border-bottom: 1px solid #EAEAEA;
+    padding: 20px 0;
+
+    @media (min-width: 768px) {
+        flex-direction: column;
+        border: none;
+        align-items: flex-start;
+        padding: 0;
+    }
+}
+
+.mylogin__button {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: $font-medium;
+    letter-spacing: 0.8px;
+    line-height: 20px;
+
+    @media (min-width: 768px) {
+        text-align: left;
+        padding: 0;
+    }
+}
+
+.mylogin__button--selected {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 4px 12px;
+
+    @media (min-width: 768px) {
+        border: none;
+        color: #000;
+        padding: 0;
+    }
+}
+
+.mylogin__button--deselected {
+    @media (min-width: 768px) {
+        color: #777;
+    }
+}
+
+.mylogin__module-container {
+    padding: 20px 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mylogin__spacer {
+    width: 0;
+    height: 0;
+
+    @media (min-width: 768px) {
+        width: 0;
+        height: 171px;
+    }
+}
+
+.mylogin__module-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mylogin__module-item {
+    margin-bottom: 16px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.mylogin__section-container {
+    display: none;
+}
+
+.mylogin__generalinfo-container,
+.mylogin__billingaddress-container,
+.mylogin__shippingaddresses-container,
+.mylogin__paymentmethod-container,
+.mylogin__newsletter-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.mylogin__generalinfo-header,
+.mylogin__billingaddress-header,
+.mylogin__shippingaddresses-header,
+.mylogin__paymentmethod-header,
+.mylogin__newsletter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-family: $main-font;
+    font-weight: $font-medium;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 32px;
+
+    .mylogin__generalinfo-icon,
+    .mylogin__billingaddress-icon,
+    .mylogin__shippingaddresses-icon,
+    .mylogin__paymentmethod-icon,
+    .mylogin__newsletter-icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url("./src/images/productpage/matita.svg");
+        background-size: contain;
+        filter: brightness(0) saturate(100%) invert(47%) sepia(5%) saturate(2943%) hue-rotate(354deg) brightness(92%) contrast(90%);
+    }
+}
+
+.mylogin__generalinfo-field,
+.mylogin__billingaddress-field,
+.mylogin__shippingaddresses-field,
+.mylogin__paymentmethod-field {
+    margin-bottom: 8px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.section-orders__title {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: block;
+        font-family: $main-font;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: $font-medium;
+        letter-spacing: 2px;
+    }
+}
+
+.orders__section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+        padding: 0;
+    }
+}
+
+.orders__item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #EAEAEA;
+    padding: 16px 0;
+
+    &-header-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-info {
+        &-order-number {
+            font-family: $main-font;
+            font-size: 16px;
+            font-weight: $font-medium;
+            line-height: 20px;
+            letter-spacing: 0.8px;
+        }
+
+        &-date,
+        &-items {
+            font-weight: $font-small;
+            font-family: $main-font;
+            font-size: 12px;
+            letter-spacing: 1px;
+            line-height: 12px;
+            color: #777;
+        }
+
+        &-total {
+            font-family: $main-font;
+            font-size: 16px;
+            font-weight: $font-medium;
+            line-height: 20px;
+            letter-spacing: 0.8px;
+        }
+
+        &-label {
+            text-transform: uppercase;
+            font-weight: $font-small;
+            font-size: 12px;
+            line-height: 12px;
+            letter-spacing: 1px;
+            font-family: $main-font;
+        }
+
+        &-value {
+            font-family: $main-font;
+            font-weight: $font-medium;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.8px;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 16px;
+
+        a {
+            color: #000;
+            text-decoration: none;
+
+            &:hover,
+            &:visited {
+                color: #000;
+            }
+        }
+        
+        &-details {
+            font-family: $main-font;
+            font-size: 16px;
+            font-weight: $font-medium;
+            line-height: 20px;
+            letter-spacing: 0.8px;
+        }
+
+        &-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url("./src/images/icons/angle-right-solid.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: brightness(0) saturate(100%) invert(46%) sepia(9%) saturate(1553%) hue-rotate(354deg) brightness(93%) contrast(91%);
+        }
+
+        &-action-text {
+            font-family: $main-font;
+            font-weight: $font-medium;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.8px;
         }
     }
 }
 
-.account-container {
+.orders__item-info-items {
+    font-weight: $font-small;
+    font-family: $main-font;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 12px;
+    color: #777;  
+}
+
+
+.orders__item-mobile {
     display: flex;
     flex-direction: column;
-    gap: 40px;
 
     @media (min-width: 768px) {
-        flex-direction: row;
+        display: none;
     }
 }
 
-.section-container {
-    display: none; /* Nascondi tutte le sezioni per impostazione predefinita */
+.orders__item-desktop {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.orders__item-desktop-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+}
+
+.orders__item-info {
+    margin-bottom: 8px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+        flex: 1;
+        padding-right: 5%;
+    }
+}
+
+.orders__item-info--number,
+.orders__item-info--status,
+.orders__item-info--date,
+.orders__item-info--total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.orders__item-desktop-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-end;
+    margin-top: auto;
+
+    a {
+        margin-right: 16px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.orders__item-action-text--return{
+    color: $main-brown;
+    &:hover,
+    &:visited{
+        color: $main-brown;
+    }
+}
+
+.orders__item-action-text{
+    color: black;
+    &:hover,
+    &:visited{
+        color: black;
+    }
+}
+
+.orders__item-footer-icon-desktop{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url("./src/images/icons/right-arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.orders__item-label {
+    color: gray;
+    font-size: 12px;
 }

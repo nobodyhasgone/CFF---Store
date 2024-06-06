@@ -5916,1088 +5916,1624 @@ body {
   display: block;
 }
 
+.mylogin__main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
 @media (min-width: 768px) {
-  .login-container {
-    padding: 0 80px;
+  .mylogin__main-container {
+    flex-direction: row;
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 80px;
   }
 }
 
-.login__title {
+.mylogin__content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .mylogin__content-container {
+    flex-direction: column;
+    text-align: left;
+    width: 30%;
+  }
+}
+
+.mylogin__title-container {
+  text-align: center;
+  padding: 45px 0 20px;
+  margin: 0 auto;
+}
+.mylogin__title-container .mylogin__title {
+  font-size: 24px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 2px;
+}
+@media (min-width: 768px) {
+  .mylogin__title-container {
+    padding: 110px 0 20px;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+}
+
+.mylogin__button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  border-top: 1px solid #EAEAEA;
+  border-bottom: 1px solid #EAEAEA;
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .mylogin__button-container {
+    flex-direction: column;
+    border: none;
+    align-items: flex-start;
+    padding: 0;
+  }
+}
+
+.mylogin__button {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Futura Std";
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+}
+@media (min-width: 768px) {
+  .mylogin__button {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+.mylogin__button--selected {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 4px 12px;
+}
+@media (min-width: 768px) {
+  .mylogin__button--selected {
+    border: none;
+    color: #000;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .mylogin__button--deselected {
+    color: #777;
+  }
+}
+
+.mylogin__module-container {
+  padding: 20px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mylogin__spacer {
+  width: 0;
+  height: 0;
+}
+@media (min-width: 768px) {
+  .mylogin__spacer {
+    width: 0;
+    height: 171px;
+  }
+}
+
+.mylogin__module-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mylogin__module-item {
+  margin-bottom: 16px;
+}
+.mylogin__module-item:last-child {
+  margin-bottom: 0;
+}
+
+.mylogin__section-container {
+  display: none;
+}
+
+.mylogin__generalinfo-container,
+.mylogin__billingaddress-container,
+.mylogin__shippingaddresses-container,
+.mylogin__paymentmethod-container,
+.mylogin__newsletter-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.mylogin__generalinfo-header,
+.mylogin__billingaddress-header,
+.mylogin__shippingaddresses-header,
+.mylogin__paymentmethod-header,
+.mylogin__newsletter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
   font-family: "Futura Std";
   font-weight: 500;
   font-size: 24px;
   letter-spacing: 2px;
   line-height: 32px;
-  margin: 0 auto;
-  text-align: center; /* Center the title horizontally */
-  padding: 60px 16px 20px; /* Default padding */
+}
+.mylogin__generalinfo-header .mylogin__generalinfo-icon,
+.mylogin__generalinfo-header .mylogin__billingaddress-icon,
+.mylogin__generalinfo-header .mylogin__shippingaddresses-icon,
+.mylogin__generalinfo-header .mylogin__paymentmethod-icon,
+.mylogin__generalinfo-header .mylogin__newsletter-icon,
+.mylogin__billingaddress-header .mylogin__generalinfo-icon,
+.mylogin__billingaddress-header .mylogin__billingaddress-icon,
+.mylogin__billingaddress-header .mylogin__shippingaddresses-icon,
+.mylogin__billingaddress-header .mylogin__paymentmethod-icon,
+.mylogin__billingaddress-header .mylogin__newsletter-icon,
+.mylogin__shippingaddresses-header .mylogin__generalinfo-icon,
+.mylogin__shippingaddresses-header .mylogin__billingaddress-icon,
+.mylogin__shippingaddresses-header .mylogin__shippingaddresses-icon,
+.mylogin__shippingaddresses-header .mylogin__paymentmethod-icon,
+.mylogin__shippingaddresses-header .mylogin__newsletter-icon,
+.mylogin__paymentmethod-header .mylogin__generalinfo-icon,
+.mylogin__paymentmethod-header .mylogin__billingaddress-icon,
+.mylogin__paymentmethod-header .mylogin__shippingaddresses-icon,
+.mylogin__paymentmethod-header .mylogin__paymentmethod-icon,
+.mylogin__paymentmethod-header .mylogin__newsletter-icon,
+.mylogin__newsletter-header .mylogin__generalinfo-icon,
+.mylogin__newsletter-header .mylogin__billingaddress-icon,
+.mylogin__newsletter-header .mylogin__shippingaddresses-icon,
+.mylogin__newsletter-header .mylogin__paymentmethod-icon,
+.mylogin__newsletter-header .mylogin__newsletter-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("./src/images/productpage/matita.svg");
+  background-size: contain;
+  filter: brightness(0) saturate(100%) invert(47%) sepia(5%) saturate(2943%) hue-rotate(354deg) brightness(92%) contrast(90%);
+}
+
+.mylogin__generalinfo-field,
+.mylogin__billingaddress-field,
+.mylogin__shippingaddresses-field,
+.mylogin__paymentmethod-field {
+  margin-bottom: 8px;
+}
+.mylogin__generalinfo-field:last-child,
+.mylogin__billingaddress-field:last-child,
+.mylogin__shippingaddresses-field:last-child,
+.mylogin__paymentmethod-field:last-child {
+  margin-bottom: 0;
+}
+
+.section-orders__title {
+  display: none;
 }
 @media (min-width: 768px) {
-  .login__title {
-    text-align: left;
-    padding: 110px 0 20px;
+  .section-orders__title {
+    display: block;
+    font-family: "Futura Std";
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    letter-spacing: 2px;
   }
 }
 
-.account-container {
+.orders__section {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .account-container {
-    flex-direction: row;
+  .orders__section {
+    padding: 0;
   }
 }
 
-.section-container {
-  display: none; /* Nascondi tutte le sezioni per impostazione predefinita */
+.orders__item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #EAEAEA;
+  padding: 16px 0;
+}
+.orders__item-header-row {
+  display: flex;
+  justify-content: space-between;
+}
+.orders__item-info-order-number {
+  font-family: "Futura Std";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.orders__item-info-date, .orders__item-info-items {
+  font-weight: 400;
+  font-family: "Futura Std";
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 12px;
+  color: #777;
+}
+.orders__item-info-total {
+  font-family: "Futura Std";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.orders__item-info-label {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  font-family: "Futura Std";
+}
+.orders__item-info-value {
+  font-family: "Futura Std";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.orders__item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+}
+.orders__item-footer a {
+  color: #000;
+  text-decoration: none;
+}
+.orders__item-footer a:hover, .orders__item-footer a:visited {
+  color: #000;
+}
+.orders__item-footer-details {
+  font-family: "Futura Std";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.orders__item-footer-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("./src/images/icons/angle-right-solid.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: brightness(0) saturate(100%) invert(46%) sepia(9%) saturate(1553%) hue-rotate(354deg) brightness(93%) contrast(91%);
+}
+.orders__item-footer-action-text {
+  font-family: "Futura Std";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+
+.orders__item-info-items {
+  font-weight: 400;
+  font-family: "Futura Std";
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 12px;
+  color: #777;
+}
+
+.orders__item-mobile {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .orders__item-mobile {
+    display: none;
+  }
+}
+
+.orders__item-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .orders__item-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.orders__item-desktop-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
-.myaccount-buttons {
-  border-top: 1px solid rgb(234, 234, 234);
-  border-bottom: 1px solid rgb(234, 234, 234);
-  padding: 18px 0;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-.myaccount-buttons__button {
-  border-radius: 8px;
-  border: none; /* No border by default */
-  padding: 0; /* No padding by default */
-  background: none; /* Transparent background by default */
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 5px 12px;
-  font-family: "Futura Std";
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.8px;
-  line-height: 20px;
-}
-.myaccount-buttons__button--active {
-  padding: 4px 12px;
-  border: 1px solid black;
+.orders__item-info {
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
-  .myaccount-buttons__button--active {
-    border: none; /* Remove border for screens larger than 768px */
-    padding: 0;
-  }
-}
-@media (min-width: 768px) {
-  .myaccount-buttons__button:not(.myaccount-buttons__button--active) {
-    color: rgb(119, 119, 119); /* Color for non-active buttons */
-    padding: 0;
-  }
-}
-@media (min-width: 768px) {
-  .myaccount-buttons {
-    flex-direction: column; /* Vertical alignment for larger screens */
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-top: none;
-    border-bottom: none;
+  .orders__item-info {
+    margin-bottom: 0;
+    flex: 1;
+    padding-right: 5%;
   }
 }
 
-.myhidden-buttons {
-  display: none; /* Nascondi pulsanti */
-}
-
-.information {
+.orders__item-info--number,
+.orders__item-info--status,
+.orders__item-info--date,
+.orders__item-info--total {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Add some space between sections */
-  padding: 16px 16px 20px;
-}
-@media (min-width: 768px) {
-  .information {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-}
-.information__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.information__section {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 0;
-}
-@media (min-width: 768px) {
-  .information__section:nth-child(-n+4) {
-    border-bottom: 1px solid rgb(234, 234, 234); /* Add border-bottom for the first four children on larger screens */
-    padding: 20px 0;
-  }
-  .information__section:first-child {
-    padding-top: 0; /* Remove padding-top for the first child */
-  }
-}
-.information__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 5px;
-  margin-bottom: 10px; /* Space between header and content */
-}
-.information__title {
-  font-size: 24px;
-  font-weight: 500;
-  font-family: "Futura Std";
-  letter-spacing: 2px;
-  line-height: 32px;
-}
-.information__icon {
-  width: 20px;
-  height: 20px;
-  background-image: url("src/images/productpage/matita.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  filter: brightness(0) saturate(100%) invert(44%) sepia(34%) saturate(411%) hue-rotate(354deg) brightness(93%) contrast(97%);
-}
-.information__subtitle {
-  padding: 5px 0;
-  font-weight: 500;
-  font-family: "Futura Std";
-  font-size: 16px;
-  letter-spacing: 0.8px;
-  line-height: 20px;
-}
-
-.edit-info__container {
-  display: none; /* Hide edit-info and billing-address containers by default */
-}
-
-.orders {
-  padding: 16px;
-}
-@media (min-width: 768px) {
-  .orders {
-    width: 100%;
-  }
-}
-.orders__title {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-@media (max-width: 768px) {
-  .orders__title {
-    display: none; /* Nascondi titolo per schermi inferiori a 768px */
-  }
-}
-.orders__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-@media (min-width: 768px) {
-  .orders__list {
-    display: none; /* Nascondi lista per schermi superiori a 768px */
-  }
-}
-.orders__item {
-  padding: 16px;
-  border-bottom: 1px solid rgb(234, 234, 234);
-}
-.orders__header, .orders__info, .orders__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.orders__date-items {
-  display: flex;
-  flex-direction: column;
-}
-.orders__date, .orders__items {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 4px;
-}
-.orders__price {
-  font-size: 16px;
-  font-weight: 700;
-}
-.orders__footer {
-  margin-top: 8px;
-}
-.orders__icon-mobile {
-  width: 20px;
-  height: 20px;
-  background-image: url("./src/images/icons/angle-right-solid.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  filter: brightness(0) saturate(100%) invert(45%) sepia(9%) saturate(1604%) hue-rotate(354deg) brightness(95%) contrast(92%);
-}
-.orders__summary {
-  display: none; /* Nascondi il layout per schermi inferiori a 768px */
-}
-@media (min-width: 768px) {
-  .orders__summary {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-.orders__summary-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgb(234, 234, 234);
-  padding: 16px 0;
-}
-.orders__summary-section {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  flex-basis: 20%; /* Occupano il 20% dello spazio */
-}
-.orders__summary-section .shipped, .orders__summary-section .delivered {
-  width: auto; /* Impedisce al bottone di allungarsi per tutto il contenitore */
-  align-self: flex-start; /* Allinea il bottone a sinistra */
-}
-.orders__label {
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: "Futura Std";
-  line-height: 12px;
-}
-.orders__value {
-  font-size: 16px;
-  font-weight: 500;
-  font-family: "Futura Std";
-  letter-spacing: 0.8px;
-  line-height: 20px;
-}
-.orders__actions {
-  display: flex;
+  align-items: flex-start;
   gap: 10px;
+}
+
+.orders__item-desktop-actions {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  align-self: flex-end;
+  margin-top: auto;
 }
-.orders__action {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.8px;
+.orders__item-desktop-actions a {
+  margin-right: 16px;
 }
-.orders__action--return {
+.orders__item-desktop-actions a:last-child {
+  margin-right: 0;
+}
+
+.orders__item-action-text--return {
   color: #886E4C;
 }
-.orders__action--details {
+.orders__item-action-text--return:hover, .orders__item-action-text--return:visited {
+  color: #886E4C;
+}
+
+.orders__item-action-text {
   color: black;
 }
-.orders__icon {
+.orders__item-action-text:hover, .orders__item-action-text:visited {
+  color: black;
+}
+
+.orders__item-footer-icon-desktop {
+  display: inline-block;
   width: 10px;
   height: 10px;
   background-image: url("./src/images/icons/right-arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  cursor: pointer;
 }
 
-.returns {
-  padding: 16px;
+.orders__item-label {
+  color: gray;
+  font-size: 12px;
 }
-@media (min-width: 768px) {
-  .returns {
-    width: 100%;
-  }
-}
-.returns__wrapper {
-  display: block;
-}
-.returns__details-container {
+
+.edit-info__content-container {
   display: none;
 }
-.returns__title {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-@media (max-width: 768px) {
-  .returns__title {
-    display: none; /* Nascondi titolo per schermi inferiori a 768px */
-  }
-}
-.returns__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 @media (min-width: 768px) {
-  .returns__list {
-    display: none; /* Nascondi lista per schermi superiori a 768px */
-  }
-}
-.returns__item {
-  padding: 16px;
-  border-bottom: 1px solid rgb(234, 234, 234);
-}
-.returns__header, .returns__info, .returns__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.returns__date-items {
-  display: flex;
-  flex-direction: column;
-}
-.returns__date, .returns__items {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 4px;
-}
-.returns__price {
-  font-size: 16px;
-  font-weight: 700;
-}
-.returns__footer {
-  margin-top: 8px;
-}
-.returns__icon-mobile {
-  width: 20px;
-  height: 20px;
-  background-image: url("./src/images/icons/angle-right-solid.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  filter: brightness(0) saturate(100%) invert(45%) sepia(9%) saturate(1604%) hue-rotate(354deg) brightness(95%) contrast(92%);
-}
-.returns__summary {
-  display: none; /* Nascondi il layout per schermi inferiori a 768px */
-}
-@media (min-width: 768px) {
-  .returns__summary {
+  .edit-info__content-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-  }
-}
-.returns__summary-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgb(234, 234, 234);
-  padding: 16px 0;
-}
-.returns__summary-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.returns__summary-section .pending,
-.returns__summary-section .refunded {
-  width: auto; /* Impedisce al bottone di allungarsi per tutto il contenitore */
-  align-self: flex-start; /* Allinea il bottone a sinistra */
-}
-.returns__label {
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: "Futura Std";
-  line-height: 12px;
-}
-.returns__value {
-  font-size: 16px;
-  font-weight: 500;
-  font-family: "Futura Std";
-  letter-spacing: 0.8px;
-  line-height: 20px;
-}
-.returns__actions {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.returns__action {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.8px;
-}
-.returns__action--return {
-  color: #886E4C;
-}
-.returns__action--details {
-  color: black;
-}
-.returns__icon {
-  width: 10px;
-  height: 10px;
-  background-image: url("./src/images/icons/right-arrow.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-.returns__details-container {
-  display: none;
-  flex-direction: column;
-  padding: 16px;
-}
-.returns__details-container .returns__details-title {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-.returns__details-container p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-.returns__details-container .btn_default-primary-active {
-  margin-top: 20px;
-}
-
-.edit__container-xl {
-  padding: 0 16px;
-}
-@media (min-width: 768px) {
-  .edit__container-xl {
-    padding: 0 80px;
-    max-width: 1280px;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    width: 30%;
   }
 }
 
 .edit-info__back-button {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  margin: 45px 0;
 }
+@media (min-width: 768px) {
+  .edit-info__back-button {
+    margin-top: 0;
+  }
+}
+
 .edit-info__global-back-button {
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: inherit;
+  margin-top: 20px;
 }
+@media (min-width: 768px) {
+  .edit-info__global-back-button {
+    margin-top: 0;
+  }
+}
+
 .edit-info__global-back-button__icon {
   width: 12px;
   height: 12px;
   margin-right: 8px;
+  margin-left: 16px;
 }
-.edit-info__global-back-button__text {
-  font-family: "Futura Std";
-  font-size: 16px;
-  color: black;
+@media (min-width: 768px) {
+  .edit-info__global-back-button__icon {
+    margin-left: 0;
+  }
 }
 
-.edit-info__container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  box-sizing: border-box;
+.edit-info__global-back-button__text {
+  font-size: 16px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
 }
-.edit-info__form {
-  display: flex;
-  flex-direction: column;
-}
+
 .edit-info__title {
-  text-align: left;
   font-size: 24px;
   font-family: "Futura Std";
   font-weight: 500;
   letter-spacing: 2px;
   line-height: 32px;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__title {
+    margin-left: 0;
+  }
+}
+
+.edit-info__form-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__form-container {
+    padding: 0;
+  }
+}
+
+.edit-info__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-info__label {
+  margin-bottom: 8px;
+  font-weight: 500;
   font-family: "Futura Std";
-  margin-top: 0;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+
+.edit-info__input {
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border: 1px solid black;
+}
+.edit-info__input:focus {
+  border-color: #886E4C;
+  outline: none;
+}
+.edit-info__input::-moz-placeholder {
+  font-family: "Futura Std";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+.edit-info__input::placeholder {
+  font-family: "Futura Std";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+
+.edit-info__save-button {
+  display: block;
 }
 @media (min-width: 768px) {
   .edit-info__save-button {
     display: none;
   }
 }
+
 .edit-info__buttons-wrapper {
   display: none;
 }
 @media (min-width: 768px) {
   .edit-info__buttons-wrapper {
     display: flex;
-    gap: 8px;
-  }
-  .edit-info__buttons-wrapper .btn_default-secondary__extra {
-    width: 100%;
+    justify-content: space-between;
   }
 }
 
+.btn_default-secondary__extra {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.edit-info__content-container {
+  display: none;
+}
+@media (min-width: 768px) {
+  .edit-info__content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 30%;
+  }
+}
+
+.edit-info__back-button {
+  margin: 45px 0;
+}
+@media (min-width: 768px) {
+  .edit-info__back-button {
+    margin-top: 0;
+  }
+}
+
+.edit-info__global-back-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .edit-info__global-back-button {
+    margin-top: 0;
+  }
+}
+
+.edit-info__global-back-button__icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__global-back-button__icon {
+    margin-left: 0;
+  }
+}
+
+.edit-info__global-back-button__text {
+  font-size: 16px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+
+.edit-info__title {
+  font-size: 24px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__title {
+    margin-left: 0;
+  }
+}
+
+.edit-info__form-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__form-container {
+    padding: 0;
+  }
+}
+
+.edit-info__form {
+  display: flex;
+  flex-direction: column;
+}
+
 .edit-info__label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-family: "Futura Std";
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+
+.edit-info__input {
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border: 1px solid black;
+}
+.edit-info__input:focus {
+  border-color: #886E4C;
+  outline: none;
+}
+.edit-info__input::-moz-placeholder {
   font-family: "Futura Std";
   font-weight: 500;
   font-size: 16px;
-  margin-bottom: 5px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+.edit-info__input::placeholder {
+  font-family: "Futura Std";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+
+.edit-info__save-button {
+  display: block;
+}
+@media (min-width: 768px) {
+  .edit-info__save-button {
+    display: none;
+  }
+}
+
+.edit-info__buttons-wrapper {
+  display: none;
+}
+@media (min-width: 768px) {
+  .edit-info__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.btn_default-secondary__extra {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.required-asterisk {
+  color: #886E4C;
+  margin-left: 4px;
+}
+
+.edit-info__content-container {
+  display: none;
+}
+@media (min-width: 768px) {
+  .edit-info__content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 30%;
+  }
+}
+
+.edit-info__back-button {
+  margin: 45px 0;
+}
+@media (min-width: 768px) {
+  .edit-info__back-button {
+    margin-top: 0;
+  }
+}
+
+.edit-info__global-back-button {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 20px;
 }
-.edit-info__label .required {
+@media (min-width: 768px) {
+  .edit-info__global-back-button {
+    margin-top: 0;
+  }
+}
+
+.edit-info__global-back-button__icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__global-back-button__icon {
+    margin-left: 0;
+  }
+}
+
+.edit-info__global-back-button__text {
+  font-size: 16px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+
+.edit-info__title {
+  font-size: 24px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__title {
+    margin-left: 0;
+  }
+}
+
+.edit-info__form-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__form-container {
+    padding: 0;
+  }
+}
+
+.edit-info__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-info__label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-family: "Futura Std";
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+
+.edit-info__input {
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border: 1px solid black;
+}
+.edit-info__input:focus {
+  border-color: #886E4C;
+  outline: none;
+}
+.edit-info__input::-moz-placeholder {
+  font-family: "Futura Std";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+.edit-info__input::placeholder {
+  font-family: "Futura Std";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+
+.edit-info__save-button {
+  display: block;
+}
+@media (min-width: 768px) {
+  .edit-info__save-button {
+    display: none;
+  }
+}
+
+.edit-info__buttons-wrapper {
+  display: none;
+}
+@media (min-width: 768px) {
+  .edit-info__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.btn_default-secondary__extra {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.required-asterisk {
   color: #886E4C;
-  margin-left: 5px;
+  margin-left: 4px;
+}
+
+.edit-info__content-container {
+  display: none;
+}
+@media (min-width: 768px) {
+  .edit-info__content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 30%;
+  }
+}
+
+.edit-info__back-button {
+  margin: 45px 0;
+}
+@media (min-width: 768px) {
+  .edit-info__back-button {
+    margin-top: 0;
+  }
+}
+
+.edit-info__global-back-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .edit-info__global-back-button {
+    margin-top: 0;
+  }
+}
+
+.edit-info__global-back-button__icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__global-back-button__icon {
+    margin-left: 0;
+  }
+}
+
+.edit-info__global-back-button__text {
+  font-size: 16px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+
+.edit-info__title {
+  font-size: 24px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__title {
+    margin-left: 0;
+  }
+}
+
+.edit-info__form-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__form-container {
+    padding: 0;
+  }
+}
+
+.edit-info__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-info__form-group {
+  margin-bottom: 16px;
+}
+
+.edit-info__label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-family: "Futura Std";
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+
+.edit-info__radio {
+  margin-right: 8px;
+}
+
+.edit-info__input-group {
+  display: none;
+  margin-bottom: 16px;
 }
 
 .edit-info__input {
   padding: 12px 16px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  border: 1px solid rgb(119, 119, 119);
-  box-sizing: border-box;
-}
-
-.billing-address__back-button {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.billing-address__global-back-button {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-.billing-address__global-back-button__icon {
-  width: 12px;
-  height: 12px;
-  margin-right: 8px;
-}
-.billing-address__global-back-button__text {
-  font-family: "Futura Std";
-  font-size: 16px;
-  color: black;
-}
-.billing-address__container {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
+  border: 1px solid black;
   width: 100%;
   box-sizing: border-box;
 }
-.billing-address__form {
-  display: flex;
-  flex-direction: column;
+.edit-info__input:focus {
+  border-color: #886E4C;
+  outline: none;
 }
-.billing-address__title {
-  text-align: left;
-  font-size: 24px;
-  font-family: "Futura Std";
-  font-weight: 500;
-  letter-spacing: 2px;
-  line-height: 32px;
-  font-family: "Futura Std";
-  margin-top: 0;
-}
-@media (min-width: 768px) {
-  .billing-address__save-button {
-    display: none;
-  }
-}
-.billing-address__buttons-wrapper {
-  display: none;
-}
-@media (min-width: 768px) {
-  .billing-address__buttons-wrapper {
-    display: flex;
-    gap: 8px;
-  }
-  .billing-address__buttons-wrapper .btn_default-secondary__extra {
-    width: 100%;
-  }
-}
-.billing-address__label {
+.edit-info__input::-moz-placeholder {
   font-family: "Futura Std";
   font-weight: 500;
   font-size: 16px;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-}
-.billing-address__label .required {
-  color: #886E4C;
-  margin-left: 5px;
-}
-.billing-address__input {
-  padding: 12px 16px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  border: 1px solid rgb(119, 119, 119);
-  box-sizing: border-box;
-}
-.billing-address__input:active {
-  border: 1px solid rgb(136, 110, 76);
-}
-
-.shipping-address__container {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  width: 100%;
-  box-sizing: border-box;
-}
-.shipping-address__back-button {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.shipping-address__global-back-button {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-.shipping-address__global-back-button__icon {
-  width: 12px;
-  height: 12px;
-  margin-right: 8px;
-}
-.shipping-address__global-back-button__text {
-  font-family: "Futura Std";
-  font-size: 16px;
-  color: black;
-}
-.shipping-address__title {
-  text-align: left;
-  font-size: 24px;
-  font-family: "Futura Std";
-  font-weight: 500;
-  letter-spacing: 2px;
-  line-height: 32px;
-  margin-top: 0;
-}
-.shipping-address__form {
-  display: flex;
-  flex-direction: column;
-}
-.shipping-address__label {
-  font-family: "Futura Std";
-  font-weight: 500;
-  font-size: 16px;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-}
-.shipping-address__label .required {
-  color: #886E4C;
-  margin-left: 5px;
-}
-.shipping-address__input {
-  padding: 12px 16px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  border: 1px solid rgb(119, 119, 119);
-  box-sizing: border-box;
-}
-@media (min-width: 768px) {
-  .shipping-address__save-button {
-    display: none;
-  }
-}
-.shipping-address__buttons-wrapper {
-  display: none;
-}
-@media (min-width: 768px) {
-  .shipping-address__buttons-wrapper {
-    display: flex;
-    gap: 8px;
-  }
-  .shipping-address__buttons-wrapper .btn_default-secondary__extra {
-    width: 100%;
-  }
-}
-
-.payment-method__container {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  width: 100%;
-  box-sizing: border-box;
-}
-.payment-method__back-button {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.payment-method__global-back-button {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-.payment-method__global-back-button__icon {
-  width: 12px;
-  height: 12px;
-  margin-right: 8px;
-}
-.payment-method__global-back-button__text {
-  font-family: "Futura Std";
-  font-size: 16px;
-  color: black;
-}
-.payment-method__title {
-  text-align: left;
-  font-size: 24px;
-  font-family: "Futura Std";
-  font-weight: 500;
-  letter-spacing: 2px;
-  line-height: 32px;
-  margin-top: 0;
-}
-.payment-method__form {
-  display: flex;
-  flex-direction: column;
-}
-.payment-method__label {
-  font-family: "Futura Std";
-  font-weight: 500;
-  font-size: 16px;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-}
-.payment-method__label .required {
-  color: #886E4C;
-  margin-left: 5px;
-}
-.payment-method__input {
-  padding: 12px 16px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  border: 1px solid rgb(119, 119, 119);
-  box-sizing: border-box;
-  width: 100%; /* Imposta la larghezza degli input al 100% */
-}
-.payment-method__option {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-.payment-method__option input[type=radio] {
-  margin-right: 10px; /* Spazio tra il radio button e l'etichetta */
-}
-.payment-method__option label {
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 0; /* Rimuovi il margine inferiore per allineare con il radio button */
-  white-space: nowrap; /* Impedisce che il testo vada a capo */
-}
-.payment-method__details {
-  margin-left: 30px; /* Indentazione per le opzioni dei dettagli */
-  width: 100%; /* Allarga i dettagli per occupare il 100% dello spazio */
-}
-@media (min-width: 768px) {
-  .payment-method__save-button {
-    display: none;
-  }
-}
-.payment-method__buttons-wrapper {
-  display: none;
-}
-@media (min-width: 768px) {
-  .payment-method__buttons-wrapper {
-    display: flex;
-    gap: 8px;
-  }
-  .payment-method__buttons-wrapper .btn_default-secondary__extra {
-    width: 100%;
-  }
-}
-
-.newsletter__container {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-}
-
-.newsletter__back-button {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.newsletter__global-back-button {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.newsletter__global-back-button__icon {
-  width: 12px;
-  height: 12px;
-  margin-right: 8px;
-}
-
-.newsletter__global-back-button__text {
-  font-family: "Futura Std";
-  font-size: 16px;
-  color: black;
-}
-
-.newsletter__title {
-  text-align: left;
-  font-size: 24px;
-  font-family: "Futura Std";
-  font-weight: 500;
-  letter-spacing: 2px;
-  line-height: 32px;
-  margin-top: 0;
-}
-
-.newsletter__form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  box-sizing: border-box;
-  gap: 20px;
-}
-
-.newsletter__label {
-  font-family: "Futura Std";
-  font-weight: 500;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-}
-
-.newsletter__checkbox {
-  margin-right: 10px;
-}
-
-.newsletter__subscribed-message {
-  font-family: "Futura Std";
-  font-size: 16px;
-  font-weight: 500;
-  color: black;
-}
-
-.orders-info__container {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-}
-
-.orders-info__back-button {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.orders-info__global-back-button {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.orders-info__global-back-button__icon {
-  width: 12px;
-  height: 12px;
-  margin-right: 8px;
-}
-
-.orders-info__global-back-button__text {
-  font-family: "Futura Std";
-  font-size: 16px;
-  color: black;
-}
-
-.orders-info__title {
-  text-align: left;
-  font-size: 24px;
-  font-family: "Futura Std";
-  font-weight: 500;
-  letter-spacing: 2px;
-  line-height: 32px;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.orders-info__details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-@media (min-width: 768px) {
-  .orders-info__details {
-    display: none;
-  }
-}
-
-.orders-info__status {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.orders-info__date-items {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.orders-info__price {
-  align-self: flex-end;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.orders-info__items,
-.orders-info__shipping-address {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid rgb(234, 234, 234);
-  padding-bottom: 10px;
-}
-
-.orders-info__shipping-details,
-.orders-info__custom-taxes {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid rgb(234, 234, 234);
-  padding-bottom: 10px;
-}
-
-.orders-info__shipping-address span,
-.orders-info__custom-taxes span {
-  font-size: 16px;
-  font-family: "Futura Std";
-}
-
-.orders-info__custom-taxes {
-  border-bottom: none;
-}
-
-.orders-info__item {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.orders-info__item-image {
-  width: 74px;
-  height: 100px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url("./src/images/product1/image1.jpg");
-}
-
-.orders-info__item-details {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.orders-info__item-details-title {
-  font-weight: 500;
-  font-family: "Futura Std";
-  line-height: 20px;
-  letter-spacing: 0.8px;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-.orders-info__item-details-subtitle {
-  font-weight: 400;
-  font-family: "Futura Std";
-  line-height: 14px;
-  letter-spacing: 0.5px;
-  font-size: 10px;
-}
-.orders-info__item-details-color {
-  font-weight: 400;
-  font-family: "Futura Std";
-  line-height: 12px;
   letter-spacing: 1px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-.orders-info__item-details-size {
-  font-weight: 400;
-  font-family: "Futura Std";
-  line-height: 12px;
-  letter-spacing: 1px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-.orders-info__item-details-price {
-  font-weight: 500;
-  font-family: "Futura Std";
   line-height: 20px;
-  letter-spacing: 0.8px;
+}
+.edit-info__input::placeholder {
+  font-family: "Futura Std";
+  font-weight: 500;
   font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 20px;
 }
 
-.orders-info__item-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.orders-info__actions {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 30px;
-}
-
-.orders-info__return-request {
-  display: none;
-  flex-direction: column;
-  padding: 16px;
-}
-@media (min-width: 768px) {
-  .orders-info__return-request {
-    display: flex;
-  }
-}
-
-.orders-info__return-label {
-  font-size: 14px;
-  margin-bottom: 4px;
-}
-
-.orders-info__return-select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-}
-
-.orders-info__return-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.required {
-  color: #886E4C;
-}
-
-.orders-info__return-select:last-of-type {
-  margin-bottom: 120px;
-}
-
-.delivered--mobile {
-  display: none;
-}
-@media (min-width: 768px) {
-  .delivered--mobile {
-    display: block;
-  }
-}
-
-.delivered--desktop {
+.edit-info__save-button {
   display: block;
 }
 @media (min-width: 768px) {
-  .delivered--desktop {
+  .edit-info__save-button {
     display: none;
   }
+}
+
+.edit-info__buttons-wrapper {
+  display: none;
+}
+@media (min-width: 768px) {
+  .edit-info__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.btn_default-secondary__extra {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.required-asterisk {
+  color: #886E4C;
+  margin-left: 4px;
+}
+
+.edit-info__content-container {
+  display: none;
+}
+@media (min-width: 768px) {
+  .edit-info__content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 30%;
+  }
+}
+
+.edit-info__back-button {
+  margin: 45px 0;
+}
+@media (min-width: 768px) {
+  .edit-info__back-button {
+    margin-top: 0;
+  }
+}
+
+.edit-info__global-back-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .edit-info__global-back-button {
+    margin-top: 0;
+  }
+}
+
+.edit-info__global-back-button__icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  .edit-info__global-back-button__icon {
+    margin-left: 0;
+  }
+}
+
+.edit-info__global-back-button__text {
+  font-size: 16px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+
+.newsletter__content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter__title {
+  font-size: 24px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.newsletter__form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.newsletter__checkbox {
+  margin-right: 8px;
+}
+
+.newsletter__label {
+  font-size: 16px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+
+.newsletter__subscribe-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.newsletter__subscribe-button.btn_default-primary-disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.order-details__title {
+  font-size: 24px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+.order-details__status {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.order-details__status-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.order-details__summary {
+  display: flex;
+  justify-content: space-between;
+}
+.order-details__summary-info {
+  display: flex;
+  flex-direction: column;
+  font-family: "Futura Std";
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 12px;
+  gap: 5px;
+  color: #777;
+}
+.order-details__total {
+  font-family: "Futura Std";
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+}
+.order-details__items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EAEAEA;
+}
+.order-details__items-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.order-details__items-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-details__items-status {
+  display: none;
+}
+@media (min-width: 768px) {
+  .order-details__items-status {
+    display: inline-block;
+  }
+}
+.order-details__items-title {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Futura Std";
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.order-details__items-card {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  position: relative;
+}
+.order-details__items-checkbox-container {
+  width: 32px;
+  height: 106px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.order-details__items-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #777;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+.order-details__items-checkbox--visible {
+  display: flex; /* Mostra quando è attiva */
+}
+.order-details__items-checkbox--checked {
+  background-color: #000;
+}
+.order-details__items-checkbox--checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 12px;
+}
+.order-details__items-image {
+  width: 74px;
+  height: 106px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #777;
+}
+.order-details__items-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.order-details__items-name {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Futura Std";
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+.order-details__items-subtitle {
+  font-size: 10px;
+  font-family: "Futura Std";
+  line-height: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+.order-details__items-color, .order-details__items-size {
+  font-size: 12px;
+  font-family: "Futura Std";
+  line-height: 12px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.order-details__items-price {
+  font-size: 16px;
+  font-family: "Futura Std";
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+.order-details__shipping-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EAEAEA;
+}
+.order-details__shipping-title {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Futura Std";
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.order-details__customer-name {
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.order-details__address {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 16px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.order-details__shipping-details, .order-details__custom-taxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EAEAEA;
+}
+.order-details__shipping-details-title, .order-details__custom-taxes-title {
+  font-size: 16px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.order-details__shipping-details-info, .order-details__custom-taxes-info {
+  font-size: 12px;
+  font-family: "Futura Std";
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 1px;
+}
+.order-details__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+.order-details__return-title {
+  display: none;
+  font-size: 24px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+.order-details__return-title p {
+  font-family: "Futura Std";
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+}
+.order-details__return-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.order-details__return-label {
+  font-size: 16px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+}
+.order-details__return-select {
+  font-size: 14px;
+  font-family: "Futura Std";
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  padding: 8px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+}
+.order-details__return-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+.order-details__confirmation {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.order-details__confirmation-title {
+  font-size: 24px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 768px) {
+  .order-details__status {
+    display: none;
+  }
+  .order-details__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .order-details__title .order-details__status-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+  }
+  .order-details__actions {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .order-details__actions button {
+    width: 50%;
+  }
+}
+.order-details__return-wrapper,
+.order-details__confirmation {
+  display: none;
+}
+
+.order-details__confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-details__confirmation-title {
+  font-size: 24px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.order-details__final-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .order-details__final-actions {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.order-details__instructions {
+  font-family: "Futura Std";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-align: left;
+}
+
+.order-details__instructions-list {
+  text-align: left;
+  padding-left: 16px;
+}
+
+.order-details__instructions-list li {
+  margin-bottom: 16px;
+}
+
+.half {
+  width: 100%;
+}
+
+.order-details__accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-details__accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: rgba(131, 111, 82, 0.2);
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+}
+
+.order-details__accordion-header-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: "Futura Std";
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+
+.order-details__accordion-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s;
+}
+
+.order-details__accordion-header--active .order-details__accordion-icon {
+  transform: rotate(180deg);
+}
+
+.order-details__accordion-content {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(131, 111, 82, 0.1);
+  border-radius: 0 0 8px 8px;
+}
+
+.order-details__accordion-item {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.order-details__accordion-product {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid white;
+  padding-bottom: 8px;
+}
+
+.order-details__accordion-product-image {
+  width: 32px;
+  height: 48px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #777;
+  margin-right: 16px;
+}
+
+.order-details__accordion-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.order-details__accordion-product-title {
+  font-size: 12px;
+  font-family: "Futura Std";
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.order-details__accordion-product-color {
+  font-size: 12px;
+  font-family: "Futura Std";
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 1px;
+  color: black;
+  text-align: left;
+}
+
+.order-details__accordion-product-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: "Futura Std";
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  color: black;
+}
+
+.order-details__accordion-product-quantity,
+.order-details__accordion-product-price {
+  margin-right: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-family: "Futura Std";
+}
+
+.order-details__accordion-reason,
+.order-details__accordion-refund {
+  font-size: 12px;
+  font-family: "Futura Std";
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 1px;
+  padding-bottom: 8px;
+  text-align: left;
+  margin: 4px 0;
+}
+
+.order-details__accordion-reason {
+  border-bottom: 1px solid white;
+}
+
+.order-details__accordion-refund {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.order-details__accordion--active .order-details__accordion-content {
+  display: flex;
 }
 
 .create-account {
@@ -7406,17 +7942,17 @@ input[type=email] {
   color: #886E4C;
 }
 
-.overlay-modal {
+#overlay-modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .modal {

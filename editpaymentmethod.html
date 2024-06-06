@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <sergey-import src="head.html" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+    <title>Edit Payment Method</title>
+</head>
+<body>
+    <sergey-import src="headermaster.html" />
+
+    <main class="mylogin__main-container">
+        <div class="edit-info__content-container">
+            <div class="mylogin__title-container">
+                <h1 class="mylogin__title">My account</h1>
+            </div>
+
+            <div class="mylogin__button-container">
+                <button id="information" class="mylogin__button">Information</button>
+                <button id="orders" class="mylogin__button">Orders</button>
+                <button id="returns" class="mylogin__button">Returns</button>
+            </div>
+        </div>
+
+        <div class="mylogin__module-container">
+            <div class="mylogin__spacer"></div>
+
+            <!-- Pulsante Back -->
+            <div class="edit-info__back-button">
+                <a href="mylogin.html" class="edit-info__global-back-button">
+                    <img src="./src/images/icons/arrow_back.svg" alt="Back" class="edit-info__global-back-button__icon">
+                    <span class="edit-info__global-back-button__text">Back</span>
+                </a>    
+            </div>
+            
+            <h2 class="edit-info__title">Payment Method</h2>
+
+            <div class="edit-info__form-container">
+                <form id="edit-paymentmethod-form" class="edit-info__form">
+                    <div class="edit-info__form-group">
+                        <input type="radio" id="paypal-radio" name="paymentmethod" value="paypal" class="edit-info__radio">
+                        <label for="paypal-radio" class="edit-info__label">PayPal</label>
+                    </div>
+                    <div class="edit-info__form-group">
+                        <input type="radio" id="creditcard-radio" name="paymentmethod" value="creditcard" class="edit-info__radio">
+                        <label for="creditcard-radio" class="edit-info__label">Credit Card</label>
+                    </div>
+                    <div class="edit-info__form-group">
+                        <input type="radio" id="cryptocurrency-radio" name="paymentmethod" value="cryptocurrency" class="edit-info__radio">
+                        <label for="cryptocurrency-radio" class="edit-info__label">Cryptocurrency</label>
+                    </div>
+
+                    <div class="edit-info__input-group" id="paypal-input-group">
+                        <label for="paypal" class="edit-info__label">PayPal Email<span class="required-asterisk">*</span></label>
+                        <input type="text" id="paypal" name="paypal" class="edit-info__input" placeholder="Enter PayPal email">
+                    </div>
+
+                    <div class="edit-info__input-group" id="creditcard-input-group">
+                        <label for="creditcard-number" class="edit-info__label">Credit Card Number<span class="required-asterisk">*</span></label>
+                        <input type="text" id="creditcard-number" name="creditcard-number" class="edit-info__input" placeholder="1234 5678 9101 1121">
+
+                        <label for="creditcard-name" class="edit-info__label">Name on Card<span class="required-asterisk">*</span></label>
+                        <input type="text" id="creditcard-name" name="creditcard-name" class="edit-info__input" placeholder="John Doe">
+
+                        <label for="creditcard-cvc" class="edit-info__label">CVC<span class="required-asterisk">*</span></label>
+                        <input type="text" id="creditcard-cvc" name="creditcard-cvc" class="edit-info__input" placeholder="123">
+
+                        <label for="creditcard-expiry" class="edit-info__label">Expiry Date<span class="required-asterisk">*</span></label>
+                        <input type="text" id="creditcard-expiry" name="creditcard-expiry" class="edit-info__input" placeholder="MM/YY">
+                    </div>
+
+                    <div class="edit-info__input-group" id="cryptocurrency-input-group">
+                        <label for="cryptocurrency" class="edit-info__label">Cryptocurrency Wallet<span class="required-asterisk">*</span></label>
+                        <input type="text" id="cryptocurrency" name="cryptocurrency" class="edit-info__input" placeholder="Enter cryptocurrency wallet">
+                    </div>
+                    
+                    <button type="submit" class="btn_default-primary-active edit-info__save-button">Save</button>
+
+                    <div class="edit-info__buttons-wrapper">
+                        <button type="button" class="btn_default-primary-active edit-info__save-and-edit-button">Save and Edit</button>
+                        <button type="button" class="btn_default-secondary btn_default-secondary__extra edit-info__cancel-button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="src/js/myloginbutton.js"></script>
+    <script src="src/js/crud.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loggedInUserEmail = localStorage.getItem('loggedInUser');
+            const user = getUser(loggedInUserEmail);
+            if (user && user.paymentMethods) {
+                document.getElementById('paypal').value = user.paymentMethods.paypal || '';
+                document.getElementById('creditcard-number').value = user.paymentMethods.creditCardNumber || '';
+                document.getElementById('creditcard-name').value = user.paymentMethods.creditCardName || '';
+                document.getElementById('creditcard-cvc').value = user.paymentMethods.creditCardCVC || '';
+                document.getElementById('creditcard-expiry').value = user.paymentMethods.creditCardExpiry || '';
+                document.getElementById('cryptocurrency').value = user.paymentMethods.cryptocurrency || '';
+            }
+
+            const paymentMethodRadios = document.querySelectorAll('.edit-info__radio');
+            const paypalInputGroup = document.getElementById('paypal-input-group');
+            const creditCardInputGroup = document.getElementById('creditcard-input-group');
+            const cryptocurrencyInputGroup = document.getElementById('cryptocurrency-input-group');
+
+            paymentMethodRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    paypalInputGroup.style.display = 'none';
+                    creditCardInputGroup.style.display = 'none';
+                    cryptocurrencyInputGroup.style.display = 'none';
+
+                    if (radio.value === 'paypal') {
+                        paypalInputGroup.style.display = 'block';
+                    } else if (radio.value === 'creditcard') {
+                        creditCardInputGroup.style.display = 'block';
+                    } else if (radio.value === 'cryptocurrency') {
+                        cryptocurrencyInputGroup.style.display = 'block';
+                    }
+                });
+            });
+
+            const saveAndEditButton = document.querySelector('.edit-info__save-and-edit-button');
+            if (saveAndEditButton) {
+                saveAndEditButton.addEventListener('click', function() {
+                    savePaymentMethod();
+                    alert('Payment method updated successfully!');
+                });
+            }
+
+            const cancelButton = document.querySelector('.edit-info__cancel-button');
+            if (cancelButton) {
+                cancelButton.addEventListener('click', function() {
+                    clearPaymentMethod();
+                    alert('Payment method cleared!');
+                });
+            }
+
+            document.getElementById('edit-paymentmethod-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                savePaymentMethod();
+                alert('Payment method updated successfully!');
+                window.location.href = "mylogin.html";
+            });
+
+            function savePaymentMethod() {
+                const selectedPaymentMethod = document.querySelector('input[name="paymentmethod"]:checked').value;
+                const updatedPayPal = document.getElementById('paypal').value;
+                const updatedCreditCardNumber = document.getElementById('creditcard-number').value;
+                const updatedCreditCardName = document.getElementById('creditcard-name').value;
+                const updatedCreditCardCVC = document.getElementById('creditcard-cvc').value;
+                const updatedCreditCardExpiry = document.getElementById('creditcard-expiry').value;
+                const updatedCryptocurrency = document.getElementById('cryptocurrency').value;
+
+                const paymentMethods = {
+                    paypal: selectedPaymentMethod === 'paypal' ? updatedPayPal : '',
+                    creditCardNumber: selectedPaymentMethod === 'creditcard' ? updatedCreditCardNumber : '',
+                    creditCardName: selectedPaymentMethod === 'creditcard' ? updatedCreditCardName : '',
+                    creditCardCVC: selectedPaymentMethod === 'creditcard' ? updatedCreditCardCVC : '',
+                    creditCardExpiry: selectedPaymentMethod === 'creditcard' ? updatedCreditCardExpiry : '',
+                    cryptocurrency: selectedPaymentMethod === 'cryptocurrency' ? updatedCryptocurrency : ''
+                };
+
+                updateUser(loggedInUserEmail, { paymentMethods });
+            }
+
+            function clearPaymentMethod() {
+                updateUser(loggedInUserEmail, {
+                    paymentMethods: {
+                        paypal: '',
+                        creditCardNumber: '',
+                        creditCardName: '',
+                        creditCardCVC: '',
+                        creditCardExpiry: '',
+                        cryptocurrency: ''
+                    }
+                });
+                document.getElementById('paypal').value = '';
+                document.getElementById('creditcard-number').value = '';
+                document.getElementById('creditcard-name').value = '';
+                document.getElementById('creditcard-cvc').value = '';
+                document.getElementById('creditcard-expiry').value = '';
+                document.getElementById('cryptocurrency').value = '';
+            }
+        });
+    </script>
+</body>
+</html>

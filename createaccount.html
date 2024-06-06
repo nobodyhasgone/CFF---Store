@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <sergey-import src="head.html" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
     <title>Create Account</title>
 </head>
@@ -15,7 +13,7 @@
             <h2 class="create-account__header">Create New Customer Account</h2>
         </div>
         <div class="create-account__form-container">
-            <form action="/register" method="post" class="create-account__form">
+            <form id="registration-form" class="create-account__form">
                 <label for="name" class="create-account__label">Name<span class="asterisk">*</span></label>
                 <input type="text" id="name" name="name" class="create-account__input" placeholder="Enter name" required>
                 
@@ -93,5 +91,7 @@
     <script src="src/js/headermaster.js"></script>
     <script src="src/js/cart.js"></script>
     <script src="src/js/minicart.js"></script>
+
+    <script src="src/js/crud.js"></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+.login-container {
+    @media (min-width: 768px) {
+        padding: 0 80px;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}
+
+.login {
+    &__title {
+        font-family: $main-font;
+        font-weight: $font-medium;
+        font-size: 24px;
+        letter-spacing: 2px;
+        line-height: 32px;
+        margin: 0 auto;
+        text-align: center; /* Center the title horizontally */
+        padding: 60px 16px 20px; /* Default padding */
+
+        @media (min-width: 768px) {
+            text-align: left;
+            padding: 110px 0 20px;
+        }
+    }
+}
+
+.account-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.section-container {
+    display: none; /* Nascondi tutte le sezioni per impostazione predefinita */
+    width: 100%;
+}

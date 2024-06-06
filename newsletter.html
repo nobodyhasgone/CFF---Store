@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <sergey-import src="head.html" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+    <title>Newsletter</title>
+</head>
+<body>
+    <sergey-import src="headermaster.html" />
+
+    <main class="mylogin__main-container">
+        <div class="edit-info__content-container">
+            <div class="mylogin__title-container">
+                <h1 class="mylogin__title">My account</h1>
+            </div>
+
+            <div class="mylogin__button-container">
+                <button id="information" class="mylogin__button">Information</button>
+                <button id="orders" class="mylogin__button">Orders</button>
+                <button id="returns" class="mylogin__button">Returns</button>
+            </div>
+        </div>
+
+        <div class="mylogin__module-container">
+            <div class="mylogin__spacer"></div>
+
+            <!-- Pulsante Back -->
+            <div class="edit-info__back-button">
+                <a href="mylogin.html" class="edit-info__global-back-button">
+                    <img src="./src/images/icons/arrow_back.svg" alt="Back" class="edit-info__global-back-button__icon">
+                    <span class="edit-info__global-back-button__text">Back</span>
+                </a>    
+            </div>
+            
+            <div class="newsletter__content-container">
+                <h2 class="newsletter__title">Newsletter</h2>
+                <div class="newsletter__form-group">
+                    <input type="checkbox" id="terms-checkbox" class="newsletter__checkbox">
+                    <label for="terms-checkbox" class="newsletter__label">I agree to the terms and conditions</label>
+                </div>
+                <button id="subscribe-button" class="btn_default-primary-disabled newsletter__subscribe-button" disabled>Subscribe</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="src/js/myloginbutton.js"></script>
+    <script src="src/js/crud.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const termsCheckbox = document.getElementById('terms-checkbox');
+            const subscribeButton = document.getElementById('subscribe-button');
+            const user = getUser(localStorage.getItem('loggedInUser'));
+
+            if (user && user.newsletterSubscribed) {
+                updateSubscriptionState(true);
+            }
+
+            termsCheckbox.addEventListener('change', function() {
+                subscribeButton.disabled = !termsCheckbox.checked;
+                subscribeButton.classList.toggle('btn_default-primary-disabled', !termsCheckbox.checked);
+                subscribeButton.classList.toggle('btn_default-primary-active', termsCheckbox.checked);
+            });
+
+            subscribeButton.addEventListener('click', function() {
+                const subscribed = subscribeButton.textContent === 'Subscribe';
+                updateSubscriptionState(subscribed);
+                updateUser(localStorage.getItem('loggedInUser'), { newsletterSubscribed: subscribed });
+            });
+
+            function updateSubscriptionState(subscribed) {
+                const label = document.querySelector('.newsletter__label');
+                if (subscribed) {
+                    termsCheckbox.style.display = 'none';
+                    label.textContent = 'You are already subscribed to our newsletter.';
+                    subscribeButton.textContent = 'Unsubscribe';
+                    subscribeButton.classList.remove('btn_default-primary-disabled');
+                    subscribeButton.classList.add('btn_default-primary-active');
+                } else {
+                    termsCheckbox.style.display = 'inline-block';
+                    label.textContent = 'I agree to the terms and conditions';
+                    subscribeButton.textContent = 'Subscribe';
+                    subscribeButton.classList.remove('btn_default-primary-active');
+                    subscribeButton.classList.add('btn_default-primary-disabled');
+                    subscribeButton.disabled = true;
+                    termsCheckbox.checked = false;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

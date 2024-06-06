@@ -3,49 +3,378 @@
 <head>
     <sergey-import src="head.html" />
     <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
-    <title>Login</title>
+    <title>My Login</title>
 </head>
 <body>
     <sergey-import src="headermaster.html" />
-    <div class="login-container">
-        <div class="login__title">My account</div>
-        <div class="account-container">
-            <sergey-import src="myaccountbutton.html" />
-            <div class="section-container" id="info-section">
-                <sergey-import src="generalinfo.html" />
+
+    <!-- <main class="mylogin__main-container">
+        <div class="mylogin__content-container">
+            <div class="mylogin__title-container">
+                <h1 class="mylogin__title">My account</h1>
             </div>
-            <div class="section-container" id="orders-section">
-                <sergey-import src="orders.html" />
-            </div>
-            <div class="section-container" id="returns-section">
-                <sergey-import src="returns.html" />
-            </div>
-            <div class="section-container" id="billing-address-section" style="display: none;">
-                <sergey-import src="billingaddress.html" />
-            </div>
-            <div class="section-container" id="shipping-address-section" style="display: none;">
-                <sergey-import src="shippingaddress.html" />
-            </div>
-            <div class="section-container" id="payment-method-section" style="display: none;">
-                <sergey-import src="paymentmethod.html" />
-            </div>
-            <div class="section-container" id="newsletter-section" style="display: none;">
-                <sergey-import src="newsletter.html" />
-            </div>
-            <div class="section-container" id="orders-info-section" style="display: none;">
-                <sergey-import src="ordersinfo.html" />
+
+            <div class="mylogin__button-container">
+                <button id="information" class="mylogin__button">Information</button>
+                <button id="orders" class="mylogin__button">Orders</button>
+                <button id="returns" class="mylogin__button">Returns</button>
             </div>
         </div>
-    </div>
-    <script src="src/js/myaccountbutton.js"></script>
-    <script src="src/js/edit.js"></script>
-    <script src="src/js/editbillingaddress.js"></script>
-    <script src="src/js/shippingaddress.js"></script>
-    <script src="src/js/paymentmethodchange.js"></script>
-    <script src="src/js/newsletter.js"></script>
-    <script src="src/js/ordersinfo.js"></script>
-    <script src="src/js/returns.js"></script>
-    <script src="src/js/headermaster.js"></script>
-    <script src="src/js/idlook.js"></script>
+
+        <div class="mylogin__module-container">
+            <div class="mylogin__spacer"></div>
+            <ul class="mylogin__module-list">
+                
+                <li class="mylogin__module-item mylogin__module-item--generalinfo">
+                    <div class="mylogin__generalinfo-container">
+                        <div class="mylogin__generalinfo-header">
+                            <span>General info</span>
+                            <a href="editgeneralinfo.html">
+                                <span class="mylogin__generalinfo-icon"></span>
+                            </a>
+                        </div>
+                        <span id="generalinfo-name" class="mylogin__generalinfo-field"></span>
+                        <span id="generalinfo-surname" class="mylogin__generalinfo-field"></span>
+                        <span id="generalinfo-email" class="mylogin__generalinfo-field"></span>
+                    </div>
+                </li>
+
+                <li class="mylogin__module-item mylogin__module-item--billingaddress">
+                    <div class="mylogin__billingaddress-container">
+                        <div class="mylogin__billingaddress-header">
+                            <span>Billing address</span>
+                            <a href="editbillingaddress.html">
+                                <span class="mylogin__billingaddress-icon"></span>
+                            </a>
+                        </div>
+                        <span id="billingaddress-street" class="mylogin__billingaddress-field">Street Address</span>
+                        <span id="billingaddress-city" class="mylogin__billingaddress-field">City</span>
+                        <span id="billingaddress-zipcode" class="mylogin__billingaddress-field">ZIP Code</span>
+                        <span id="billingaddress-country" class="mylogin__billingaddress-field">Country</span>
+                    </div>
+                </li>
+
+                <li class="mylogin__module-item mylogin__module-item--shippingaddresses">
+                    <div class="mylogin__shippingaddresses-container">
+                        <div class="mylogin__shippingaddresses-header">
+                            <span>Shipping addresses</span>
+                            <a href="editshippingaddresses.html">
+                                <span class="mylogin__shippingaddresses-icon"></span>
+                            </a>
+                        </div>
+                        <span id="shippingaddresses-street" class="mylogin__shippingaddresses-field">Street Address</span>
+                        <span id="shippingaddresses-city" class="mylogin__shippingaddresses-field">City</span>
+                        <span id="shippingaddresses-zipcode" class="mylogin__shippingaddresses-field">ZIP Code</span>
+                        <span id="shippingaddresses-country" class="mylogin__shippingaddresses-field">Country</span>
+                    </div>
+                </li>
+
+                <li class="mylogin__module-item mylogin__module-item--paymentmethod">
+                    <div class="mylogin__paymentmethod-container">
+                        <div class="mylogin__paymentmethod-header">
+                            <span>Payment method</span>
+                            <a href="editpaymentmethod.html">
+                                <span class="mylogin__paymentmethod-icon"></span>
+                            </a>
+                        </div>
+                        <span id="paymentmethod-paypal" class="mylogin__paymentmethod-field">PayPal</span>
+                        <span id="paymentmethod-creditcard" class="mylogin__paymentmethod-field">Credit Card</span>
+                        <span id="paymentmethod-cryptocurrency" class="mylogin__paymentmethod-field">Cryptocurrency</span>
+                    </div>
+                </li>
+
+                <li class="mylogin__module-item mylogin__module-item--newsletter">
+                    <div class="mylogin__newsletter-container">
+                        <div class="mylogin__newsletter-header">
+                            <span>Newsletter</span>
+                            <a href="newsletter.html">
+                                <span class="mylogin__newsletter-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main> -->
+
+    <main class="mylogin__main-container">
+        <div class="mylogin__content-container">
+            <div class="mylogin__title-container">
+                <h1 class="mylogin__title">My account</h1>
+            </div>
+
+            <div class="mylogin__button-container">
+                <button id="information" class="mylogin__button">Information</button>
+                <button id="orders" class="mylogin__button">Orders</button>
+                <button id="returns" class="mylogin__button">Returns</button>
+            </div>
+        </div>
+
+        <div class="mylogin__module-container">
+            <div class="mylogin__spacer"></div>
+
+            <div class="mylogin__section-container" id="section-information">
+                <ul class="mylogin__module-list">
+                    <li class="mylogin__module-item mylogin__module-item--generalinfo">
+                        <div class="mylogin__generalinfo-container">
+                            <div class="mylogin__generalinfo-header">
+                                <span>General info</span>
+                                <a href="editgeneralinfo.html">
+                                    <span class="mylogin__generalinfo-icon"></span>
+                                </a>
+                            </div>
+                            <span id="generalinfo-name" class="mylogin__generalinfo-field"></span>
+                            <span id="generalinfo-surname" class="mylogin__generalinfo-field"></span>
+                            <span id="generalinfo-email" class="mylogin__generalinfo-field"></span>
+                        </div>
+                    </li>
+
+                    <li class="mylogin__module-item mylogin__module-item--billingaddress">
+                        <div class="mylogin__billingaddress-container">
+                            <div class="mylogin__billingaddress-header">
+                                <span>Billing address</span>
+                                <a href="editbillingaddress.html">
+                                    <span class="mylogin__billingaddress-icon"></span>
+                                </a>
+                            </div>
+                            <span id="billingaddress-street" class="mylogin__billingaddress-field">Street Address</span>
+                            <span id="billingaddress-city" class="mylogin__billingaddress-field">City</span>
+                            <span id="billingaddress-zipcode" class="mylogin__billingaddress-field">ZIP Code</span>
+                            <span id="billingaddress-country" class="mylogin__billingaddress-field">Country</span>
+                        </div>
+                    </li>
+
+                    <li class="mylogin__module-item mylogin__module-item--shippingaddresses">
+                        <div class="mylogin__shippingaddresses-container">
+                            <div class="mylogin__shippingaddresses-header">
+                                <span>Shipping addresses</span>
+                                <a href="editshippingaddresses.html">
+                                    <span class="mylogin__shippingaddresses-icon"></span>
+                                </a>
+                            </div>
+                            <span id="shippingaddresses-street" class="mylogin__shippingaddresses-field">Street Address</span>
+                            <span id="shippingaddresses-city" class="mylogin__shippingaddresses-field">City</span>
+                            <span id="shippingaddresses-zipcode" class="mylogin__shippingaddresses-field">ZIP Code</span>
+                            <span id="shippingaddresses-country" class="mylogin__shippingaddresses-field">Country</span>
+                        </div>
+                    </li>
+
+                    <li class="mylogin__module-item mylogin__module-item--paymentmethod">
+                        <div class="mylogin__paymentmethod-container">
+                            <div class="mylogin__paymentmethod-header">
+                                <span>Payment method</span>
+                                <a href="editpaymentmethod.html">
+                                    <span class="mylogin__paymentmethod-icon"></span>
+                                </a>
+                            </div>
+                            <span id="paymentmethod-paypal" class="mylogin__paymentmethod-field">PayPal</span>
+                            <span id="paymentmethod-creditcard" class="mylogin__paymentmethod-field">Credit Card</span>
+                            <span id="paymentmethod-cryptocurrency" class="mylogin__paymentmethod-field">Cryptocurrency</span>
+                        </div>
+                    </li>
+
+                    <li class="mylogin__module-item mylogin__module-item--newsletter">
+                        <div class="mylogin__newsletter-container">
+                            <div class="mylogin__newsletter-header">
+                                <span>Newsletter</span>
+                                <a href="newsletter.html">
+                                    <span class="mylogin__newsletter-icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mylogin__section-container" id="section-orders" style="display:none;">
+                <h2 class="section-orders__title">Orders</h2>
+                
+                <div class="orders__section">
+                    <!-- Ordine 1 -->
+                    <div class="orders__item">
+                        <!-- Contenitore per schermi inferiori a 768px -->
+                        <div class="orders__item-mobile">
+                            <div class="orders__item-header">
+                                <div class="orders__item-header-row">
+                                    <div class="orders__item-info orders__item-info--number">
+                                        <span class="orders__item-info-order-number">Order #12345</span>
+                                    </div>
+                                    <div class="orders__item-info orders__item-info--status">
+                                        <button class="shipped">Shipped</button>
+                                    </div>
+                                </div>
+                                <div class="orders__item-header-row">
+                                    <div class="orders__item-info orders__item-info--date">
+                                        <span class="orders__item-info-date">25 nov 2022</span>
+                                        <span class="orders__item-info-items">2 items</span>
+                                    </div>
+                                    <div class="orders__item-info orders__item-info--total">
+                                        <span class="orders__item-info-total">€ 74.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders__item-footer">
+                                <span class="orders__item-footer-details">View more details</span>
+                                <a href="orders.html">
+                                    <span class="orders__item-footer-icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Contenitore per schermi superiori a 768px -->
+                        <div class="orders__item-desktop">
+                            <div class="orders__item-desktop-info">
+                                <div class="orders__item-info orders__item-info--number">
+                                    <span class="orders__item-info-label">Order number</span>
+                                    <span class="orders__item-info-value">12345</span>
+                                </div>
+                                <div class="orders__item-info orders__item-info--date">
+                                    <span class="orders__item-info-label">Date</span>
+                                    <span class="orders__item-info-value">25 nov 2022</span>
+                                </div>
+                                <div class="orders__item-info orders__item-info--total">
+                                    <span class="orders__item-info-label">Order total</span>
+                                    <span class="orders__item-info-value">€ 74.00</span>
+                                </div>
+                                <div class="orders__item-info orders__item-info--status">
+                                    <span class="orders__item-info-label">Status</span>
+                                    <button class="shipped">Shipped</button>
+                                </div>
+                            </div>
+                            <div class="orders__item-desktop-actions">
+                                <a href="#"><span class="orders__item-action-text orders__item-action-text--return">Return</span></a>
+                                <a href="orders.html"><span class="orders__item-action-text">Details</span></a>
+                                <a href="orders.html"><span class="orders__item-footer-icon-desktop"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Ordine 2 -->
+                    <div class="orders__item">
+                        <!-- Contenitore per schermi inferiori a 768px -->
+                        <div class="orders__item-mobile">
+                            <div class="orders__item-header">
+                                <div class="orders__item-header-row">
+                                    <div class="orders__item-info orders__item-info--number">
+                                        <span class="orders__item-info-order-number">Order #12344</span>
+                                    </div>
+                                    <div class="orders__item-info orders__item-info--status">
+                                        <button class="delivered">Delivered</button>
+                                    </div>
+                                </div>
+                                <div class="orders__item-header-row">
+                                    <div class="orders__item-info orders__item-info--date">
+                                        <span class="orders__item-info-date">15 nov 2022</span>
+                                        <span class="orders__item-info-items">1 item</span>
+                                    </div>
+                                    <div class="orders__item-info orders__item-info--total">
+                                        <span class="orders__item-info-total">€ 150.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders__item-footer">
+                                <span class="orders__item-footer-details">View more details</span>
+                                <a href="orders.html">
+                                    <span class="orders__item-footer-icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Contenitore per schermi superiori a 768px -->
+                        <div class="orders__item-desktop">
+                            <div class="orders__item-desktop-info">
+                                <div class="orders__item-info orders__item-info--number">
+                                    <span class="orders__item-info-label">Order number</span>
+                                    <span class="orders__item-info-value">12344</span>
+                                </div>
+                                <div class="orders__item-info orders__item-info--date">
+                                    <span class="orders__item-info-label">Date</span>
+                                    <span class="orders__item-info-value">15 nov 2022</span>
+                                </div>
+                                <div class="orders__item-info orders__item-info--total">
+                                    <span class="orders__item-info-label">Order total</span>
+                                    <span class="orders__item-info-value">€ 150.00</span>
+                                </div>
+                                <div class="orders__item-info orders__item-info--status">
+                                    <span class="orders__item-info-label">Status</span>
+                                    <button class="delivered">Delivered</button>
+                                </div>
+                            </div>
+                            <div class="orders__item-desktop-actions">
+                                <a href="#"><span class="orders__item-action-text orders__item-action-text--return">Return</span></a>
+                                <a href="orders.html"><span class="orders__item-action-text">Details</span></a>
+                                <a href="orders.html"><span class="orders__item-footer-icon-desktop"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Ordine 3 -->
+                    <div class="orders__item">
+                        <!-- Contenitore per schermi inferiori a 768px -->
+                        <div class="orders__item-mobile">
+                            <div class="orders__item-header">
+                                <div class="orders__item-header-row">
+                                    <div class="orders__item-info orders__item-info--number">
+                                        <span class="orders__item-info-order-number">Order #12343</span>
+                                    </div>
+                                    <div class="orders__item-info orders__item-info--status">
+                                        <button class="delivered">Delivered</button>
+                                    </div>
+                                </div>
+                                <div class="orders__item-header-row">
+                                    <div class="orders__item-info orders__item-info--date">
+                                        <span class="orders__item-info-date">01 nov 2022</span>
+                                        <span class="orders__item-info-items">3 items</span>
+                                    </div>
+                                    <div class="orders__item-info orders__item-info--total">
+                                        <span class="orders__item-info-total">€ 250.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders__item-footer">
+                                <span class="orders__item-footer-details">View more details</span>
+                                <a href="orders.html">
+                                    <span class="orders__item-footer-icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Contenitore per schermi superiori a 768px -->
+                        <div class="orders__item-desktop">
+                            <div class="orders__item-desktop-info">
+                                <div class="orders__item-info orders__item-info--number">
+                                    <span class="orders__item-info-label">Order number</span>
+                                    <span class="orders__item-info-value">12343</span>
+                                </div>
+                                <div class="orders__item-info orders__item-info--date">
+                                    <span class="orders__item-info-label">Date</span>
+                                    <span class="orders__item-info-value">01 nov 2022</span>
+                                </div>
+                                <div class="orders__item-info orders__item-info--total">
+                                    <span class="orders__item-info-label">Order total</span>
+                                    <span class="orders__item-info-value">€ 250.00</span>
+                                </div>
+                                <div class="orders__item-info orders__item-info--status">
+                                    <span class="orders__item-info-label">Status</span>
+                                    <button class="delivered">Delivered</button>
+                                </div>
+                            </div>
+                            <div class="orders__item-desktop-actions">
+                                <a href="#"><span class="orders__item-action-text orders__item-action-text--return">Return</span></a>
+                                <a href="orders.html"><span class="orders__item-action-text">Details</span></a>
+                                <a href="orders.html"><span class="orders__item-footer-icon-desktop"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            <div class="mylogin__section-container" id="section-returns" style="display:none;">
+                <h2>Returns</h2>
+                <!-- Returns content will go here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="src/js/myloginbutton.js"></script>
+    <script src="src/js/crud.js"></script>
+
 </body>
 </html>

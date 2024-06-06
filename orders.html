@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <sergey-import src="head.html" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+    <title>Order Details</title>
+</head>
+<body>
+    <sergey-import src="headermaster.html" />
+
+    <main class="mylogin__main-container">
+        <div class="edit-info__content-container">
+            <div class="mylogin__title-container">
+                <h1 class="mylogin__title">My account</h1>
+            </div>
+
+            <div class="mylogin__button-container">
+                <button id="information" class="mylogin__button">Information</button>
+                <button id="orders" class="mylogin__button">Orders</button>
+                <button id="returns" class="mylogin__button">Returns</button>
+            </div>
+        </div>
+
+        <div class="mylogin__module-container">
+            <div class="mylogin__spacer"></div>
+
+            <!-- Pulsante Back -->
+            <div class="edit-info__back-button">
+                <a href="mylogin.html" class="edit-info__global-back-button">
+                    <img src="./src/images/icons/arrow_back.svg" alt="Back" class="edit-info__global-back-button__icon">
+                    <span class="edit-info__global-back-button__text">Back</span>
+                </a>    
+            </div>
+
+            <!-- Container per i dettagli dell'ordine -->
+            <div class="order-details">
+                <div class="order-details__title">
+                    <span>Order #12344</span>
+                </div>
+
+                <div class="order-details__return-title" style="display:none;">
+                    <span>Return for order #12344</span>
+                    <p style="margin-top: 20px;">Select one or more items to return</p>
+                </div>
+
+                <div class="order-details__status">
+                    <div class="order-details__status-info">
+                        <button class="delivered">Delivered</button>
+                    </div>
+                    <div class="order-details__summary">
+                        <div class="order-details__summary-info">
+                            <span>25 nov 2022</span>
+                            <span>2 item</span>
+                        </div>
+                        <div class="order-details__total">
+                            <span>€ 74.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-details__items">
+                    <span class="order-details__items-title">Items:</span>
+                    <div class="order-details__items-card">
+                        <div class="order-details__items-checkbox-container">
+                            <div class="order-details__items-checkbox" id="return-checkbox-1"></div>
+                        </div>
+                        <img src="./src/images/product1/image1.jpg" alt="Product 1" class="order-details__items-image">
+                        <div class="order-details__items-info">
+                            <div class="order-details__items-header">
+                                <span class="order-details__items-name">AJAX FULL-ZIP SWEATSHIRT</span>
+                                <button class="delivered order-details__items-status">Delivered</button>
+                            </div>
+                            <span class="order-details__items-subtitle">A comfortable full-zip sweatshirt made from premium materials, perfect for casual wear.</span>
+                            <span class="order-details__items-color">Color: Black</span>
+                            <span class="order-details__items-size">Size: 44</span>
+                            <span class="order-details__items-price">€ 37.00</span>
+                        </div>
+                    </div>
+
+                    <div class="order-details__items-card">
+                        <div class="order-details__items-checkbox-container">
+                            <div class="order-details__items-checkbox" id="return-checkbox-2"></div>
+                        </div>
+                        <img src="./src/images/product2/image1.jpg" alt="Product 2" class="order-details__items-image">
+                        <div class="order-details__items-info">
+                            <div class="order-details__items-header">
+                                <span class="order-details__items-name">STRIKE ENDURANCE TEE</span>
+                                <button class="delivered order-details__items-status">Delivered</button>
+                            </div>
+                            <span class="order-details__items-subtitle">Stylish and versatile, this jacket is designed for both comfort and performance.</span>
+                            <span class="order-details__items-color">Color: Red</span>
+                            <span class="order-details__items-size">Size: 46</span>
+                            <span class="order-details__items-price">€ 37.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-details__shipping-wrapper">
+                    <div class="order-details__shipping-info">
+                        <span class="order-details__shipping-title">Shipping Address:</span>
+                        <div class="order-details__customer-name">John Doe</div>
+                        <div class="order-details__address">
+                            <div>123 Main St, Apt 4B</div>
+                            <div>City, 12345, Country</div>
+                            <div>+1 234 567 890</div>
+                        </div>
+                    </div>
+
+                    <div class="order-details__shipping-details">
+                        <span class="order-details__shipping-details-title">Shipping details:</span>
+                        <span class="order-details__shipping-details-info">FREE</span>
+                    </div>
+
+                    <div class="order-details__custom-taxes">
+                        <span class="order-details__custom-taxes-title">Custom Taxes:</span>
+                        <span class="order-details__custom-taxes-info">€ 0,00</span>
+                    </div>
+
+                    <div class="order-details__actions">
+                        <button class="btn_default-primary-active">View tracking</button>
+                        <button class="btn_default-secondary" id="show-return-checkboxes">Request return</button>
+                    </div>
+                </div>
+
+                <div class="order-details__return-wrapper" style="display:none;">
+                    <label for="reason" class="order-details__return-label">Reason for return<span class="asterisk">*</span></label>
+                    <select id="reason" class="order-details__return-select">
+                        <option value="#" class="select-placeholder">Please select an option</option>
+                        <option value="wrong-size">Wrong size</option>
+                        <option value="damaged">Damaged product</option>
+                        <option value="not-as-described">Not as described</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="refund-method" class="order-details__return-label">How do you want your money back?<span class="asterisk">*</span></label>
+                    <select id="refund-method" class="order-details__return-select">
+                        <option value="#" class="select-placeholder">Please select an option</option>
+                        <option value="original-payment">Original payment method</option>
+                        <option value="store-credit">Store credit</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="order-details__return-actions">
+                        <button class="btn_default-primary-active">Send Request</button>
+                    </div>
+                </div>
+
+                <!-- Nuovo container per la conferma -->
+<div class="order-details__confirmation" style="display:none;">
+    <span class="order-details__confirmation-title">Request sent!</span>
+    
+    <div class="order-details__accordion">
+        <div class="order-details__accordion-header">
+            <span class="order-details__accordion-header-title">Return Summary</span>
+            <img src="./src/images/icons/chevron-down-solid.svg" alt="Toggle" class="order-details__accordion-icon">
+        </div>
+        <div class="order-details__accordion-content" style="display: none;">
+            <div class="order-details__accordion-item">
+                <div class="order-details__accordion-product">
+                    <img src="./src/images/product1/image1.jpg" alt="Product 1" class="order-details__accordion-product-image">
+                    <div class="order-details__accordion-product-info">
+                        <span class="order-details__accordion-product-title">AJAX FULL-ZIP SWEATSHIRT</span>
+                        <span class="order-details__accordion-product-color">Color: Black</span>
+                        <div class="order-details__accordion-product-details">
+                            <span class="order-details__accordion-product-quantity">x1</span>
+                            <span class="order-details__accordion-product-price">€ 37.00</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="order-details__accordion-reason">Reason of return: Size Too Small</p>
+                <p class="order-details__accordion-refund">Refund Method: Same as order method</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="order-details__instructions">
+        <p>Now, please follow the instructions to return the item:</p>
+        <ol type="1" class="order-details__instructions-list">
+            <li>Pack your Item (use the same packaging possible)</li>
+            <li>Attach return label</li>
+            <li>Schedule a pick up slot online or calling this number</li>
+            <li>Give the packaging to the shipper</li>
+        </ol>
+    </div>
+
+    <div class="order-details__final-actions">
+        <button class="btn_default-primary-active half">Track request</button>
+        <button class="btn_default-secondary half">View my returns</button>
+    </div>
+</div>
+
+
+            </div>
+        </div>
+
+    </main>
+<script src="src/js/request.js"></script>
+</body>
+</html>

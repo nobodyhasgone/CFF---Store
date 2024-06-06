@@ -49,17 +49,23 @@
 @import 'src/scss/components/headerMaster/headermasterleft2';
 @import 'src/scss/components/headerMaster/headermasterright';
 @import 'src/scss/components/headerMaster/headmastercart';
+
 @import 'src/scss/components/myLogin/mylogin';
-@import 'src/scss/components/myLogin/myaccountbutton';
-@import 'src/scss/components/myLogin/generalinfo';
-@import 'src/scss/components/myLogin/orders';
-@import 'src/scss/components/myLogin/returns';
-@import 'src/scss/components/myLogin/editinfo';
-@import 'src/scss/components/myLogin/billingaddress';
-@import 'src/scss/components/myLogin/shippingaddress';
-@import 'src/scss/components/myLogin/paymentmethod';
+@import 'src/scss/components/myLogin/editgeneralinfo';
+@import 'src/scss/components/myLogin/editbillingaddress';
+@import 'src/scss/components/myLogin/editshippingaddresses';
+@import 'src/scss/components/myLogin/editpaymentmethod';
 @import 'src/scss/components/myLogin/newsletter';
-@import 'src/scss/components/myLogin/orderinfo';
+@import 'src/scss/components/myLogin/orders';
+// @import 'src/scss/components/myLogin/myaccountbutton';
+// @import 'src/scss/components/myLogin/generalinfo';
+// @import 'src/scss/components/myLogin/returns';
+// @import 'src/scss/components/myLogin/editinfo';
+// @import 'src/scss/components/myLogin/billingaddress';
+// @import 'src/scss/components/myLogin/shippingaddress';
+// @import 'src/scss/components/myLogin/paymentmethod';
+// @import 'src/scss/components/myLogin/orderinfo';
+
 @import 'src/scss/components/createAccount/createAccount';
 @import 'src/scss/components/forgotPassword/forgotpassword';
 @import 'src/scss/components/componentsCross/modaleindex';

@@ -46,15 +46,7 @@
     letter-spacing: 0.8px;
 }
 
-.newsletter__content-container {
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.newsletter__title {
+.edit-info__title {
     font-size: 24px;
     font-family: $main-font;
     font-weight: $font-medium;
@@ -62,39 +54,75 @@
     line-height: 32px;
     text-align: left;
     margin-bottom: 20px;
+    margin-left: 16px;
+    @media (min-width: 768px) {
+        margin-left: 0;
+    }
 }
 
-.newsletter__form-group {
+.edit-info__form-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    @media (min-width: 768px) {
+        padding: 0;
+    }
+}
+
+.edit-info__form {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column;
 }
 
-.newsletter__checkbox {
-    margin-right: 8px;
-}
-
-.newsletter__label {
-    font-size: 16px;
-    font-family: $main-font;
+.edit-info__label {
+    margin-bottom: 8px;
     font-weight: $font-medium;
+    font-family: $main-font;
+    font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.8px;
 }
 
-.newsletter__subscribe-button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    font-family: $main-font;
-    font-weight: $font-medium;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-
-    &.btn_default-primary-disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
+.edit-info__input {
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    border: 1px solid black;
+    &:focus{
+        border-color: $main-brown;
+        outline: none;
     }
+    &::placeholder{
+        font-family: $main-font;
+        font-weight: $font-medium;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 20px;
+    }
+}
+
+.edit-info__save-button {
+    display: block;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.edit-info__buttons-wrapper {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.btn_default-secondary__extra {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.required-asterisk {
+    color: $main-brown;
+    margin-left: 4px;
 }

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <sergey-import src="head.html" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+    <title>Edit Billing Address</title>
+</head>
+<body>
+    <sergey-import src="headermaster.html" />
+
+    <main class="mylogin__main-container">
+        <div class="edit-info__content-container">
+            <div class="mylogin__title-container">
+                <h1 class="mylogin__title">My account</h1>
+            </div>
+
+            <div class="mylogin__button-container">
+                <button id="information" class="mylogin__button">Information</button>
+                <button id="orders" class="mylogin__button">Orders</button>
+                <button id="returns" class="mylogin__button">Returns</button>
+            </div>
+        </div>
+
+        <div class="mylogin__module-container">
+            <div class="mylogin__spacer"></div>
+
+            <!-- Pulsante Back -->
+            <div class="edit-info__back-button">
+                <a href="mylogin.html" class="edit-info__global-back-button">
+                    <img src="./src/images/icons/arrow_back.svg" alt="Back" class="edit-info__global-back-button__icon">
+                    <span class="edit-info__global-back-button__text">Back</span>
+                </a>    
+            </div>
+            
+            <h2 class="edit-info__title">Billing Address</h2>
+
+            <div class="edit-info__form-container">
+                <form id="edit-billingaddress-form" class="edit-info__form">
+                    <label for="street" class="edit-info__label">Street Address<span class="required-asterisk">*</span></label>
+                    <input type="text" id="street" name="street" class="edit-info__input" placeholder="Enter street address" required>
+                    
+                    <label for="city" class="edit-info__label">City<span class="required-asterisk">*</span></label>
+                    <input type="text" id="city" name="city" class="edit-info__input" placeholder="Enter city" required>
+                    
+                    <label for="zipcode" class="edit-info__label">ZIP Code<span class="required-asterisk">*</span></label>
+                    <input type="text" id="zipcode" name="zipcode" class="edit-info__input" placeholder="Enter ZIP code" required>
+                    
+                    <label for="country" class="edit-info__label">Country<span class="required-asterisk">*</span></label>
+                    <input type="text" id="country" name="country" class="edit-info__input" placeholder="Enter country" required>
+                    
+                    <button type="submit" class="btn_default-primary-active edit-info__save-button">Save</button>
+
+                    <div class="edit-info__buttons-wrapper">
+                        <button type="button" class="btn_default-primary-active edit-info__save-and-edit-button">Save and Edit</button>
+                        <button type="button" class="btn_default-secondary btn_default-secondary__extra edit-info__cancel-button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="src/js/myloginbutton.js"></script>
+    <script src="src/js/crud.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loggedInUserEmail = localStorage.getItem('loggedInUser');
+            const user = getUser(loggedInUserEmail);
+            if (user && user.billingAddress) {
+                document.getElementById('street').value = user.billingAddress.street || '';
+                document.getElementById('city').value = user.billingAddress.city || '';
+                document.getElementById('zipcode').value = user.billingAddress.zipcode || '';
+                document.getElementById('country').value = user.billingAddress.country || '';
+            }
+
+            const saveAndEditButton = document.querySelector('.edit-info__save-and-edit-button');
+            if (saveAndEditButton) {
+                saveAndEditButton.addEventListener('click', function() {
+                    saveBillingAddress();
+                    alert('Billing address updated successfully!');
+                });
+            }
+
+            const cancelButton = document.querySelector('.edit-info__cancel-button');
+            if (cancelButton) {
+                cancelButton.addEventListener('click', function() {
+                    clearBillingAddress();
+                    alert('Billing address cleared!');
+                });
+            }
+
+            document.getElementById('edit-billingaddress-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                saveBillingAddress();
+                alert('Billing address updated successfully!');
+                window.location.href = "mylogin.html";
+            });
+
+            function saveBillingAddress() {
+                const updatedStreet = document.getElementById('street').value;
+                const updatedCity = document.getElementById('city').value;
+                const updatedZipcode = document.getElementById('zipcode').value;
+                const updatedCountry = document.getElementById('country').value;
+                updateUser(loggedInUserEmail, {
+                    billingAddress: {
+                        street: updatedStreet,
+                        city: updatedCity,
+                        zipcode: updatedZipcode,
+                        country: updatedCountry
+                    }
+                });
+            }
+
+            function clearBillingAddress() {
+                updateUser(loggedInUserEmail, {
+                    billingAddress: {
+                        street: '',
+                        city: '',
+                        zipcode: '',
+                        country: ''
+                    }
+                });
+                document.getElementById('street').value = '';
+                document.getElementById('city').value = '';
+                document.getElementById('zipcode').value = '';
+                document.getElementById('country').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
